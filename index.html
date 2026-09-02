@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Battoir — Plaine de l'Orbe · tout ce qui se passe près de chez vous</title>
+<meta name="description" content="Chaque jeudi, tout ce qui se passe dans les 36 villages de la plaine de l'Orbe : lotos, soirées de sociétés, concerts, matchs, bals, marchés. Un seul message. Gratuit.">
+<meta property="og:title" content="Le Battoir — Plaine de l'Orbe">
+<meta property="og:description" content="Tout ce qui se passe dans les 36 villages de la plaine de l'Orbe. Chaque jeudi, un seul message.">
+<meta property="og:type" content="website">
+<!-- 26.08.2026 : og:image manquait. Sans elle, un lien vers lebattoir.ch colle
+     dans un groupe de village ou une conversation arrivait sans vignette, et
+     avait l'air de rien. L'image est FIXE (le tampon, le nom, la region) et non
+     l'agenda du week-end : la vignette est petite, une carte a douze lignes y
+     serait illisible. Etant fixe, elle n'a pas besoin de suffixe anti-cache.
+     Fabriquee par image_partage.py, publiee par site/deploy.py. -->
+<meta property="og:image" content="https://lebattoir.ch/partage.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Le Battoir — Plaine de l'Orbe">
+<meta property="og:url" content="https://lebattoir.ch/">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:site_name" content="Le Battoir">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rouge:#C2412E; --noir:#222222; --creme:#F4EFE6;
+  --gris:#6b6560; --trait:#e2dbd0; --blanc:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--noir);background:var(--blanc);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* iOS colore en bleu tout bouton dont la couleur n'est pas declaree */
+button,select,input{font:inherit;color:var(--noir);-webkit-appearance:none;appearance:none;border-radius:0}
+h1,h2,h3,.osw{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+a{color:inherit}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+/* ---------- en-tête ---------- */
+header{border-bottom:3px solid var(--noir)}
+.bar{display:flex;align-items:center;gap:16px;padding:18px 0}
+.mark{flex:0 0 auto}
+.mark svg{display:block}
+.wordmark{line-height:1}
+.wordmark .n{font-family:Oswald,sans-serif;font-weight:700;font-size:30px;letter-spacing:.02em}
+.wordmark .t{font-family:Inter,sans-serif;font-weight:600;font-size:10.5px;letter-spacing:.18em;color:var(--rouge);text-transform:uppercase;margin-top:3px}
+nav{margin-left:auto;display:flex;gap:22px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.06em}
+nav a{text-decoration:none;padding-bottom:2px;border-bottom:2px solid transparent}
+nav a:hover{border-color:var(--rouge)}
+.baseline{background:var(--rouge);color:#fff;font-family:Oswald,sans-serif;font-weight:500;
+  text-transform:uppercase;letter-spacing:.07em;font-size:13px;padding:9px 0;text-align:center}
+
+/* ---------- promesse ---------- */
+.hero{padding:54px 0 40px;border-bottom:1px solid var(--trait)}
+.hero h1{font-size:clamp(30px,6vw,50px);max-width:19ch;line-height:1.16}
+.hero h1 em{font-style:normal;color:var(--rouge)}
+.hero p{margin-top:18px;font-size:18px;max-width:56ch;color:#3a3632}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;
+  text-transform:uppercase;letter-spacing:.05em;font-size:15px;padding:13px 22px;border:2px solid var(--noir)}
+.btn.p{background:var(--rouge);border-color:var(--rouge);color:#fff}
+.btn.s{background:#fff}
+.btn:hover{opacity:.88}
+.note{margin-top:14px;font-size:13.5px;color:var(--gris)}
+
+/* ---------- reseaux ---------- */
+.social{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px;align-items:center}
+.social .lab{font-size:13.5px;color:var(--gris)}
+.social a{display:inline-flex;align-items:center;gap:7px;text-decoration:none;font-size:14px;
+  font-weight:500;padding:7px 13px;border:1.5px solid var(--trait);background:#fff;color:var(--noir)}
+.social a:hover{border-color:var(--rouge);color:var(--rouge)}
+.social svg{width:16px;height:16px;fill:currentColor;flex:0 0 auto}
+footer .social{margin-top:0}
+footer .social a{font-size:13.5px;padding:5px 10px}
+
+/* ---------- agenda ---------- */
+section{padding:44px 0}
+.stitle{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.stitle h2{font-size:26px}
+.stitle span{font-size:13px;color:var(--gris)}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 8px}
+.filters select{font-family:Inter,sans-serif;font-size:14px;padding:9px 34px 9px 12px;
+  border:1.5px solid var(--trait);background:#fff;color:var(--noir);max-width:100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23222' stroke-width='1.8'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:11px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+.chip{font-family:Inter,sans-serif;font-size:12.5px;font-weight:500;padding:6px 11px;
+  border:1.5px solid var(--trait);background:#fff;color:var(--noir);cursor:pointer;user-select:none}
+.chip[aria-pressed="true"]{background:var(--noir);color:#fff;border-color:var(--noir)}
+.month{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
+  font-size:13px;color:var(--rouge);border-bottom:1.5px solid var(--trait);padding-bottom:6px;margin:26px 0 4px}
+.ev{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--trait);align-items:start}
+.d{text-align:center;border-right:2px solid var(--rouge);padding-right:10px}
+.d b{display:block;font-family:Oswald,sans-serif;font-size:23px;font-weight:700;line-height:1}
+.d s{display:block;text-decoration:none;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);margin-top:2px}
+.ev h3{font-family:Inter,sans-serif;font-weight:600;text-transform:none;font-size:16.5px;letter-spacing:0;line-height:1.3}
+.meta{font-size:13.5px;color:var(--gris);margin-top:3px}
+.tag{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 7px;border:1px solid var(--trait);margin-right:7px;vertical-align:1px}
+.empty{padding:30px 0;color:var(--gris);font-size:15px}
+
+/* ---------- sociétés ---------- */
+.soc{background:var(--creme);border-top:3px solid var(--noir);border-bottom:3px solid var(--noir)}
+.soc h2{font-size:26px}
+.soc p{margin-top:14px;max-width:60ch;font-size:16.5px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px;margin-top:26px}
+.step b{font-family:Oswald,sans-serif;font-size:30px;color:var(--rouge);display:block;line-height:1}
+.step p{margin-top:6px;font-size:15px}
+.free{margin-top:26px;padding:16px 18px;background:#fff;border-left:4px solid var(--rouge);font-size:15px;max-width:62ch}
+
+/* ---------- villages ---------- */
+.vlist{columns:3;column-gap:26px;font-size:14.5px;margin-top:16px;color:#3a3632}
+.vlist span{display:block;padding:2px 0;break-inside:avoid}
+
+/* ---------- mobile ----------
+   Ajout 24.08.2026. Le fichier n'avait qu'une seule media query (.vlist).
+   Sur iPhone 14 (390 px) la barre d'en-tete est en flex sans wrap :
+   logo 54 + wordmark Oswald 30 + les 3 liens de nav depassent les 350 px
+   utiles, "VILLAGES" sortait de l'ecran. Ce debordement elargissait le
+   document, donc TOUT le contenu se retrouvait colle aux bords malgre le
+   padding de .wrap — un seul bug, visible partout. Constate par Jocelyn
+   sur capture le 23.08. */
+@media(max-width:700px){
+  .bar{flex-wrap:wrap;gap:12px;padding:14px 0}
+  .wordmark .n{font-size:25px}
+  .wordmark .t{font-size:9.5px;letter-spacing:.14em}
+  nav{margin-left:0;width:100%;gap:0;justify-content:space-between;
+      border-top:1px solid var(--trait);padding-top:11px}
+  nav a{flex:1;text-align:center;font-size:12px;letter-spacing:.04em}
+  .baseline{font-size:11.5px;letter-spacing:.05em;padding:8px 14px}
+  .hero{padding:34px 0 30px}
+  .hero h1{max-width:none}
+  .hero p{font-size:16.5px}
+  .btn{font-size:14px;padding:12px 18px}
+  .social{gap:8px}
+  .social .lab{width:100%;margin-bottom:2px}
+  .stitle h2,.soc h2{font-size:22px}
+  .ev{grid-template-columns:50px 1fr;gap:12px}
+  .d b{font-size:20px}
+  footer .r{gap:8px 16px}
+}
+/* 2 colonnes tenues jusqu'en bas : "Corcelles-sur-Chavornay" est le nom le
+   plus long du perimetre et debordait d'une colonne de 162 px a 14.5 px. */
+@media(max-width:640px){.vlist{columns:2;column-gap:16px;font-size:13.5px}}
+
+.pourquoi{margin-top:38px;padding-top:26px;border-top:1px solid var(--trait);max-width:62ch}
+.pourquoi h3{font-size:17px;letter-spacing:.06em}
+.pourquoi p{margin-top:9px;font-size:16px;color:#3a3632}
+footer{border-top:3px solid var(--noir);padding:30px 0 44px;font-size:14px;color:var(--gris)}
+footer .r{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center}
+footer a{color:var(--noir);text-decoration:underline}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <span class="mark" aria-hidden="true">
+      <svg width="54" height="54" viewBox="0 0 400 400" role="img">
+        <circle cx="200" cy="200" r="166" fill="none" stroke="#C2412E" stroke-width="13"/>
+        <!-- chevron plein, pointe mitrée nette -->
+        <path d="M 142 168 L 200 116 L 258 168 L 258 187 L 200 135 L 142 187 Z" fill="#C2412E"/>
+        <text x="200" y="298" text-anchor="middle" font-family="Oswald,Arial Narrow,sans-serif"
+              font-size="152" font-weight="700" fill="#C2412E">B</text>
+      </svg>
+    </span>
+    <span class="wordmark">
+      <span class="n">LE BATTOIR</span>
+      <span class="t">Plaine de l'Orbe</span>
+    </span>
+    <nav>
+      <a href="#agenda">Agenda</a>
+      <a href="#societes">Annoncer</a>
+      <a href="#villages">Villages</a>
+    </nav>
+  </div>
+  <div class="baseline">Tout ce qui se passe dans les 36 villages de la plaine de l'Orbe</div>
+</header>
+
+<div class="wrap hero">
+  <h1>Vous ne raterez plus <em>rien</em> de ce qui se passe près de chez vous.</h1>
+  <p>Lotos, soirées de sociétés, concerts, matchs, bals de jeunesse, marchés, séances communales.
+     Tout est ici — et chaque jeudi soir, l'essentiel du week-end arrive en <strong>un seul message</strong>.</p>
+  <div class="cta">
+    <a class="btn p" id="sub" target="_blank" rel="noopener"
+       href="https://whatsapp.com/channel/0029Vb8DjmlHbFVApHXmTK23">Rejoindre la chaîne WhatsApp</a>
+    <a class="btn s" href="#agenda">Voir l'agenda</a>
+  </div>
+  <p class="note"><strong>Rien à installer, aucun compte à créer</strong> — vous êtes déjà sur WhatsApp.
+     Un message le jeudi soir, jamais plus. Personne ne voit votre numéro, pas même nous,
+     et vous partez en un clic.</p>
+  <div class="social">
+    <span class="lab">Le Battoir est aussi sur&nbsp;:</span>
+    <a href="https://www.facebook.com/lebattoir" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>Facebook</a>
+    <a href="https://www.instagram.com/lebattoir" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 5.4a4.44 4.44 0 100 8.88 4.44 4.44 0 000-8.88zm0 7.32a2.88 2.88 0 110-5.76 2.88 2.88 0 010 5.76zm5.65-7.5a1.04 1.04 0 11-2.07 0 1.04 1.04 0 012.07 0z"/></svg>Instagram</a>
+  </div>
+</div>
+
+<section id="agenda" class="wrap">
+  <div class="stitle">
+    <h2>L'agenda</h2>
+    <span id="count"></span>
+  </div>
+  <div class="filters">
+    <select id="fv" aria-label="Filtrer par village"><option value="">Tous les villages</option></select>
+  </div>
+  <div class="chips" id="fc"></div>
+  <div id="list"></div>
+</section>
+
+<section class="soc">
+  <div class="wrap">
+    <h2>Vous organisez quelque chose ?</h2>
+    <p>Un loto, un repas de soutien, une soirée annuelle, un concert, un tournoi.
+       Dites-le-nous et toute la plaine le saura. <strong>C'est gratuit, et ça le restera.</strong></p>
+    <div class="steps">
+      <div class="step"><b>1</b><p>Vous nous écrivez la date, l'heure, le lieu — trois lignes suffisent.</p></div>
+      <div class="step"><b>2</b><p>Ou vous nous mentionnez quand vous l'annoncez sur vos réseaux.</p></div>
+      <div class="step"><b>3</b><p>On s'occupe du reste. Aucun formulaire, aucun compte à créer.</p></div>
+    </div>
+    <div class="cta">
+      <a class="btn p" href="mailto:annonce@lebattoir.ch?subject=Notre%20manifestation">annonce@lebattoir.ch</a>
+    </div>
+    <div class="free">
+      <strong>Être annoncé dans l'agenda est gratuit, et le restera.</strong>
+      Pour les sociétés comme pour les lecteurs.
+    </div>
+  </div>
+</section>
+
+<section id="villages" class="wrap">
+  <div class="stitle"><h2>Les 36 villages</h2><span>Le périmètre de la plaine de l'Orbe</span></div>
+  <div class="vlist" id="vl"></div>
+
+  <div class="pourquoi">
+    <h3>Pourquoi « Le Battoir » ?</h3>
+    <p>Parce que dans nos villages, le battoir est la salle où l'on se retrouve —
+       et où se tiennent justement les lotos, les soirées de gymnastique et les bals
+       que vous trouverez ici. Chaque village a le sien. Celui-ci est à tout le monde.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap r">
+    <span><strong>Le Battoir</strong> — Plaine de l'Orbe</span>
+    <span><a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a></span>
+    <span>Une manifestation à annoncer, une correction à signaler&nbsp;: écrivez-nous.</span>
+    <!-- 26.08.2026 : la citation de la source est la contrepartie de la decision
+         de relever les horaires sur le match center. Elle n'est pas decorative :
+         voir foot-perimetre.md §3. Ne pas retirer. -->
+    <span>Horaires et terrains des matchs&nbsp;: <a href="https://matchcenter-acvf.football.ch/" target="_blank" rel="noopener">match center ACVF</a>.</span>
+
+  </div>
+  <div class="wrap">
+  <div class="social">
+    <a href="https://www.facebook.com/lebattoir" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.5-3.91 3.77-3.91 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.78-1.63 1.57v1.89h2.78l-.45 2.91h-2.33V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>Facebook</a>
+    <a href="https://www.instagram.com/lebattoir" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 5.4a4.44 4.44 0 100 8.88 4.44 4.44 0 000-8.88zm0 7.32a2.88 2.88 0 110-5.76 2.88 2.88 0 010 5.76zm5.65-7.5a1.04 1.04 0 11-2.07 0 1.04 1.04 0 012.07 0z"/></svg>Instagram</a>
+  </div>
+  </div>
+</footer>
+
+<script>
+/* ---- données : extraites des sites communaux le 15.08.2026 ---- */
+const CATS = {
+  foot:{l:'Football',e:'⚽'}, sport:{l:'Sport',e:'🏃'},
+  loto:{l:'Loto & repas de soutien',e:'🎱'}, fete:{l:'Fête & bal',e:'🎉'},
+  culture:{l:'Culture & spectacles',e:'🎭'}, musique:{l:'Musique',e:'🎵'},
+  marche:{l:'Marché & vente',e:'🛒'}, officiel:{l:'Officiel',e:'🏛️'}
+};
+let EV = [];   // charge depuis events.json
+const VILLAGES = ['Agiez','Arnex-sur-Orbe','Ballaigues','Baulmes','Bavois','Bofflens','Bretonnières',
+'Champvent','Chavornay','Corcelles-sur-Chavornay','Croy','Ependes','Essert-Pittet','Essert-sous-Champvent',
+'Juriens','L\'Abergement','La Praz','La Russille','Les Clées','Lignerolle','Mathod','Montcherand','Orbe',
+'Orny','Pompaples','Premier','Rances','Romainmôtier-Envy','Sergey','Suchy','Suscévaz',
+'Valeyres-sous-Rances','Vallorbe','Vaulion','Villars-sous-Champvent','Vuiteboeuf'];
+
+const JOURS=['dim','lun','mar','mer','jeu','ven','sam'];
+const MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+let fv='', fcats=new Set();
+
+document.getElementById('vl').innerHTML = VILLAGES.map(v=>`<span>${v}</span>`).join('');
+document.getElementById('fc').innerHTML = Object.entries(CATS)
+  .map(([k,c])=>`<button class="chip" data-c="${k}" aria-pressed="false">${c.e} ${c.l}</button>`).join('');
+
+function render(){
+  const now = new Date(); now.setHours(0,0,0,0);
+  const list = EV.filter(e=>new Date(e.d)>=now)
+                 .filter(e=>!fv||e.v===fv)
+                 .filter(e=>!fcats.size||fcats.has(e.c))
+                 .sort((a,b)=>a.d.localeCompare(b.d));
+  const el=document.getElementById('list');
+  document.getElementById('count').textContent =
+    list.length ? `${list.length} manifestation${list.length>1?'s':''} à venir` : '';
+  if(!list.length){ el.innerHTML='<p class="empty">Rien ne correspond à cette sélection.</p>'; return; }
+  let out='', lastM='';
+  for(const e of list){
+    const dt=new Date(e.d), m=`${MOIS[dt.getMonth()]} ${dt.getFullYear()}`;
+    if(m!==lastM){ out+=`<div class="month">${m}</div>`; lastM=m; }
+    // 26.08.2026 : deux ajouts.
+    // 1) e.lieu — la salle ou le terrain. Le champ existait et n'etait pas affiche :
+    //    « Concerts a Chavornay » ne disait pas « O ruines du Vieux-Moulin », et un
+    //    match ne disait pas son stade. Pour un agenda, ou l'on va vaut l'heure.
+    // 2) e.exterieur — le drapeau existait aussi, publier.py s'en servait deja pour
+    //    le message (« a l'exterieur »), la page l'ignorait. Un match du FC Champvent
+    //    joue a Lonay s'affichait comme un match a Champvent.
+    const ou = e.exterieur ? `${e.v} \u2014 à l’extérieur` : e.v;
+    const det=[ou, e.h||'', e.lieu||'', e.o||''].filter(Boolean).join(' \u00b7 ');
+    out+=`<article class="ev">
+      <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${JOURS[dt.getDay()]}</s></div>
+      <div>
+        <h3>${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t}</h3>
+        <div class="meta"><span class="tag">${CATS[e.c].e} ${CATS[e.c].l}</span>${det}</div>
+      </div></article>`;
+  }
+  el.innerHTML=out;
+}
+document.getElementById('fv').addEventListener('change',e=>{fv=e.target.value;render()});
+document.getElementById('fc').addEventListener('click',e=>{
+  const b=e.target.closest('.chip'); if(!b)return;
+  const c=b.dataset.c, on=fcats.has(c);
+  on?fcats.delete(c):fcats.add(c);
+  b.setAttribute('aria-pressed',String(!on)); render();
+});
+
+fetch('events.json?v='+Date.now())
+  .then(r=>r.json())
+  .then(j=>{
+     EV=j;
+     const fvSel=document.getElementById('fv');
+     [...new Set(EV.map(e=>e.v))].sort().forEach(v=>{
+        const o=document.createElement('option'); o.value=v; o.textContent=v; fvSel.appendChild(o);
+     });
+     render();
+  })
+  .catch(()=>{document.getElementById('list').innerHTML=
+     '<p class="empty">L\'agenda n\'a pas pu être chargé. Réessayez dans un instant.</p>';});
+</script>
+</body>
+</html>
