@@ -158,6 +158,17 @@
  {
   "d": "2026-09-04",
   "fin": "2026-09-04",
+  "t": "Concert de jazz — Oliver's Salt & Pepper",
+  "v": "Bretonnières",
+  "c": "culture",
+  "o": "Famille Chappuis",
+  "h": "19h",
+  "lieu": "Cantine de Bretonnières",
+  "url": "https://bretonnieres.ch/"
+ },
+ {
+  "d": "2026-09-04",
+  "fin": "2026-09-04",
   "t": "Course annuelle des retraités",
   "v": "Chavornay",
   "c": "fete",
@@ -1363,6 +1374,17 @@
  {
   "d": "2026-10-07",
   "fin": "2026-10-07",
+  "t": "Conseil général",
+  "v": "Bretonnières",
+  "c": "officiel",
+  "o": "Commune de Bretonnières",
+  "h": "",
+  "lieu": "",
+  "url": "https://bretonnieres.ch/"
+ },
+ {
+  "d": "2026-10-07",
+  "fin": "2026-10-07",
   "t": "Lis-moi une histoire",
   "v": "Orbe",
   "c": "fete",
@@ -1876,6 +1898,17 @@
   "h": "10h-11h",
   "lieu": "Bureau de vote, Route de Juriens 1",
   "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
+  "d": "2026-12-02",
+  "fin": "2026-12-02",
+  "t": "Conseil général",
+  "v": "Bretonnières",
+  "c": "officiel",
+  "o": "Commune de Bretonnières",
+  "h": "",
+  "lieu": "",
+  "url": "https://bretonnieres.ch/"
  },
  {
   "d": "2026-12-05",
