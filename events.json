@@ -1088,6 +1088,17 @@
  {
   "d": "2026-09-16",
   "fin": "2026-09-16",
+  "t": "Conseil général",
+  "v": "La Praz",
+  "c": "officiel",
+  "o": "Commune de La Praz",
+  "h": "20h15",
+  "lieu": "Grande Salle",
+  "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
+  "d": "2026-09-16",
+  "fin": "2026-09-16",
   "t": "Lis-moi une histoire",
   "v": "Orbe",
   "c": "fete",
@@ -1293,6 +1304,17 @@
   "h": "",
   "lieu": "Foyer de la Salle Polyvalente",
   "url": ""
+ },
+ {
+  "d": "2026-10-03",
+  "fin": "2026-10-03",
+  "t": "Sortie champignons",
+  "v": "La Praz",
+  "c": "sport",
+  "o": "GALP",
+  "h": "",
+  "lieu": "Mollendruz",
+  "url": "https://www.lapraz.ch/agenda/"
  },
  {
   "d": "2026-10-03",
@@ -1845,6 +1867,17 @@
   "url": "https://www.mdnorbe.ch"
  },
  {
+  "d": "2026-11-29",
+  "fin": "2026-11-29",
+  "t": "Votations et élections complémentaires",
+  "v": "La Praz",
+  "c": "officiel",
+  "o": "Commune de La Praz",
+  "h": "10h-11h",
+  "lieu": "Bureau de vote, Route de Juriens 1",
+  "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
   "d": "2026-12-05",
   "fin": "2026-12-05",
   "t": "Concert Alexandre Cellier (piano)",
@@ -1964,6 +1997,17 @@
   "h": "21h00",
   "lieu": "Grande salle Jura",
   "url": "https://www.fvjc.ch/agenda/#baldelenfervol4-1093"
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Noël villageois",
+  "v": "La Praz",
+  "c": "fete",
+  "o": "Commune de La Praz",
+  "h": "11h",
+  "lieu": "Église",
+  "url": "https://www.lapraz.ch/agenda/"
  },
  {
   "d": "2026-12-12",
