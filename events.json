@@ -189,6 +189,17 @@
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
+  "d": "2026-09-04",
+  "fin": "2026-09-04",
+  "t": "Poste de gendarmerie mobile",
+  "v": "Pompaples",
+  "c": "officiel",
+  "o": "Commune de Pompaples",
+  "h": "",
+  "lieu": "Préau du collège (l'après-midi)",
+  "url": "https://www.pompaples.ch/agenda"
+ },
+ {
   "d": "2026-09-05",
   "fin": "2026-09-05",
   "t": "Escape game",
@@ -247,6 +258,17 @@
  {
   "d": "2026-09-05",
   "fin": "2026-09-05",
+  "t": "Fournée du four à pain",
+  "v": "Pompaples",
+  "c": "fete",
+  "o": "Commune de Pompaples",
+  "h": "",
+  "lieu": "Four à pain",
+  "url": "https://www.pompaples.ch/agenda"
+ },
+ {
+  "d": "2026-09-05",
+  "fin": "2026-09-05",
   "t": "Mise des fruits des arbres communaux",
   "v": "Romainmôtier-Envy",
   "c": "marche",
@@ -265,6 +287,17 @@
   "h": "",
   "lieu": "Orny",
   "url": ""
+ },
+ {
+  "d": "2026-09-05",
+  "fin": "2026-09-05",
+  "t": "Repair Café — collecte d'objets à réparer",
+  "v": "Ballaigues",
+  "c": "fete",
+  "o": "Commune de Ballaigues",
+  "h": "10h-12h",
+  "lieu": "",
+  "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
  },
  {
   "d": "2026-09-06",
@@ -732,6 +765,17 @@
   "h": "20h00",
   "lieu": "Stade André Reymond, Vaulion",
   "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-11",
+  "fin": "2026-09-11",
+  "t": "Course du Village",
+  "v": "Pompaples",
+  "c": "fete",
+  "o": "Commune de Pompaples",
+  "h": "",
+  "lieu": "Val-de-Travers",
+  "url": "https://www.pompaples.ch/agenda"
  },
  {
   "d": "2026-09-11",
@@ -1240,6 +1284,17 @@
   "url": "https://www.fvjc.ch/agenda/#soire333-1007"
  },
  {
+  "d": "2026-09-26",
+  "fin": "2026-09-26",
+  "t": "Vide Poussette",
+  "v": "Ballaigues",
+  "c": "marche",
+  "o": "Commune de Ballaigues",
+  "h": "",
+  "lieu": "",
+  "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
+ },
+ {
   "d": "2026-09-27",
   "fin": "2026-09-27",
   "t": "RepairMôtier : le repair café",
@@ -1403,6 +1458,17 @@
   "h": "De 9h00 à 17h00",
   "lieu": "Forêt de Chassagne, près d'Orbe",
   "url": "https://point-nature.ch/ateliers.html"
+ },
+ {
+  "d": "2026-10-08",
+  "fin": "2026-10-08",
+  "t": "Conseil général",
+  "v": "Pompaples",
+  "c": "officiel",
+  "o": "Commune de Pompaples",
+  "h": "",
+  "lieu": "Salle villageoise",
+  "url": "https://www.pompaples.ch/agenda"
  },
  {
   "d": "2026-10-09",
@@ -1801,6 +1867,17 @@
   "url": "https://www.fvjc.ch/agenda/#balanne80-1077"
  },
  {
+  "d": "2026-11-21",
+  "fin": "2026-11-21",
+  "t": "Explorations thermiques — après-midi participative",
+  "v": "Arnex-sur-Orbe",
+  "c": "officiel",
+  "o": "Commune d'Arnex-sur-Orbe",
+  "h": "14h",
+  "lieu": "Place du Village",
+  "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
+ },
+ {
   "d": "2026-11-22",
   "fin": "2026-11-22",
   "t": "Hechizo Flamenco Group",
@@ -1935,6 +2012,17 @@
  {
   "d": "2026-12-05",
   "fin": "2026-12-05",
+  "t": "Fournée du four à pain",
+  "v": "Pompaples",
+  "c": "fete",
+  "o": "Commune de Pompaples",
+  "h": "",
+  "lieu": "Salle villageoise La Biolle",
+  "url": "https://www.pompaples.ch/agenda"
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
   "t": "Loto",
   "v": "Chavornay",
   "c": "loto",
@@ -2021,6 +2109,28 @@
   "url": ""
  },
  {
+  "d": "2026-12-10",
+  "fin": "2026-12-10",
+  "t": "Conseil général",
+  "v": "Pompaples",
+  "c": "officiel",
+  "o": "Commune de Pompaples",
+  "h": "",
+  "lieu": "Salle villageoise",
+  "url": "https://www.pompaples.ch/agenda"
+ },
+ {
+  "d": "2026-12-10",
+  "fin": "2026-12-10",
+  "t": "Conseil général",
+  "v": "Arnex-sur-Orbe",
+  "c": "officiel",
+  "o": "Commune d'Arnex-sur-Orbe",
+  "h": "20h",
+  "lieu": "En Bulande",
+  "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
+ },
+ {
   "d": "2026-12-12",
   "fin": "2026-12-12",
   "t": "Bal de l‘enfer vol.4",
@@ -2052,6 +2162,17 @@
   "h": "",
   "lieu": "Foyer de la Salle Polyvalente",
   "url": ""
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Vente de sapins",
+  "v": "Arnex-sur-Orbe",
+  "c": "marche",
+  "o": "Municipalité d'Arnex-sur-Orbe",
+  "h": "10h",
+  "lieu": "Place de la Grande salle",
+  "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
  },
  {
   "d": "2026-12-12",
