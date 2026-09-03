@@ -33,50 +33,6 @@
   "url": ""
  },
  {
-  "d": "2026-08-27",
-  "fin": "2026-08-27",
-  "t": "FC Bavois-Chavornay – Vevey-Sports",
-  "v": "Bavois",
-  "c": "foot",
-  "o": "Seniors 30+ champion",
-  "h": "20h00",
-  "lieu": "Terrains Les Peupliers",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-27",
-  "fin": "2026-08-27",
-  "t": "FC Vallon du Nozon – FC Champagne Sports I",
-  "v": "Vaulion",
-  "c": "foot",
-  "o": "Seniors 30+ Groupe 2",
-  "h": "20h00",
-  "lieu": "Stade André Reymond",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-27",
-  "fin": "2026-08-27",
-  "t": "Grp 13 coteaux – FC Etoile Bonvillars",
-  "v": "Arnex-sur-Orbe",
-  "c": "foot",
-  "o": "Seniors 30+ Groupe 2",
-  "h": "20h00",
-  "lieu": "En Bullandaz - Terrain principal",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-28",
-  "fin": "2026-08-28",
-  "t": "FC Ependes – FC Donneloye II",
-  "v": "Ependes",
-  "c": "foot",
-  "o": "4e ligue Groupe 4",
-  "h": "20h00",
-  "lieu": "Stade des Cartes - Terrain des Cartes",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
   "d": "2026-08-28",
   "fin": "2026-08-28",
   "t": "Tour de jeunesse",
@@ -97,76 +53,6 @@
   "h": "20h30",
   "lieu": "Ô ruines du Vieux-Moulin",
   "url": "https://www.les-bouffons-chavornay.ch/programme-fr1511.html"
- },
- {
-  "d": "2026-08-29",
-  "fin": "2026-08-29",
-  "t": "FC Bavois II – FC Bursins-Rolle-Perroy I",
-  "v": "Bavois",
-  "c": "foot",
-  "o": "2e ligue Groupe 1",
-  "h": "17h30",
-  "lieu": "Terrains Les Peupliers - Peupliers N°1",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-29",
-  "fin": "2026-08-29",
-  "t": "FC Etoile-Broye III – FC Arnex IA",
-  "v": "Arnex-sur-Orbe",
-  "c": "foot",
-  "o": "5e ligue Groupe 4",
-  "h": "20h00",
-  "lieu": "Parc des Sports, Lucens",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-29",
-  "fin": "2026-08-29",
-  "t": "FC Granges Marnand – FC Bavois III",
-  "v": "Bavois",
-  "c": "foot",
-  "o": "4e ligue Groupe 4",
-  "h": "19h00",
-  "lieu": "Place des Sports, Granges-Marnand",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-29",
-  "fin": "2026-08-29",
-  "t": "FC Lonay-Sport I – FC Champvent I",
-  "v": "Champvent",
-  "c": "foot",
-  "o": "2e ligue Groupe 1",
-  "h": "17h30",
-  "lieu": "En Faclay N°1, Lonay",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-29",
-  "fin": "2026-08-29",
-  "t": "FC Lugano U-21 – FC Bavois",
-  "v": "Bavois",
-  "c": "foot",
-  "o": "Promotion League",
-  "h": "17h30",
-  "lieu": "Campo Maglio, Canobbio",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-29",
-  "fin": "2026-08-29",
-  "t": "FC Orbe I – FC Poliez-Pittet I",
-  "v": "Orbe",
-  "c": "foot",
-  "o": "3e ligue Groupe 4",
-  "h": "19h00",
-  "lieu": "Stade du Puisoir - Puisoir Nr 1",
-  "url": "https://matchcenter-acvf.football.ch/"
  },
  {
   "d": "2026-08-29",
@@ -213,178 +99,6 @@
   "url": "https://henosis.ch/evenements/voyage-en-amenie-autour-du-duduk/"
  },
  {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Baulmes I – FC Orbe II",
-  "v": "Baulmes",
-  "c": "foot",
-  "o": "4e ligue Groupe 5",
-  "h": "15h00",
-  "lieu": "Stade Sous-Ville",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Baulmes II – FC Yvonand II",
-  "v": "Baulmes",
-  "c": "foot",
-  "o": "5e ligue Groupe 4",
-  "h": "10h00",
-  "lieu": "Stade Sous-Ville",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Champagne Sports II – FC Rances",
-  "v": "Rances",
-  "c": "foot",
-  "o": "4e ligue Groupe 5",
-  "h": "14h00",
-  "lieu": "Derrière-Ville N°1, Champagne",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Champagne Sports – FC Chavornay Sports",
-  "v": "Chavornay",
-  "c": "foot",
-  "o": "Féminine 4e ligue",
-  "h": "17h00",
-  "lieu": "Derrière-Ville N°1, Champagne",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Etoile-Broye II – FC Chavornay Sports II",
-  "v": "Chavornay",
-  "c": "foot",
-  "o": "4e ligue Groupe 4",
-  "h": "14h00",
-  "lieu": "Ch. des Vignes, Moudon",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Forward-Morges I – FC Chavornay Sports I",
-  "v": "Chavornay",
-  "c": "foot",
-  "o": "2e ligue Groupe 1",
-  "h": "16h00",
-  "lieu": "Terrain de la Vogéaz N°1, Tolochenaz",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Jorat-Mézières II – FC Vallorbe-Ballaigues II",
-  "v": "Vallorbe",
-  "c": "foot",
-  "o": "5e ligue Groupe 4",
-  "h": "16h00",
-  "lieu": "En Pré l'Étang, Mézières",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Montcherand – Sport Lausanne Benfica II",
-  "v": "Montcherand",
-  "c": "foot",
-  "o": "4e ligue Groupe 3",
-  "h": "11h00",
-  "lieu": "La Gravière",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Suchy-Sports – FC Poliez-Pittet II",
-  "v": "Suchy",
-  "c": "foot",
-  "o": "5e ligue Groupe 3",
-  "h": "10h30",
-  "lieu": "Terrain de Suchy - Terrain Communal",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Vallon du Nozon – FC Echallens Région I",
-  "v": "Vaulion",
-  "c": "foot",
-  "o": "Féminine 4e ligue",
-  "h": "10h30",
-  "lieu": "Stade André Reymond",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Vallon du Nozon – FC Grandson-Tuileries II",
-  "v": "Vaulion",
-  "c": "foot",
-  "o": "4e ligue Groupe 5",
-  "h": "14h00",
-  "lieu": "Stade André Reymond",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Vallée de Joux I – FC Champvent II",
-  "v": "Champvent",
-  "c": "foot",
-  "o": "4e ligue Groupe 5",
-  "h": "14h00",
-  "lieu": "Terrain des Crêtets, Le Sentier",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-30",
-  "fin": "2026-08-30",
-  "t": "FC Valmont II – FC Arnex IB",
-  "v": "Arnex-sur-Orbe",
-  "c": "foot",
-  "o": "5e ligue Groupe 5",
-  "h": "13h30",
-  "lieu": "Terrain des 5 Communes, Chamblon",
-  "url": "https://matchcenter-acvf.football.ch/",
-  "exterieur": true
- },
- {
-  "d": "2026-08-31",
-  "fin": "2026-08-31",
-  "t": "FC Bavois-Chavornay – FC Yvorne I",
-  "v": "Bavois",
-  "c": "foot",
-  "o": "Seniors 30+ champion",
-  "h": "20h15",
-  "lieu": "Terrains Les Peupliers",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-08-31",
-  "fin": "2026-08-31",
-  "t": "Grp 13 coteaux Arnex – FC Bavois-Chavornay",
-  "v": "Arnex-sur-Orbe",
-  "c": "foot",
-  "o": "Seniors 40+ Groupe 1",
-  "h": "20h00",
-  "lieu": "En Bullandaz - Terrain principal",
-  "url": "https://matchcenter-acvf.football.ch/"
- },
- {
   "d": "2026-09-01",
   "fin": "2026-09-01",
   "t": "Café contact et créatif — activités de septembre",
@@ -394,28 +108,6 @@
   "h": "",
   "lieu": "Salle Essert-Pittet",
   "url": ""
- },
- {
-  "d": "2026-09-02",
-  "fin": "2026-09-02",
-  "t": "Atelier « montgolfières »",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "Selon les horaires d’ouverture du service",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
- },
- {
-  "d": "2026-09-02",
-  "fin": "2026-09-02",
-  "t": "Rencontre d’échanges « Jardins extraordinaires »",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Commune d'Orbe",
-  "h": "De 15h à 18h",
-  "lieu": "Place de jeux du Signal",
-  "url": "https://www.orbe.ch/officiel/services-communaux/secretariat-general/durabilite/jardins-extraordinaires"
  },
  {
   "d": "2026-09-03",
@@ -431,12 +123,36 @@
  {
   "d": "2026-09-03",
   "fin": "2026-09-03",
-  "t": "Grp 13 coteaux – FC Lusitanos de Payerne",
+  "t": "FC Chavannes-Yvonand – FC Vallon du Nozon",
+  "v": "Vaulion",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 2",
+  "h": "20h15",
+  "lieu": "En Brit, Yvonand",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-03",
+  "fin": "2026-09-03",
+  "t": "FC Cossonay – FC Chavornay Sports - Bavois",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 4",
+  "h": "20h00",
+  "lieu": "En Marche N°1, Cossonay-Ville",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-03",
+  "fin": "2026-09-03",
+  "t": "Grp 13 coteaux (9143) – FC Lusitanos de Payerne",
   "v": "Baulmes",
   "c": "foot",
   "o": "Seniors 30+ Groupe 2",
   "h": "20h00",
-  "lieu": "Stade Sous-Ville",
+  "lieu": "Stade Sous-Ville, Baulmes",
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
@@ -458,7 +174,7 @@
   "c": "foot",
   "o": "Seniors 30+ Groupe 2",
   "h": "20h15",
-  "lieu": "Stade Prés-Sous-Ville - Terrain 1",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
@@ -480,7 +196,7 @@
   "c": "foot",
   "o": "4e ligue Groupe 4",
   "h": "20h00",
-  "lieu": "Terrains Les Peupliers",
+  "lieu": "Les Peupliers, Bavois",
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
@@ -491,7 +207,7 @@
   "c": "foot",
   "o": "Promotion League",
   "h": "16h00",
-  "lieu": "Terrains Les Peupliers - Peupliers N°1",
+  "lieu": "Les Peupliers N°1, Bavois",
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
@@ -502,8 +218,20 @@
   "c": "foot",
   "o": "2e ligue Groupe 1",
   "h": "20h00",
-  "lieu": "Stade Sous-Ville",
+  "lieu": "Stade Sous-Ville, Baulmes",
   "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-05",
+  "fin": "2026-09-05",
+  "t": "FC Münsingen – FC Bavois -Chavornay",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Coupe suisse Seniors 30+ 1/16",
+  "h": "16h00",
+  "lieu": "Sandreutenen, Münsingen",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-09-05",
@@ -530,6 +258,18 @@
  {
   "d": "2026-09-06",
   "fin": "2026-09-06",
+  "t": "AF LUC-Dorigny I – FC Orbe I",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "3e ligue Groupe 4",
+  "h": "15h00",
+  "lieu": "Centre Sportif Dorigny-UNIL N°1, Lausanne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
   "t": "Concert Intemplo Duo Serenata",
   "v": "Orbe",
   "c": "culture",
@@ -537,6 +277,177 @@
   "h": "17h - 19h30",
   "lieu": "Temple d'Orbe, Rue du Château 5, 1350 Orbe",
   "url": "https://monbillet.ch/events/in-templo-26-duo-serenata"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Arnex IA – FC Baulmes II",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "14h30",
+  "lieu": "En Bullandaz, Arnex",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Arnex IB – FC Villars-le-Terroir IB",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 5",
+  "h": "10h30",
+  "lieu": "En Bullandaz, Arnex",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Champvent II – FC Corcelles-Payerne IB",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "10h30",
+  "lieu": "Stade Sous-Ville, Baulmes",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Chavornay Sports I – FC Genolier-Begnins I",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "16h00",
+  "lieu": "En Courtes-Raies N°1, Chavornay",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Chavornay Sports II – FC Corcelles-Payerne IA",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "10h30",
+  "lieu": "En Courtes-Raies N°1, Chavornay",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Chavornay Sports – FC Vallée de Joux",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Féminine 4e ligue",
+  "h": "13h30",
+  "lieu": "En Courtes-Raies N°1, Chavornay",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Cugy – FC Suchy-Sports",
+  "v": "Suchy",
+  "c": "foot",
+  "o": "5e ligue Groupe 3",
+  "h": "10h30",
+  "lieu": "Place du Billard, Cugy",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Echallens Région III – FC Montcherand",
+  "v": "Montcherand",
+  "c": "foot",
+  "o": "4e ligue Groupe 3",
+  "h": "11h00",
+  "lieu": "Centre sportif des 3 sapins, Echallens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Orbe II – FC Champagne Sports II",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Stade du Puisoir N°1, Orbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Renens II – FC Vallon du Nozon",
+  "v": "Vaulion",
+  "c": "foot",
+  "o": "Féminine 4e ligue",
+  "h": "13h00",
+  "lieu": "Zone sportive du Censuy, Renens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Sainte-Croix/La Sagne I – FC Baulmes I",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h30",
+  "lieu": "Stade de La Sagne, Sagne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Thierrens II – FC Ependes",
+  "v": "Ependes",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "14h00",
+  "lieu": "Le Marais 1, Thierrens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Vallorbe-Ballaigues I – FC Vallon du Nozon",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h30",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Vallorbe-Ballaigues II – FC Champagne Sports III",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "11h00",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-06",
+  "fin": "2026-09-06",
+  "t": "FC Vallée de Joux I – FC Rances",
+  "v": "Rances",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Terrain des Crêtets, Le Sentier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-09-06",
@@ -574,6 +485,18 @@
  {
   "d": "2026-09-07",
   "fin": "2026-09-07",
+  "t": "CS Chavannes Epenex – Grp 13 coteaux - Arnex",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "Seniors 40+ Groupe 1",
+  "h": "20h30",
+  "lieu": "Terrains de la Plaine, Chavannes-près-Renens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-07",
+  "fin": "2026-09-07",
   "t": "Conseil général",
   "v": "Orny",
   "c": "fete",
@@ -581,6 +504,41 @@
   "h": "",
   "lieu": "Salle communale",
   "url": ""
+ },
+ {
+  "d": "2026-09-07",
+  "fin": "2026-09-07",
+  "t": "FC Chavornay Sports - Bavois – FC Saint-Sulpice",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Coupe vaudoise Seniors 30+ 1/32",
+  "h": "20h00",
+  "lieu": "En Courtes-Raies N°1, Chavornay",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-07",
+  "fin": "2026-09-07",
+  "t": "FC Cossonay – FC Vallorbe-Ballaigues",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "Coupe vaudoise Seniors 30+ 1/32",
+  "h": "20h00",
+  "lieu": "En Marche N°1, Cossonay-Ville",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-07",
+  "fin": "2026-09-07",
+  "t": "FC Gingins I – Grp 13 coteaux (9143)",
+  "v": "Rances",
+  "c": "foot",
+  "o": "Coupe vaudoise Seniors 30+ 1/32",
+  "h": "20h00",
+  "lieu": "Stade Charles Gorgerat, Gingins",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-09-08",
@@ -596,6 +554,18 @@
  {
   "d": "2026-09-08",
   "fin": "2026-09-08",
+  "t": "Lausanne Nord II – FC Chavornay Sports",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Coupe vaudoise Féminines 1/8",
+  "h": "20h30",
+  "lieu": "Praz Séchaud, Lausanne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-08",
+  "fin": "2026-09-08",
   "t": "Table au bistrot",
   "v": "Orny",
   "c": "fete",
@@ -607,6 +577,98 @@
  {
   "d": "2026-09-09",
   "fin": "2026-09-09",
+  "t": "FC Amical Saint-Prex II – FC Champvent I",
+  "v": "Champvent",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h30",
+  "lieu": "Stade de Marcy N°2, Saint-Prex",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Baulmes I – FC Dardania Lausanne I",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h00",
+  "lieu": "Stade Sous-Ville, Baulmes",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Bavois -Chavornay – FC Tolochenaz",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 50+ Groupe 4",
+  "h": "20h00",
+  "lieu": "Les Peupliers N°3, Bavois",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Bex I – FC Bavois II",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h00",
+  "lieu": "Stade du Relais N°1, Bex",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Gimel-Bière – FC Chavornay Sports I",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h00",
+  "lieu": "Terrain le Marais N°1, Gimel",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Renens II – FC Vallon du Nozon",
+  "v": "Vaulion",
+  "c": "foot",
+  "o": "Coupe vaudoise Féminines 1/8",
+  "h": "20h30",
+  "lieu": "Zone sportive du Censuy, Renens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Vallon du Nozon – FC Montreux-Sports I",
+  "v": "Croy",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h00",
+  "lieu": "Terrain du Praz-Amiet, Croy",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
+  "t": "FC Vallorbe-Ballaigues I – FC Saint-Légier I",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h00",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-09",
+  "fin": "2026-09-09",
   "t": "Mercredi Forêt Famille",
   "v": "Orbe",
   "c": "fete",
@@ -614,6 +676,62 @@
   "h": "De 9h00 à 17h00",
   "lieu": "Forêt de Chassagne, près d'Orbe",
   "url": "https://point-nature.ch/ateliers.html"
+ },
+ {
+  "d": "2026-09-10",
+  "fin": "2026-09-10",
+  "t": "AS FC Napoli Vevey – FC Bavois -Chavornay",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 30+ champion Groupe 1",
+  "h": "20h30",
+  "lieu": "Terrain de la Veyre N°1, Saint-Légier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-10",
+  "fin": "2026-09-10",
+  "t": "FC Chavornay Sports - Bavois – FC Venoge",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 4",
+  "h": "20h00",
+  "lieu": "En Courtes-Raies N°1, Chavornay",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-10",
+  "fin": "2026-09-10",
+  "t": "FC Rances – FC Concordia LS II",
+  "v": "Rances",
+  "c": "foot",
+  "o": "Coupe vaudoise des actifs 1/32",
+  "h": "20h15",
+  "lieu": "Goran's park, Rances",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-10",
+  "fin": "2026-09-10",
+  "t": "FC Vallon du Nozon – FC Etoile Bonvillars",
+  "v": "Vaulion",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 2",
+  "h": "20h00",
+  "lieu": "Stade André Reymond, Vaulion",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-11",
+  "fin": "2026-09-11",
+  "t": "FC Vallorbe-Ballaigues – FC Chavannes-Yvonand",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 2",
+  "h": "20h00",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
+  "url": "https://matchcenter-acvf.football.ch/"
  },
  {
   "d": "2026-09-12",
@@ -628,6 +746,18 @@
  },
  {
   "d": "2026-09-12",
+  "fin": "2026-09-12",
+  "t": "BSC Young Boys U-21 – FC Bavois",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Promotion League",
+  "h": "16h00",
+  "lieu": "Stadion Wankdorf, Bern",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-12",
   "fin": "2026-09-13",
   "t": "Brocante de la paroisse",
   "v": "Romainmôtier-Envy",
@@ -636,6 +766,52 @@
   "h": "9h-17h",
   "lieu": "Centre paroissial et culturel",
   "url": "https://romainmotier.ch/actualite-manifestations/agenda/"
+ },
+ {
+  "d": "2026-09-12",
+  "fin": "2026-09-12",
+  "t": "FC Bavois II – FC Echallens Région II",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "17h30",
+  "lieu": "Les Peupliers N°1, Bavois",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-12",
+  "fin": "2026-09-12",
+  "t": "FC Granges Marnand – FC Chavornay Sports II",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "19h00",
+  "lieu": "Place des Sports, Granges-Marnand",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-12",
+  "fin": "2026-09-12",
+  "t": "FC Orbe I – FC Cheseaux I",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "3e ligue Groupe 4",
+  "h": "19h00",
+  "lieu": "Stade du Puisoir N°1, Orbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-12",
+  "fin": "2026-09-12",
+  "t": "FC Romanel I – FC Ependes",
+  "v": "Ependes",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "19h00",
+  "lieu": "Centre Sportif des Marais, Romanel",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-09-12",
@@ -713,6 +889,179 @@
   "h": "9h00",
   "lieu": "Stand de Tir",
   "url": "https://suchy.ch/events/tirs-militaires-et-tir-a-prix-6-2/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Baulmes II – FC Thierrens III",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "10h00",
+  "lieu": "Stade Sous-Ville, Baulmes",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Bosna Yverdon II – FC Bavois III",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "13h00",
+  "lieu": "Terrain des Iles, Yverdon-les-Bains",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Bursins-Rolle-Perroy I – FC Champvent I",
+  "v": "Champvent",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "10h00",
+  "lieu": "Terrains en Chanivet N°1, Perroy",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Chavornay Sports – FC Echallens Région I",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Féminine 4e ligue",
+  "h": "14h00",
+  "lieu": "En Courtes-Raies N°1, Chavornay",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Corcelles-Payerne IB – FC Rances",
+  "v": "Rances",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "11h00",
+  "lieu": "Freybonnaz N°1, Corcelles-Payerne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Grandson-Tuileries I – FC Chavornay Sports I",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "14h30",
+  "lieu": "Place de Sports des Tuileries A, Grandson",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Montcherand – CS Chavannes Epenex I",
+  "v": "Montcherand",
+  "c": "foot",
+  "o": "4e ligue Groupe 3",
+  "h": "11h00",
+  "lieu": "La Gravière, Montcherand",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Savigny-Forel II – FC Arnex IA",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "15h00",
+  "lieu": "Terrain St Amour, Savigny",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Suchy-Sports – FC Mont-Goulin IA",
+  "v": "Suchy",
+  "c": "foot",
+  "o": "5e ligue Groupe 3",
+  "h": "10h30",
+  "lieu": "Terrain de Suchy, Suchy",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Vallon du Nozon – FC Etoile Bonvillars",
+  "v": "Croy",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Terrain du Praz-Amiet, Croy",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Vallorbe-Ballaigues I – FC Champvent II",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h30",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Vallorbe-Ballaigues II – AS Haute-Broye II",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "11h00",
+  "lieu": "Stade Prés-Sous-Ville, Vallorbe",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Vallée de Joux I – FC Orbe II",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Terrain des Crêtets, Le Sentier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Vallée de Joux – FC Vallon du Nozon",
+  "v": "Vaulion",
+  "c": "foot",
+  "o": "Féminine 4e ligue",
+  "h": "10h00",
+  "lieu": "Terrain des Crêtets, Le Sentier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-09-13",
+  "fin": "2026-09-13",
+  "t": "FC Veyron-Venoge II – FC Arnex IB",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 5",
+  "h": "13h30",
+  "lieu": "Champmarpaud, La Chaux",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-09-13",
@@ -911,6 +1260,17 @@
   "h": "De 16h30 à 17h30",
   "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
   "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
+ },
+ {
+  "d": "2026-10-01",
+  "fin": "2026-10-01",
+  "t": "Ciné-Doc : Freedom – Le Destin de Shewit",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Association Ciné-Doc",
+  "h": "De 19h30 à 21h30",
+  "lieu": "Cinéma Urba, Rue des Terreaux 36, 1350 Orbe",
+  "url": "https://cinedoc.ch/"
  },
  {
   "d": "2026-10-01",
