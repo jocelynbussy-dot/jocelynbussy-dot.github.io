@@ -1165,6 +1165,17 @@
  },
  {
   "d": "2026-09-26",
+  "fin": "2026-09-27",
+  "t": "Missa Latina — Chœur Chant pour Chant",
+  "v": "Orbe",
+  "c": "musique",
+  "o": "Chœur Chant pour Chant",
+  "h": "sa 20h · di 14h et 17h",
+  "lieu": "Temple d'Orbe, rue du Château 5-7",
+  "url": "https://eventfrog.ch/de/p/konzerte/chor/missa-latina-par-le-choeur-chant-pour-chant-7442668308854240938.html"
+ },
+ {
+  "d": "2026-09-26",
   "fin": "2026-09-26",
   "t": "Soirée 333",
   "v": "Ependes",
@@ -1649,6 +1660,17 @@
   "h": "",
   "lieu": "Auberge communale Les Rupiants",
   "url": ""
+ },
+ {
+  "d": "2026-10-14",
+  "fin": "2026-10-14",
+  "t": "Soirée jeux",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "T'as où les jeux",
+  "h": "A partir de 18h30 et jusqu'à 22h30",
+  "lieu": "Rue Davall 3, 1350 Orbe",
+  "url": "https://tasoulesjeux.ch/"
  },
  {
   "d": "2026-10-17",
@@ -2804,16 +2826,5 @@
   "h": "",
   "lieu": "Foyer de la salle polyvalente",
   "url": ""
- },
- {
-  "d": "2027-09-26",
-  "fin": "2027-09-27",
-  "t": "Concert Missa Latina du Choeur Chant pour Chant",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Choeur Chant pour Chant",
-  "h": "Le 26 septembre à 20h / Le 27 septembre à 14h et 17h",
-  "lieu": "Temple d'Orbe rue du Château 5-7",
-  "url": "https://eventfrog.ch/de/p/konzerte/chor/missa-latina-par-le-choeur-chant-pour-chant-7442668308854240938.html"
  }
 ]
