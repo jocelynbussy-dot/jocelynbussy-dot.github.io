@@ -299,6 +299,18 @@ function plage(e){
     : `du ${j(a)} ${mois(a)} au ${j(b)} ${mois(b)}`;
 }
 
+// 18.09.2026, remarque de Jocelyn : « on ne voit pas que cela dure 5 jours ».
+// La plage etait dans la ligne grise, trop discrete. La pastille de date le dit
+// maintenant elle-meme : « 23 / au 27 » au lieu de « 23 / MER ».
+function badge(e, dt){
+  const JOURS2=['dim','lun','mar','mer','jeu','ven','sam'];
+  if(e.fin && e.fin!==e.d){
+    const f=new Date(e.fin);
+    if(f-dt <= 10*86400000) return `au ${f.getDate()}`;
+  }
+  return JOURS2[dt.getDay()];
+}
+
 function render(){
   const now = new Date(); now.setHours(0,0,0,0);
   // 18.09.2026 — signale par Myriam Schertenleib (Missa Latina, 26-27.09) : « on voit
@@ -335,9 +347,13 @@ function render(){
     //    le message (« a l'exterieur »), la page l'ignorait. Un match du FC Champvent
     //    joue a Lonay s'affichait comme un match a Champvent.
     const ou = e.exterieur ? `${e.v} \u2014 à l’extérieur` : e.v;
-    const det=[ou, plage(e), e.h||'', e.lieu||'', e.o||''].filter(Boolean).join(' \u00b7 ');
+    // 18.09.2026 : ne pas ecrire deux fois la meme chose. L'agenda d'Orbe donne
+    // lieu = organisateur pour la Fete Suisse (« Centre culturel Henosis · Centre
+    // culturel Henosis »).
+    const org = (e.o && e.o.trim() === (e.lieu||'').trim()) ? '' : (e.o||'');
+    const det=[ou, plage(e), e.h||'', e.lieu||'', org].filter(Boolean).join(' \u00b7 ');
     out+=`<article class="ev">
-      <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${JOURS[dt.getDay()]}</s></div>
+      <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${badge(e,dt)}</s></div>
       <div>
         <h3>${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t}</h3>
         <div class="meta"><span class="tag">${CATS[e.c].e} ${CATS[e.c].l}</span>${det}</div>
