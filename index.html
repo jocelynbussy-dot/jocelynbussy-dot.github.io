@@ -285,9 +285,28 @@ document.getElementById('vl').innerHTML = VILLAGES.map(v=>`<span>${v}</span>`).j
 document.getElementById('fc').innerHTML = Object.entries(CATS)
   .map(([k,c])=>`<button class="chip" data-c="${k}" aria-pressed="false">${c.e} ${c.l}</button>`).join('');
 
+// Plage d'une manifestation sur plusieurs jours : '' si elle tient sur un jour.
+// « du samedi 26 au dimanche 27 septembre », et sans repeter le mois quand il est le meme.
+function plage(e){
+  if(!e.fin || e.fin===e.d) return '';
+  const JL=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+  const a=new Date(e.d), b=new Date(e.fin);
+  const j=d=>`${JL[d.getDay()]} ${d.getDate()}`;
+  const mois=d=>MOIS[d.getMonth()];
+  return a.getMonth()===b.getMonth()
+    ? `du ${j(a)} au ${j(b)} ${mois(b)}`
+    : `du ${j(a)} ${mois(a)} au ${j(b)} ${mois(b)}`;
+}
+
 function render(){
   const now = new Date(); now.setHours(0,0,0,0);
-  const list = EV.filter(e=>new Date(e.d)>=now)
+  // 18.09.2026 — signale par Myriam Schertenleib (Missa Latina, 26-27.09) : « on voit
+  // l'annonce sous le 26.09, mais pas sous le 27.09 ». Une manifestation sur plusieurs
+  // jours ne paraissait qu'a sa date de debut et disparaissait des ce premier jour passe
+  // (la Fete de la saucisse aux choux, 5 jours, se serait effacee du site des le jeudi soir).
+  // ➜ On filtre sur la date de FIN, et la ligne porte la plage complete (voir plage()).
+  // Choix de Jocelyn le 18.09 : UNE ligne par manifestation, pas une repetition par jour.
+  const list = EV.filter(e=>new Date(e.fin||e.d)>=now)
                  .filter(e=>!fv||e.v===fv)
                  .filter(e=>!fcats.size||fcats.has(e.c))
                  .sort((a,b)=>a.d.localeCompare(b.d));
@@ -307,7 +326,7 @@ function render(){
     //    le message (« a l'exterieur »), la page l'ignorait. Un match du FC Champvent
     //    joue a Lonay s'affichait comme un match a Champvent.
     const ou = e.exterieur ? `${e.v} \u2014 à l’extérieur` : e.v;
-    const det=[ou, e.h||'', e.lieu||'', e.o||''].filter(Boolean).join(' \u00b7 ');
+    const det=[ou, plage(e), e.h||'', e.lieu||'', e.o||''].filter(Boolean).join(' \u00b7 ');
     out+=`<article class="ev">
       <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${JOURS[dt.getDay()]}</s></div>
       <div>
