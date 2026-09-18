@@ -289,6 +289,7 @@ document.getElementById('fc').innerHTML = Object.entries(CATS)
 // « du samedi 26 au dimanche 27 septembre », et sans repeter le mois quand il est le meme.
 function plage(e){
   if(!e.fin || e.fin===e.d) return '';
+  if(new Date(e.fin)-new Date(e.d) > 10*86400000) return '';   // programme, pas plage
   const JL=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
   const a=new Date(e.d), b=new Date(e.fin);
   const j=d=>`${JL[d.getDay()]} ${d.getDate()}`;
@@ -306,7 +307,15 @@ function render(){
   // (la Fete de la saucisse aux choux, 5 jours, se serait effacee du site des le jeudi soir).
   // ➜ On filtre sur la date de FIN, et la ligne porte la plage complete (voir plage()).
   // Choix de Jocelyn le 18.09 : UNE ligne par manifestation, pas une repetition par jour.
-  const list = EV.filter(e=>new Date(e.fin||e.d)>=now)
+  // Garde-fou du 18.09 : au-dela de 10 jours ce n'est plus une manifestation mais un
+  // PROGRAMME (« Programme 2026 du Stand de Tir », 15.04 -> 31.12). On le garde a sa date
+  // de debut, sinon il squatte le haut de l'agenda toute l'annee.
+  const DIX_JOURS = 10*86400000;
+  const finUtile = e => {
+    const d0=new Date(e.d), f=new Date(e.fin||e.d);
+    return (f-d0) > DIX_JOURS ? d0 : f;
+  };
+  const list = EV.filter(e=>finUtile(e)>=now)
                  .filter(e=>!fv||e.v===fv)
                  .filter(e=>!fcats.size||fcats.has(e.c))
                  .sort((a,b)=>a.d.localeCompare(b.d));
