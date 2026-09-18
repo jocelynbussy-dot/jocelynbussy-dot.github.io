@@ -288,6 +288,11 @@ document.getElementById('fc').innerHTML = Object.entries(CATS)
 // Plage d'une manifestation sur plusieurs jours : '' si elle tient sur un jour.
 // « du samedi 26 au dimanche 27 septembre », et sans repeter le mois quand il est le meme.
 function plage(e){
+  if(e._jour){
+    const JL=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+    const a=new Date(e._d0), b=new Date(e._fin);
+    return `jour ${e._jour} sur ${e._total} \u2014 du ${JL[a.getDay()]} ${a.getDate()} au ${JL[b.getDay()]} ${b.getDate()} ${MOIS[b.getMonth()]}`;
+  }
   if(!e.fin || e.fin===e.d) return '';
   if(new Date(e.fin)-new Date(e.d) > 10*86400000) return '';   // programme, pas plage
   const JL=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
@@ -302,9 +307,24 @@ function plage(e){
 // 18.09.2026, remarque de Jocelyn : « on ne voit pas que cela dure 5 jours ».
 // La plage etait dans la ligne grise, trop discrete. La pastille de date le dit
 // maintenant elle-meme : « 23 / au 27 » au lieu de « 23 / MER ».
+// Une ligne par journee pour les manifestations de 2 a 10 jours.
+function deplie(evs){
+  const out=[];
+  for(const e of evs){
+    const a=new Date(e.d), f=new Date(e.fin||e.d), n=Math.round((f-a)/86400000);
+    if(!e.fin || e.fin===e.d || n<1 || n>10){ out.push(e); continue; }
+    for(let i=0;i<=n;i++){
+      const j=new Date(a.getTime()+i*86400000);
+      const iso=j.toISOString().slice(0,10);
+      out.push({...e, d:iso, fin:iso, _jour:i+1, _total:n+1, _d0:e.d, _fin:e.fin});
+    }
+  }
+  return out.sort((x,y)=>x.d.localeCompare(y.d));
+}
+
 function badge(e, dt){
   const JOURS2=['dim','lun','mar','mer','jeu','ven','sam'];
-  if(e.fin && e.fin!==e.d){
+  if(e.fin && e.fin!==e.d){          // manifestation longue, non depliee (> 10 jours)
     const f=new Date(e.fin);
     if(f-dt <= 10*86400000) return `au ${f.getDate()}`;
   }
@@ -327,7 +347,12 @@ function render(){
     const d0=new Date(e.d), f=new Date(e.fin||e.d);
     return (f-d0) > DIX_JOURS ? d0 : f;
   };
-  const list = EV.filter(e=>finUtile(e)>=now)
+  // 18.09.2026, choix de Jocelyn : « c'est mieux de mettre vraiment tous les jours ».
+  // On DEPLIE chaque manifestation de 2 a 10 jours : une ligne par journee, chacune
+  // marquee « jour 2 sur 5 ». Mesure avant de le faire : 9 manifestations concernees,
+  // +26 lignes sur 193 (13 %). Pour revenir en arriere : remettre `EV` a la place de
+  // `deplie(EV)` ci-dessous, rien d'autre.
+  const list = deplie(EV).filter(e=>finUtile(e)>=now)
                  .filter(e=>!fv||e.v===fv)
                  .filter(e=>!fcats.size||fcats.has(e.c))
                  .sort((a,b)=>a.d.localeCompare(b.d));
