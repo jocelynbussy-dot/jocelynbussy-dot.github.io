@@ -627,7 +627,7 @@
   "c": "officiel",
   "o": "Commune",
   "h": "",
-  "lieu": "Salle du Conseil communal",
+  "lieu": "",
   "url": ""
  },
  {
@@ -1014,6 +1014,17 @@
   "h": "20h15",
   "lieu": "Stade Prés-Sous-Ville",
   "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-09-25",
+  "fin": "2026-09-25",
+  "t": "Dédicace de Nicolas Feuz",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Librairie-Papeterie Padi",
+  "h": "16h-18h",
+  "lieu": "Librairie Padi, Grand-Rue 13",
+  "url": ""
  },
  {
   "d": "2026-09-25",
