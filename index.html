@@ -27,7 +27,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --rouge:#C2412E; --noir:#222222; --creme:#F4EFE6;
+  --rouge:#C2412E; --noir:#222222; --creme:#F5F0E7;
   --gris:#6b6560; --trait:#e2dbd0; --blanc:#fff;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -57,7 +57,7 @@ nav a:hover{border-color:var(--rouge)}
 .hero{padding:54px 0 40px;border-bottom:1px solid var(--trait)}
 .hero h1{font-size:clamp(30px,6vw,50px);max-width:19ch;line-height:1.16}
 .hero h1 em{font-style:normal;color:var(--rouge)}
-.hero p{margin-top:18px;font-size:18px;max-width:56ch;color:#3a3632}
+.hero p{margin-top:18px;font-size:18px;max-width:56ch;color:#222222}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
 .btn{display:inline-block;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;
   text-transform:uppercase;letter-spacing:.05em;font-size:15px;padding:13px 22px;border:2px solid var(--noir)}
@@ -112,7 +112,7 @@ section{padding:44px 0}
 .free{margin-top:26px;padding:16px 18px;background:#fff;border-left:4px solid var(--rouge);font-size:15px;max-width:62ch}
 
 /* ---------- villages ---------- */
-.vlist{columns:3;column-gap:26px;font-size:14.5px;margin-top:16px;color:#3a3632}
+.vlist{columns:3;column-gap:26px;font-size:14.5px;margin-top:16px;color:#222222}
 .vlist span{display:block;padding:2px 0;break-inside:avoid}
 
 /* ---------- mobile ----------
@@ -148,7 +148,7 @@ section{padding:44px 0}
 
 .pourquoi{margin-top:38px;padding-top:26px;border-top:1px solid var(--trait);max-width:62ch}
 .pourquoi h3{font-size:17px;letter-spacing:.06em}
-.pourquoi p{margin-top:9px;font-size:16px;color:#3a3632}
+.pourquoi p{margin-top:9px;font-size:16px;color:#222222}
 footer{border-top:3px solid var(--noir);padding:30px 0 44px;font-size:14px;color:var(--gris)}
 footer .r{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center}
 footer a{color:var(--noir);text-decoration:underline}
@@ -211,7 +211,7 @@ footer a{color:var(--noir);text-decoration:underline}
   <div id="list"></div>
 </section>
 
-<section class="soc">
+<section id="societes" class="soc">
   <div class="wrap">
     <h2>Vous organisez quelque chose ?</h2>
     <p>Un loto, un repas de soutien, une soirée annuelle, un concert, un tournoi.
