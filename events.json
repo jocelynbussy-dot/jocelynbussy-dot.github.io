@@ -1426,17 +1426,6 @@
  {
   "d": "2026-10-01",
   "fin": "2026-10-01",
-  "t": "Ciné-Doc : Freedom – Le Destin de Shewit",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Association Ciné-Doc",
-  "h": "De 19h30 à 21h30",
-  "lieu": "Cinéma Urba, Rue des Terreaux 36, 1350 Orbe",
-  "url": "https://cinedoc.ch/"
- },
- {
-  "d": "2026-10-01",
-  "fin": "2026-10-01",
   "t": "FC Bavois -Chavornay – FC La Sarraz-Eclépens",
   "v": "Bavois",
   "c": "foot",
@@ -1557,6 +1546,17 @@
   "h": "17h00",
   "lieu": "En Courtes-Raies N°1",
   "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-03",
+  "fin": "2026-10-03",
+  "t": "Fête de la pomme — journée de soutien de l'école de musique",
+  "v": "Baulmes",
+  "c": "fete",
+  "o": "École de musique Champvent-Baulmes",
+  "h": "10h-16h",
+  "lieu": "Salle des Fêtes",
+  "url": "https://champvent-baulmes.multisite.ch/"
  },
  {
   "d": "2026-10-03",
