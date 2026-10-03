@@ -112,6 +112,26 @@ section{padding:44px 0}
 .wk .suite{margin-top:18px;font-size:14.5px}
 .donnees{margin-top:18px;font-size:13px;line-height:1.5;max-width:74ch}
 
+/* ---------- regroupement par jour (03.10.2026) ---------- */
+.jour{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:30px 0 4px;padding:9px 14px;
+  background:var(--noir);color:#fff;position:sticky;top:0;z-index:2}
+.jour.we{background:var(--rouge)}
+.jour b{font-family:Oswald,sans-serif;font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.04em;line-height:1.1}
+.jour span{font-size:12.5px;opacity:.8}
+.d i{display:block;font-style:normal;font-size:22px;line-height:1.1}
+.d b.hh{font-size:19px;white-space:nowrap}
+.plus{display:block;margin:26px auto 0;cursor:pointer;background:#fff}
+.wkg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:14px;align-items:start}
+.col{background:#fff;border:1px solid #d9d0c0;border-top:4px solid var(--noir)}
+.col.we{border-top-color:var(--rouge)}
+.col h3{font-size:17px;letter-spacing:.04em;padding:11px 14px 9px;border-bottom:1px solid var(--trait)}
+.col h3 small{font-family:Inter,sans-serif;font-weight:500;text-transform:none;letter-spacing:0;font-size:12px;color:var(--gris);margin-left:6px}
+.mini{display:grid;grid-template-columns:46px 1fr;gap:10px;padding:10px 14px;border-bottom:1px solid var(--trait);font-size:14.5px;line-height:1.3}
+.mini:last-child{border-bottom:0}
+.mini .h{font-family:Oswald,sans-serif;font-weight:600;font-size:15px;color:var(--rouge);white-space:nowrap}
+.mini strong{font-weight:600;display:block}
+.mini small{display:block;font-size:12.5px;color:var(--gris);margin-top:2px}
+
 /* ---------- sociétés ---------- */
 .soc{background:var(--creme);border-top:3px solid var(--noir);border-bottom:3px solid var(--noir)}
 .soc h2{font-size:26px}
@@ -311,6 +331,7 @@ const VILLAGES = ['Agiez','Arnex-sur-Orbe','Ballaigues','Baulmes','Bavois','Boff
 const JOURS=['dim','lun','mar','mer','jeu','ven','sam'];
 const MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 let fv='', fcats=new Set();
+const NB_JOURS=14; let nbJours=NB_JOURS;
 
 // 03.10.2026 : « ce week-end pres de chez moi ». Chaque village a son adresse
 // (?village=chavornay), partageable, et la liste du bas y mene.
@@ -376,20 +397,53 @@ function badge(e, dt){
   return JOURS2[dt.getDay()];
 }
 
+// 03.10.2026 : l'agenda est regroupe par JOUR (bandeau), a la demande : « plus visuel
+// qu'une longue liste ». La date n'est donc plus repetee a gauche de chaque ligne :
+// on y met l'heure quand elle est simple (« 20h », « 18h30 »), sinon le picto.
+const JL=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+function heureCourte(e){
+  const m=(e.h||'').trim().match(/^(\d{1,2})\s?h\s?(\d{2})?$/i);
+  return m ? `${+m[1]}h${m[2]&&m[2]!=='00'?m[2]:''}` : '';
+}
+function titreLien(e){
+  return e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t;
+}
+// Une exposition ou un programme de plus de 10 jours ne parait qu'a son debut :
+// on dit au moins jusqu'a quand il dure.
+function jusqua(e){
+  if(e._jour || !e.fin || e.fin===e.d) return '';
+  const f=new Date(e.fin);
+  return (f-new Date(e.d)) > 10*86400000 ? `jusqu'au ${f.getDate()} ${MOIS[f.getMonth()]}` : '';
+}
 function ligne(e){
-    const dt=new Date(e.d);
-    const ou = e.exterieur ? `${e.v} \u2014 à l’extérieur` : e.v;
-    // 18.09.2026 : ne pas ecrire deux fois la meme chose. L'agenda d'Orbe donne
-    // lieu = organisateur pour la Fete Suisse (« Centre culturel Henosis · Centre
-    // culturel Henosis »).
+    // e.lieu : la salle ou le terrain (26.08.2026). Pour un agenda, ou l'on va vaut l'heure.
+    // e.exterieur : un match joue ailleurs ne doit pas s'afficher comme joue au village.
+    const ou = e.exterieur ? `${e.v} — à l’extérieur` : e.v;
+    // 18.09.2026 : ne pas ecrire deux fois la meme chose (lieu = organisateur).
     const org = (e.o && e.o.trim() === (e.lieu||'').trim()) ? '' : (e.o||'');
-    const det=[ou, plage(e), e.h||'', e.lieu||'', org].filter(Boolean).join(' \u00b7 ');
+    const hc=heureCourte(e);
+    const det=[ou, plage(e), jusqua(e), hc?'':(e.h||''), e.lieu||'', org].filter(Boolean).join(' · ');
     return `<article class="ev">
-      <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${badge(e,dt)}</s></div>
+      <div class="d">${hc?`<b class="hh">${hc}</b>`:`<i aria-hidden="true">${CATS[e.c].e}</i>`}</div>
       <div>
-        <h3>${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t}</h3>
+        <h3>${titreLien(e)}</h3>
         <div class="meta"><span class="tag">${CATS[e.c].e} ${CATS[e.c].l}</span>${det}</div>
       </div></article>`;
+}
+function nomJour(iso){
+  const d=new Date(iso), auj=isoL(new Date()), dem=new Date(); dem.setDate(dem.getDate()+1);
+  const pre = iso===auj ? 'Aujourd’hui · ' : iso===isoL(dem) ? 'Demain · ' : '';
+  return {txt:`${pre}${JL[d.getDay()]} ${d.getDate()} ${MOIS[d.getMonth()]}`, we:[0,6].includes(d.getDay())};
+}
+// Regroupe une liste deja triee en [[iso, [evenements]], ...]
+function parJour(list){
+  const g=[];
+  for(const e of list){
+    if(!g.length || g[g.length-1][0]!==e.d) g.push([e.d,[]]);
+    g[g.length-1][1].push(e);
+  }
+  for(const [,l] of g) l.sort((x,y)=>(heureCourte(x)?0:1)-(heureCourte(y)?0:1) || (x.h||'').localeCompare(y.h||'',undefined,{numeric:true}));
+  return g;
 }
 
 // Le week-end affiche : vendredi a dimanche. Du lundi au jeudi, celui qui vient.
@@ -401,6 +455,17 @@ function bornesWeekend(){
   const dim=new Date(ven); dim.setDate(ven.getDate()+2);
   return {ven,dim,auj:n};
 }
+function mini(e){
+  const hc=heureCourte(e);
+  const ou=[e.exterieur?`${e.v} (à l’extérieur)`:e.v, hc?'':(e.h||''), e.lieu||''].filter(Boolean).join(' · ');
+  return `<div class="mini"><span class="h">${hc||CATS[e.c].e}</span><div><strong>${titreLien(e)}</strong><small>${hc?CATS[e.c].e+' ':''}${ou}</small></div></div>`;
+}
+function colonnes(list){
+  return `<div class="wkg">`+parJour(list).map(([iso,l])=>{
+    const j=nomJour(iso);
+    return `<div class="col${j.we?' we':''}"><h3>${j.txt.replace(/ \d+ \S+$/,'')}<small>${new Date(iso).getDate()} ${MOIS[new Date(iso).getMonth()]} · ${l.length}</small></h3>${l.map(mini).join('')}</div>`;
+  }).join('')+`</div>`;
+}
 function renderWeekend(){
   const {ven,dim,auj}=bornesWeekend();
   const a=isoL(ven>auj?ven:auj), b=isoL(dim);
@@ -408,19 +473,19 @@ function renderWeekend(){
     ? `du vendredi ${ven.getDate()} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`
     : `du vendredi ${ven.getDate()} ${MOIS[ven.getMonth()]} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`;
   document.getElementById('wkt').textContent = mv ? `Ce week-end à ${mv}` : 'Ce week-end près de chez vous';
-  // memes garde-fous que l'agenda : au-dela de 10 jours c'est un programme, pas une sortie
-  const wk=EV.filter(e=>e.d<=b && (e.fin||e.d)>=a && (new Date(e.fin||e.d)-new Date(e.d))<=10*86400000)
-             .sort((x,y)=>x.d.localeCompare(y.d)||(x.h||'').localeCompare(y.h||''));
+  // une colonne par jour ; une manifestation de plusieurs jours parait dans chacun.
+  // Au-dela de 10 jours c'est un programme : il ne parait qu'a son debut (meme regle que l'agenda).
+  const wk=deplie(EV).filter(e=>e.d>=a && e.d<=b);
   const el=document.getElementById('wkl');
   if(!mv){
     const l=wk.filter(e=>!e.exterieur);
-    el.innerHTML = l.length ? l.map(ligne).join('') : '<p class="empty">Rien d\'annoncé pour ce week-end pour l\'instant.</p>';
+    el.innerHTML = l.length ? colonnes(l) : '<p class="empty">Rien d\'annoncé pour ce week-end pour l\'instant.</p>';
     return;
   }
   const ici=wk.filter(e=>e.v===mv), ailleurs=wk.filter(e=>e.v!==mv && e.c!=='foot');
-  let out = ici.length ? ici.map(ligne).join('')
+  let out = ici.length ? colonnes(ici)
     : `<p class="empty">Rien d'annoncé à ${mv} ce week-end. Vous organisez quelque chose ? <a href="#societes">Dites-le-nous</a>.</p>`;
-  if(ailleurs.length) out+=`<div class="sep">Ailleurs dans la plaine</div>`+ailleurs.map(ligne).join('');
+  if(ailleurs.length) out+=`<div class="sep">Ailleurs dans la plaine</div>`+colonnes(ailleurs);
   el.innerHTML=out;
 }
 const TITRE=document.title;
@@ -435,6 +500,7 @@ function choisirVillage(v, memorise){
     history.replaceState(null,'', v ? `?village=${slug(v)}` : location.pathname);
   }
   document.title = v ? `${v} ce week-end · Le Battoir` : TITRE;
+  nbJours=NB_JOURS;
   renderWeekend(); render();
 }
 
@@ -467,28 +533,31 @@ function render(){
   document.getElementById('count').textContent =
     list.length ? `${list.length} manifestation${list.length>1?'s':''} à venir` : '';
   if(!list.length){ el.innerHTML='<p class="empty">Rien ne correspond à cette sélection.</p>'; return; }
-  let out='', lastM='';
-  for(const e of list){
-    const dt=new Date(e.d), m=`${MOIS[dt.getMonth()]} ${dt.getFullYear()}`;
+  // Un bandeau par jour. On montre les NB_JOURS premiers jours ; le reste a la demande,
+  // pour ne pas derouler 200 lignes a quelqu'un qui cherche son week-end.
+  const jours=parJour(list);
+  let out='', lastM='', vus=0;
+  for(const [iso,l] of jours.slice(0,nbJours)){
+    const dt=new Date(iso), m=`${MOIS[dt.getMonth()]} ${dt.getFullYear()}`;
     if(m!==lastM){ out+=`<div class="month">${m}</div>`; lastM=m; }
-    // 26.08.2026 : deux ajouts.
-    // 1) e.lieu — la salle ou le terrain. Le champ existait et n'etait pas affiche :
-    //    « Concerts a Chavornay » ne disait pas « O ruines du Vieux-Moulin », et un
-    //    match ne disait pas son stade. Pour un agenda, ou l'on va vaut l'heure.
-    // 2) e.exterieur — le drapeau existait aussi, publier.py s'en servait deja pour
-    //    le message (« a l'exterieur »), la page l'ignorait. Un match du FC Champvent
-    //    joue a Lonay s'affichait comme un match a Champvent.
-    out+=ligne(e);
+    const j=nomJour(iso);
+    out+=`<div class="jour${j.we?' we':''}"><b>${j.txt}</b><span>${l.length} sortie${l.length>1?'s':''}</span></div>`;
+    out+=l.map(ligne).join('');
+    vus+=l.length;
   }
+  if(jours.length>nbJours)
+    out+=`<button class="btn s plus" id="plus">Voir la suite (${list.length-vus} autres)</button>`;
   el.innerHTML=out;
+  const bp=document.getElementById('plus');
+  if(bp) bp.addEventListener('click',()=>{ nbJours+=NB_JOURS; render(); });
 }
-document.getElementById('fv').addEventListener('change',e=>{fv=e.target.value;render()});
+document.getElementById('fv').addEventListener('change',e=>{fv=e.target.value;nbJours=NB_JOURS;render()});
 document.getElementById('mv').addEventListener('change',e=>choisirVillage(e.target.value,true));
 document.getElementById('fc').addEventListener('click',e=>{
   const b=e.target.closest('.chip'); if(!b)return;
   const c=b.dataset.c, on=fcats.has(c);
   on?fcats.delete(c):fcats.add(c);
-  b.setAttribute('aria-pressed',String(!on)); render();
+  b.setAttribute('aria-pressed',String(!on)); nbJours=NB_JOURS; render();
 });
 
 fetch('events.json?v='+Date.now())
