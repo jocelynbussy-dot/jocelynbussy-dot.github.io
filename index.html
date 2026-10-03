@@ -102,6 +102,16 @@ section{padding:44px 0}
   padding:2px 7px;border:1px solid var(--trait);margin-right:7px;vertical-align:1px}
 .empty{padding:30px 0;color:var(--gris);font-size:15px}
 
+/* ---------- ce week-end (03.10.2026) ---------- */
+.wk{background:var(--creme);border-bottom:3px solid var(--noir);padding:36px 0 30px}
+.wk .filters{margin:16px 0 4px}
+.wk .ev{border-bottom-color:#d9d0c0}
+.wk .sep{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
+  font-size:13px;color:var(--rouge);border-bottom:1.5px solid #d9d0c0;padding-bottom:6px;margin:24px 0 4px}
+.wk .empty{padding:18px 0 6px}
+.wk .suite{margin-top:18px;font-size:14.5px}
+.donnees{margin-top:18px;font-size:13px;line-height:1.5;max-width:74ch}
+
 /* ---------- sociétés ---------- */
 .soc{background:var(--creme);border-top:3px solid var(--noir);border-bottom:3px solid var(--noir)}
 .soc h2{font-size:26px}
@@ -113,7 +123,8 @@ section{padding:44px 0}
 
 /* ---------- villages ---------- */
 .vlist{columns:3;column-gap:26px;font-size:14.5px;margin-top:16px;color:#222222}
-.vlist span{display:block;padding:2px 0;break-inside:avoid}
+.vlist a{display:block;padding:2px 0;break-inside:avoid;text-decoration:none}
+.vlist a:hover{color:var(--rouge);text-decoration:underline}
 
 /* ---------- mobile ----------
    Ajout 24.08.2026. Le fichier n'avait qu'une seule media query (.vlist).
@@ -121,8 +132,7 @@ section{padding:44px 0}
    logo 54 + wordmark Oswald 30 + les 3 liens de nav depassent les 350 px
    utiles, "VILLAGES" sortait de l'ecran. Ce debordement elargissait le
    document, donc TOUT le contenu se retrouvait colle aux bords malgre le
-   padding de .wrap — un seul bug, visible partout. Constate par Jocelyn
-   sur capture le 23.08. */
+   padding de .wrap — un seul bug, visible partout. Constate sur capture le 23.08. */
 @media(max-width:700px){
   .bar{flex-wrap:wrap;gap:12px;padding:14px 0}
   .wordmark .n{font-size:25px}
@@ -199,6 +209,20 @@ footer a{color:var(--noir);text-decoration:underline}
   </div>
 </div>
 
+<section id="weekend" class="wk">
+  <div class="wrap">
+    <div class="stitle">
+      <h2 id="wkt">Ce week-end près de chez vous</h2>
+      <span id="wkd"></span>
+    </div>
+    <div class="filters">
+      <select id="mv" aria-label="Choisir mon village"><option value="">Choisir mon village</option></select>
+    </div>
+    <div id="wkl"></div>
+    <p class="suite"><a href="#agenda">Tout l'agenda, semaine après semaine</a></p>
+  </div>
+</section>
+
 <section id="agenda" class="wrap">
   <div class="stitle">
     <h2>L'agenda</h2>
@@ -232,7 +256,7 @@ footer a{color:var(--noir);text-decoration:underline}
 </section>
 
 <section id="villages" class="wrap">
-  <div class="stitle"><h2>Les 36 villages</h2><span>Le périmètre de la plaine de l'Orbe</span></div>
+  <div class="stitle"><h2>Les 36 villages</h2><span>Cliquez sur le vôtre pour voir son week-end</span></div>
   <div class="vlist" id="vl"></div>
 
   <div class="pourquoi">
@@ -260,6 +284,13 @@ footer a{color:var(--noir);text-decoration:underline}
     <a href="https://www.instagram.com/lebattoir" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 5.4a4.44 4.44 0 100 8.88 4.44 4.44 0 000-8.88zm0 7.32a2.88 2.88 0 110-5.76 2.88 2.88 0 010 5.76zm5.65-7.5a1.04 1.04 0 11-2.07 0 1.04 1.04 0 012.07 0z"/></svg>Instagram</a>
   </div>
   </div>
+  <div class="wrap">
+    <p class="donnees" id="donnees"><strong>Vos données.</strong> Le Battoir ne dépose aucun cookie et ne demande aucun compte.
+    Si vous choisissez votre village, ce choix est gardé dans votre navigateur, pour vous le reproposer à la prochaine visite.
+    <span id="dgc" hidden>Nous comptons les visites avec GoatCounter, un outil sans cookie qui ne permet pas de vous identifier.</span>
+    Les polices d'écriture sont chargées depuis Google Fonts, qui reçoit de ce fait votre adresse IP.
+    Une question&nbsp;: <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
+  </div>
 </footer>
 
 <script>
@@ -281,7 +312,21 @@ const JOURS=['dim','lun','mar','mer','jeu','ven','sam'];
 const MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
 let fv='', fcats=new Set();
 
-document.getElementById('vl').innerHTML = VILLAGES.map(v=>`<span>${v}</span>`).join('');
+// 03.10.2026 : « ce week-end pres de chez moi ». Chaque village a son adresse
+// (?village=chavornay), partageable, et la liste du bas y mene.
+const slug=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+let mv='';
+document.getElementById('vl').innerHTML = VILLAGES.map(v=>`<a href="?village=${slug(v)}#weekend">${v}</a>`).join('');
+document.getElementById('mv').insertAdjacentHTML('beforeend', VILLAGES.map(v=>`<option>${v}</option>`).join(''));
+
+// Mesure des visites (GoatCounter, sans cookie). Vide = aucune mesure, aucun appel.
+// Les liens marques par canal s'ecrivent ?ref=whatsapp, ?ref=tiktok, ?ref=qr
+const GC_CODE='lebattoir';
+if(GC_CODE && /(^|\.)lebattoir\.ch$/.test(location.hostname)){
+  const g=document.createElement('script'); g.async=true; g.src='https://gc.zgo.at/count.js';
+  g.dataset.goatcounter=`https://${GC_CODE}.goatcounter.com/count`; document.head.appendChild(g);
+  document.getElementById('dgc').hidden=false;
+}
 document.getElementById('fc').innerHTML = Object.entries(CATS)
   .map(([k,c])=>`<button class="chip" data-c="${k}" aria-pressed="false">${c.e} ${c.l}</button>`).join('');
 
@@ -304,7 +349,7 @@ function plage(e){
     : `du ${j(a)} ${mois(a)} au ${j(b)} ${mois(b)}`;
 }
 
-// 18.09.2026, remarque de Jocelyn : « on ne voit pas que cela dure 5 jours ».
+// 18.09.2026, remarque : « on ne voit pas que cela dure 5 jours ».
 // La plage etait dans la ligne grise, trop discrete. La pastille de date le dit
 // maintenant elle-meme : « 23 / au 27 » au lieu de « 23 / MER ».
 // Une ligne par journee pour les manifestations de 2 a 10 jours.
@@ -331,14 +376,76 @@ function badge(e, dt){
   return JOURS2[dt.getDay()];
 }
 
+function ligne(e){
+    const dt=new Date(e.d);
+    const ou = e.exterieur ? `${e.v} \u2014 à l’extérieur` : e.v;
+    // 18.09.2026 : ne pas ecrire deux fois la meme chose. L'agenda d'Orbe donne
+    // lieu = organisateur pour la Fete Suisse (« Centre culturel Henosis · Centre
+    // culturel Henosis »).
+    const org = (e.o && e.o.trim() === (e.lieu||'').trim()) ? '' : (e.o||'');
+    const det=[ou, plage(e), e.h||'', e.lieu||'', org].filter(Boolean).join(' \u00b7 ');
+    return `<article class="ev">
+      <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${badge(e,dt)}</s></div>
+      <div>
+        <h3>${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t}</h3>
+        <div class="meta"><span class="tag">${CATS[e.c].e} ${CATS[e.c].l}</span>${det}</div>
+      </div></article>`;
+}
+
+// Le week-end affiche : vendredi a dimanche. Du lundi au jeudi, celui qui vient.
+const isoL=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+function bornesWeekend(){
+  const n=new Date(); n.setHours(0,0,0,0);
+  const g=n.getDay(), ven=new Date(n);
+  ven.setDate(n.getDate()+(g===0?-2:g===6?-1:5-g));
+  const dim=new Date(ven); dim.setDate(ven.getDate()+2);
+  return {ven,dim,auj:n};
+}
+function renderWeekend(){
+  const {ven,dim,auj}=bornesWeekend();
+  const a=isoL(ven>auj?ven:auj), b=isoL(dim);
+  document.getElementById('wkd').textContent = ven.getMonth()===dim.getMonth()
+    ? `du vendredi ${ven.getDate()} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`
+    : `du vendredi ${ven.getDate()} ${MOIS[ven.getMonth()]} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`;
+  document.getElementById('wkt').textContent = mv ? `Ce week-end à ${mv}` : 'Ce week-end près de chez vous';
+  // memes garde-fous que l'agenda : au-dela de 10 jours c'est un programme, pas une sortie
+  const wk=EV.filter(e=>e.d<=b && (e.fin||e.d)>=a && (new Date(e.fin||e.d)-new Date(e.d))<=10*86400000)
+             .sort((x,y)=>x.d.localeCompare(y.d)||(x.h||'').localeCompare(y.h||''));
+  const el=document.getElementById('wkl');
+  if(!mv){
+    const l=wk.filter(e=>!e.exterieur);
+    el.innerHTML = l.length ? l.map(ligne).join('') : '<p class="empty">Rien d\'annoncé pour ce week-end pour l\'instant.</p>';
+    return;
+  }
+  const ici=wk.filter(e=>e.v===mv), ailleurs=wk.filter(e=>e.v!==mv && e.c!=='foot');
+  let out = ici.length ? ici.map(ligne).join('')
+    : `<p class="empty">Rien d'annoncé à ${mv} ce week-end. Vous organisez quelque chose ? <a href="#societes">Dites-le-nous</a>.</p>`;
+  if(ailleurs.length) out+=`<div class="sep">Ailleurs dans la plaine</div>`+ailleurs.map(ligne).join('');
+  el.innerHTML=out;
+}
+const TITRE=document.title;
+function choisirVillage(v, memorise){
+  mv=v;
+  document.getElementById('mv').value=v;
+  const f=document.getElementById('fv');
+  fv=[...f.options].some(o=>o.value===v) ? v : '';
+  f.value=fv;
+  if(memorise){
+    try{ v ? localStorage.setItem('village',v) : localStorage.removeItem('village'); }catch(_){}
+    history.replaceState(null,'', v ? `?village=${slug(v)}` : location.pathname);
+  }
+  document.title = v ? `${v} ce week-end · Le Battoir` : TITRE;
+  renderWeekend(); render();
+}
+
 function render(){
   const now = new Date(); now.setHours(0,0,0,0);
-  // 18.09.2026 — signale par Myriam Schertenleib (Missa Latina, 26-27.09) : « on voit
+  // 18.09.2026 — signale par une annonceuse : « on voit
   // l'annonce sous le 26.09, mais pas sous le 27.09 ». Une manifestation sur plusieurs
   // jours ne paraissait qu'a sa date de debut et disparaissait des ce premier jour passe
   // (la Fete de la saucisse aux choux, 5 jours, se serait effacee du site des le jeudi soir).
   // ➜ On filtre sur la date de FIN, et la ligne porte la plage complete (voir plage()).
-  // Choix de Jocelyn le 18.09 : UNE ligne par manifestation, pas une repetition par jour.
+  // Choix du 18.09 : UNE ligne par manifestation, pas une repetition par jour.
   // Garde-fou du 18.09 : au-dela de 10 jours ce n'est plus une manifestation mais un
   // PROGRAMME (« Programme 2026 du Stand de Tir », 15.04 -> 31.12). On le garde a sa date
   // de debut, sinon il squatte le haut de l'agenda toute l'annee.
@@ -347,7 +454,7 @@ function render(){
     const d0=new Date(e.d), f=new Date(e.fin||e.d);
     return (f-d0) > DIX_JOURS ? d0 : f;
   };
-  // 18.09.2026, choix de Jocelyn : « c'est mieux de mettre vraiment tous les jours ».
+  // 18.09.2026, choix : « c'est mieux de mettre vraiment tous les jours ».
   // On DEPLIE chaque manifestation de 2 a 10 jours : une ligne par journee, chacune
   // marquee « jour 2 sur 5 ». Mesure avant de le faire : 9 manifestations concernees,
   // +26 lignes sur 193 (13 %). Pour revenir en arriere : remettre `EV` a la place de
@@ -371,22 +478,12 @@ function render(){
     // 2) e.exterieur — le drapeau existait aussi, publier.py s'en servait deja pour
     //    le message (« a l'exterieur »), la page l'ignorait. Un match du FC Champvent
     //    joue a Lonay s'affichait comme un match a Champvent.
-    const ou = e.exterieur ? `${e.v} \u2014 à l’extérieur` : e.v;
-    // 18.09.2026 : ne pas ecrire deux fois la meme chose. L'agenda d'Orbe donne
-    // lieu = organisateur pour la Fete Suisse (« Centre culturel Henosis · Centre
-    // culturel Henosis »).
-    const org = (e.o && e.o.trim() === (e.lieu||'').trim()) ? '' : (e.o||'');
-    const det=[ou, plage(e), e.h||'', e.lieu||'', org].filter(Boolean).join(' \u00b7 ');
-    out+=`<article class="ev">
-      <div class="d"><b>${String(dt.getDate()).padStart(2,'0')}</b><s>${badge(e,dt)}</s></div>
-      <div>
-        <h3>${e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t}</h3>
-        <div class="meta"><span class="tag">${CATS[e.c].e} ${CATS[e.c].l}</span>${det}</div>
-      </div></article>`;
+    out+=ligne(e);
   }
   el.innerHTML=out;
 }
 document.getElementById('fv').addEventListener('change',e=>{fv=e.target.value;render()});
+document.getElementById('mv').addEventListener('change',e=>choisirVillage(e.target.value,true));
 document.getElementById('fc').addEventListener('click',e=>{
   const b=e.target.closest('.chip'); if(!b)return;
   const c=b.dataset.c, on=fcats.has(c);
@@ -402,7 +499,12 @@ fetch('events.json?v='+Date.now())
      [...new Set(EV.map(e=>e.v))].sort().forEach(v=>{
         const o=document.createElement('option'); o.value=v; o.textContent=v; fvSel.appendChild(o);
      });
-     render();
+     // village demande par l'adresse, sinon celui garde dans le navigateur
+     const q=new URLSearchParams(location.search).get('village');
+     let v=q ? VILLAGES.find(x=>slug(x)===slug(q)) : '';
+     if(!v){ try{ v=localStorage.getItem('village')||''; }catch(_){} }
+     if(!VILLAGES.includes(v)) v='';
+     choisirVillage(v,false);
   })
   .catch(()=>{document.getElementById('list').innerHTML=
      '<p class="empty">L\'agenda n\'a pas pu être chargé. Réessayez dans un instant.</p>';});
