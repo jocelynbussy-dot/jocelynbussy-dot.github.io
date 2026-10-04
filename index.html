@@ -132,6 +132,22 @@ section{padding:44px 0}
 .mini strong{font-weight:600;display:block}
 .mini small{display:block;font-size:12.5px;color:var(--gris);margin-top:2px}
 
+/* ---------- mon village : meteo, routes, entreprises (03.10.2026) ---------- */
+.mvs{padding:38px 0 8px}
+.mvg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:16px;align-items:start}
+.bloc{border:1px solid var(--trait);border-top:4px solid var(--noir);background:#fff}
+.bloc h3{font-size:17px;letter-spacing:.04em;padding:11px 14px 9px;border-bottom:1px solid var(--trait)}
+.bloc .it{padding:10px 14px;border-bottom:1px solid var(--trait);font-size:14.5px;line-height:1.35}
+.bloc .it strong{font-weight:600}
+.bloc .it small{display:block;font-size:12.5px;color:var(--gris);margin-top:2px}
+.bloc .rien{padding:12px 14px;font-size:14px;color:var(--gris)}
+.bloc .src{padding:9px 14px 11px;font-size:11.5px;color:var(--gris);line-height:1.4}
+.bloc .quand{font-family:Oswald,sans-serif;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--rouge);display:block;margin-bottom:2px}
+.met{display:grid;grid-template-columns:54px 30px 1fr;gap:8px;align-items:center;padding:9px 14px;border-bottom:1px solid var(--trait);font-size:14.5px}
+.met b{font-family:Oswald,sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
+.met i{font-style:normal;font-size:21px;text-align:center}
+.met small{display:block;font-size:12.5px;color:var(--gris)}
+
 /* ---------- sociétés ---------- */
 .soc{background:var(--creme);border-top:3px solid var(--noir);border-bottom:3px solid var(--noir)}
 .soc h2{font-size:26px}
@@ -243,6 +259,18 @@ footer a{color:var(--noir);text-decoration:underline}
   </div>
 </section>
 
+<section id="village" class="wrap mvs" hidden>
+  <div class="stitle">
+    <h2 id="mvt">Dans la plaine</h2>
+    <span id="mvsous">météo, routes et nouvelles entreprises</span>
+  </div>
+  <div class="mvg">
+    <div class="bloc"><h3>La météo</h3><div id="bmeteo"><p class="rien">Chargement…</p></div></div>
+    <div class="bloc"><h3>Sur les routes</h3><div id="broutes"></div></div>
+    <div class="bloc"><h3>Nouvelles entreprises</h3><div id="bentr"></div></div>
+  </div>
+</section>
+
 <section id="agenda" class="wrap">
   <div class="stitle">
     <h2>L'agenda</h2>
@@ -308,7 +336,7 @@ footer a{color:var(--noir);text-decoration:underline}
     <p class="donnees" id="donnees"><strong>Vos données.</strong> Le Battoir ne dépose aucun cookie et ne demande aucun compte.
     Si vous choisissez votre village, ce choix est gardé dans votre navigateur, pour vous le reproposer à la prochaine visite.
     <span id="dgc" hidden>Nous comptons les visites avec GoatCounter, un outil sans cookie qui ne permet pas de vous identifier.</span>
-    Les polices d'écriture sont chargées depuis Google Fonts, qui reçoit de ce fait votre adresse IP.
+    Les polices d'écriture sont chargées depuis Google Fonts, et la météo est demandée au service Open-Meteo quand vous ouvrez la page&nbsp;: tous deux reçoivent de ce fait votre adresse IP.
     Une question&nbsp;: <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
   </div>
 </footer>
@@ -472,7 +500,7 @@ function renderWeekend(){
   document.getElementById('wkd').textContent = ven.getMonth()===dim.getMonth()
     ? `du vendredi ${ven.getDate()} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`
     : `du vendredi ${ven.getDate()} ${MOIS[ven.getMonth()]} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`;
-  document.getElementById('wkt').textContent = mv ? `Ce week-end à ${mv}` : 'Ce week-end près de chez vous';
+  document.getElementById('wkt').textContent = mv ? `Ce week-end ${aLieu(mv)}` : 'Ce week-end près de chez vous';
   // une colonne par jour ; une manifestation de plusieurs jours parait dans chacun.
   // Au-dela de 10 jours c'est un programme : il ne parait qu'a son debut (meme regle que l'agenda).
   const wk=deplie(EV).filter(e=>e.d>=a && e.d<=b);
@@ -484,10 +512,68 @@ function renderWeekend(){
   }
   const ici=wk.filter(e=>e.v===mv), ailleurs=wk.filter(e=>e.v!==mv && e.c!=='foot');
   let out = ici.length ? colonnes(ici)
-    : `<p class="empty">Rien d'annoncé à ${mv} ce week-end. Vous organisez quelque chose ? <a href="#societes">Dites-le-nous</a>.</p>`;
+    : `<p class="empty">Rien d'annoncé ${aLieu(mv)} ce week-end. Vous organisez quelque chose ? <a href="#societes">Dites-le-nous</a>.</p>`;
   if(ailleurs.length) out+=`<div class="sep">Ailleurs dans la plaine</div>`+colonnes(ailleurs);
   el.innerHTML=out;
 }
+// ---- Mon village : meteo, routes, nouvelles entreprises (03.10.2026) ----
+// villages.json est fabrique par build_villages.py (sources et regles : voir ce fichier).
+// Chaque bloc dit sa source et la date du releve. La meteo est demandee en direct.
+// « à Orbe », mais « aux Clées » et « à L'Abergement »
+const aLieu=v=>v.startsWith('Les ')?'aux '+v.slice(4):v.startsWith('Le ')?'au '+v.slice(3):'à '+v;
+let VD=null;
+const dcourt=iso=>{const d=new Date(iso);return `${d.getDate()} ${MOIS[d.getMonth()]}`;};
+const releve=iso=>iso?`relevé le ${dcourt(iso.slice(0,10))}`:'';
+const WMO=c=>c===0?['☀️','Ensoleillé']:c<=2?['🌤️','Assez ensoleillé']:c===3?['☁️','Couvert']
+  :c<=48?['🌫️','Brouillard']:c<=57?['🌦️','Bruine']:c<=67?['🌧️','Pluie']:c<=77?['🌨️','Neige']
+  :c<=82?['🌦️','Averses']:c<=86?['🌨️','Averses de neige']:['⛈️','Orage'];
+const METEO={};
+function renderMeteo(){
+  const lieu = mv && VD.coords[mv] ? mv : 'Orbe', c=VD.coords[lieu], el=document.getElementById('bmeteo');
+  if(!c){ el.innerHTML='<p class="rien">Météo indisponible.</p>'; return; }
+  const dessine=d=>{
+    if(lieu!==(mv && VD.coords[mv] ? mv : 'Orbe')) return;      // le village a change entre-temps
+    const JC=['dim','lun','mar','mer','jeu','ven','sam'];
+    el.innerHTML=d.time.map((t,i)=>{
+      const [e,l]=WMO(d.weather_code[i]), j=new Date(t);
+      const pluie=d.precipitation_probability_max && d.precipitation_probability_max[i]!=null ? ` · pluie ${d.precipitation_probability_max[i]} %` : '';
+      return `<div class="met"><b>${JC[j.getDay()]} ${j.getDate()}</b><i aria-hidden="true">${e}</i><div>${l}<small>${Math.round(d.temperature_2m_min[i])}° / ${Math.round(d.temperature_2m_max[i])}°${pluie}</small></div></div>`;
+    }).join('')+`<p class="src">Prévision pour ${lieu}. Modèle ICON de MétéoSuisse, via <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>, consulté à l'instant.</p>`;
+  };
+  if(METEO[lieu]){ dessine(METEO[lieu]); return; }
+  el.innerHTML='<p class="rien">Chargement…</p>';
+  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c[0]}&longitude=${c[1]}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FZurich&forecast_days=4&models=meteoswiss_icon_ch2`)
+    .then(r=>r.json()).then(j=>{ if(!j.daily) throw 0; METEO[lieu]=j.daily; dessine(j.daily); })
+    .catch(()=>{ el.innerHTML='<p class="rien">Météo indisponible pour l\'instant.</p>'; });
+}
+function renderVillage(){
+  if(!VD) return;
+  document.getElementById('village').hidden=false;
+  document.getElementById('mvt').textContent = mv ? aLieu(mv).replace(/^./,c=>c.toUpperCase()) : 'Dans la plaine';
+  const auj=isoL(new Date());
+  // routes : celles qui citent le village, et qui ne sont pas terminees
+  const r=VD.routes.liste.filter(x=>x.fin>=auj && (!mv || x.villages.includes(mv)));
+  document.getElementById('broutes').innerHTML = (r.length ? r.map(x=>{
+      const quand = x.debut<=auj ? `En cours, jusqu'au ${dcourt(x.fin)}`
+                  : x.debut===x.fin ? `Le ${dcourt(x.debut)}` : `Du ${dcourt(x.debut)} au ${dcourt(x.fin)}`;
+      const h = x.h_debut && x.h_fin ? ` · ${x.h_debut} à ${x.h_fin}` : '';
+      const det=[x.restrictions.join(', '), x.remarque, x.weekend?'':'pas le week-end'].filter(Boolean).join(' · ');
+      return `<div class="it"><span class="quand">${quand}${h}</span><strong>${x.nom}</strong><small>${det}</small></div>`;
+    }).join('') : `<p class="rien">Aucune restriction annoncée sur les routes cantonales${mv?` ${aLieu(mv)}`:''}.</p>`)
+    + `<p class="src">Routes cantonales seulement. Source : <a href="https://www.vd.ch/mobilite/loffre-de-mobilite-a-votre-disposition/transports-individuels-motorises-tim/restrictions-de-circulation-et-travaux" target="_blank" rel="noopener">État de Vaud, DGMR</a>, ${releve(VD.routes.releve)}.</p>`;
+  // entreprises : par commune (un hameau releve de sa commune)
+  const com = mv ? (VD.commune_de[mv]||mv) : '';
+  let e=VD.entreprises.liste.filter(x=>!com || x.commune===com);
+  const total=e.length; if(!mv) e=e.slice(0,6);
+  document.getElementById('bentr').innerHTML = (e.length ? e.map(x=>
+      `<div class="it"><strong><a href="${x.url}" target="_blank" rel="noopener">${x.nom}</a></strong>
+       <small>${x.commune} · ${x.forme} · publiée le ${dcourt(x.date)}</small>${x.but?`<small>${x.but}</small>`:''}</div>`
+    ).join('') : `<p class="rien">Aucune nouvelle société inscrite ${aLieu(com)} ces ${VD.entreprises.jours} derniers jours.</p>`)
+    + `<p class="src">${!mv && total>e.length ? `Les ${e.length} plus récentes sur ${total}. Choisissez un village pour voir les siennes. ` : ''}Inscriptions des ${VD.entreprises.jours} derniers jours. Source : <a href="https://www.shab.ch/" target="_blank" rel="noopener">Feuille officielle suisse du commerce</a>, ${releve(VD.entreprises.releve)}. Vous ne souhaitez pas y figurer ? <a href="mailto:annonce@lebattoir.ch?subject=Retrait%20des%20nouvelles%20entreprises">Écrivez-nous</a>.</p>`;
+  renderMeteo();
+}
+fetch('villages.json?v='+Date.now()).then(r=>r.json()).then(j=>{ VD=j; renderVillage(); }).catch(()=>{});
+
 const TITRE=document.title;
 function choisirVillage(v, memorise){
   mv=v;
@@ -501,7 +587,7 @@ function choisirVillage(v, memorise){
   }
   document.title = v ? `${v} ce week-end · Le Battoir` : TITRE;
   nbJours=NB_JOURS;
-  renderWeekend(); render();
+  renderWeekend(); render(); renderVillage();
 }
 
 function render(){
