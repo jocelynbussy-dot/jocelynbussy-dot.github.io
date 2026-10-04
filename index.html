@@ -134,7 +134,12 @@ section{padding:44px 0}
 
 /* ---------- mon village : meteo, routes, entreprises (03.10.2026) ---------- */
 .mvs{padding:38px 0 8px}
-.mvg{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:16px;align-items:start}
+/* 04.10.2026 : meteo et pratique sont toujours la -> rangee fixe, cote a cote.
+   Ce qui varie (routes, defibrillateurs, entreprises) vient dessous, en colonnes. */
+.mvtop{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:16px;align-items:start}
+.mvg{columns:3 250px;column-gap:16px;margin-top:16px}
+.mvg .bloc{break-inside:avoid;margin-bottom:16px}
+.bloc details summary{cursor:pointer;padding:10px 14px;font-size:14px;font-weight:600;border-bottom:1px solid var(--trait);color:var(--rouge)}
 .bloc{border:1px solid var(--trait);border-top:4px solid var(--noir);background:#fff}
 .bloc h3{font-size:17px;letter-spacing:.04em;padding:11px 14px 9px;border-bottom:1px solid var(--trait)}
 .bloc .it{padding:10px 14px;border-bottom:1px solid var(--trait);font-size:14.5px;line-height:1.35}
@@ -147,6 +152,16 @@ section{padding:44px 0}
 .met b{font-family:Oswald,sans-serif;font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:.04em}
 .met i{font-style:normal;font-size:21px;text-align:center}
 .met small{display:block;font-size:12.5px;color:var(--gris)}
+
+/* ---------- urgences (04.10.2026) ---------- */
+.urg{background:var(--noir);color:#fff;font-size:14px}
+.urg .wrap{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:baseline;padding-top:10px;padding-bottom:10px}
+.urg b{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.08em;font-size:13px;color:#f3b9ae}
+.urg a{color:#fff;text-decoration:none;white-space:nowrap}
+.urg a strong{font-family:Oswald,sans-serif;font-weight:600;font-size:16px;letter-spacing:.02em;border-bottom:2px solid var(--rouge)}
+.urg .plus{margin:0;display:inline;background:none;font-size:12.5px;opacity:.75;text-decoration:underline}
+.air{padding:9px 14px;border-bottom:1px solid var(--trait);font-size:13.5px}
+.wkcal{margin-top:10px;font-size:14px;padding:8px 12px;background:#fff;border-left:4px solid var(--rouge)}
 
 /* ---------- sociétés ---------- */
 .soc{background:var(--creme);border-top:3px solid var(--noir);border-bottom:3px solid var(--noir)}
@@ -245,6 +260,18 @@ footer a{color:var(--noir);text-decoration:underline}
   </div>
 </div>
 
+<!-- Urgences et gardes. Numeros lus sur vd.ch (dispositifs de soins vaudois, urgences) le 04.10.2026. -->
+<div class="urg" id="urgences">
+  <div class="wrap">
+    <b>Urgences</b>
+    <a href="tel:144"><strong>144</strong> ambulance</a>
+    <a href="tel:117"><strong>117</strong> police</a>
+    <a href="tel:118"><strong>118</strong> feu</a>
+    <a href="tel:0848133133"><strong>0848 133 133</strong> médecin et pharmacie de garde</a>
+    <a class="plus" href="https://www.vd.ch/sante-soins-et-handicap/dispositifs-de-soins-vaudois/urgences" target="_blank" rel="noopener">source : État de Vaud</a>
+  </div>
+</div>
+
 <section id="weekend" class="wk">
   <div class="wrap">
     <div class="stitle">
@@ -254,6 +281,7 @@ footer a{color:var(--noir);text-decoration:underline}
     <div class="filters">
       <select id="mv" aria-label="Choisir mon village"><option value="">Choisir mon village</option></select>
     </div>
+    <div class="wkcal" id="wkcal" hidden></div>
     <div id="wkl"></div>
     <p class="suite"><a href="#agenda">Tout l'agenda, semaine après semaine</a></p>
   </div>
@@ -262,11 +290,15 @@ footer a{color:var(--noir);text-decoration:underline}
 <section id="village" class="wrap mvs" hidden>
   <div class="stitle">
     <h2 id="mvt">Dans la plaine</h2>
-    <span id="mvsous">météo, routes et nouvelles entreprises</span>
+    <span id="mvsous">météo, routes, nouvelles entreprises, infos pratiques</span>
   </div>
-  <div class="mvg">
+  <div class="mvtop" id="mvtop">
     <div class="bloc"><h3>La météo</h3><div id="bmeteo"><p class="rien">Chargement…</p></div></div>
-    <div class="bloc"><h3>Sur les routes</h3><div id="broutes"></div></div>
+    <div class="bloc" id="cprat" hidden><h3>Pratique</h3><div id="bprat"></div></div>
+  </div>
+  <div class="mvg" id="mvbas">
+    <div class="bloc" id="croutes"><h3>Sur les routes</h3><div id="broutes"></div></div>
+    <div class="bloc" id="cdefib" hidden><h3>Défibrillateurs</h3><div id="bdefib"></div></div>
     <div class="bloc"><h3>Nouvelles entreprises</h3><div id="bentr"></div></div>
   </div>
 </section>
@@ -336,7 +368,7 @@ footer a{color:var(--noir);text-decoration:underline}
     <p class="donnees" id="donnees"><strong>Vos données.</strong> Le Battoir ne dépose aucun cookie et ne demande aucun compte.
     Si vous choisissez votre village, ce choix est gardé dans votre navigateur, pour vous le reproposer à la prochaine visite.
     <span id="dgc" hidden>Nous comptons les visites avec GoatCounter, un outil sans cookie qui ne permet pas de vous identifier.</span>
-    Les polices d'écriture sont chargées depuis Google Fonts, et la météo est demandée au service Open-Meteo quand vous ouvrez la page&nbsp;: tous deux reçoivent de ce fait votre adresse IP.
+    Les polices d'écriture sont chargées depuis Google Fonts, et la météo est demandée au service Open-Meteo (avec la qualité de l'air) quand vous ouvrez la page&nbsp;: tous deux reçoivent de ce fait votre adresse IP.
     Une question&nbsp;: <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
   </div>
 </footer>
@@ -503,7 +535,11 @@ function renderWeekend(){
   document.getElementById('wkt').textContent = mv ? `Ce week-end ${aLieu(mv)}` : 'Ce week-end près de chez vous';
   // une colonne par jour ; une manifestation de plusieurs jours parait dans chacun.
   // Au-dela de 10 jours c'est un programme : il ne parait qu'a son debut (meme regle que l'agenda).
-  const wk=deplie(EV).filter(e=>e.d>=a && e.d<=b);
+  const wk=deplie(EV).filter(e=>!e._cal && e.d>=a && e.d<=b);
+  // rappel : vacances ou jour ferie qui touchent ce week-end
+  const cal=EV.filter(e=>e._cal && e.d<=b && (e.fin||e.d)>=a), wc=document.getElementById('wkcal');
+  wc.hidden=!cal.length;
+  wc.innerHTML=cal.map(e=>`${e.t}${e.fin!==e.d?`, du ${dcourt(e.d)} au ${dcourt(e.fin)}`:`, le ${dcourt(e.d)}`}`).join(' · ');
   const el=document.getElementById('wkl');
   if(!mv){
     const l=wk.filter(e=>!e.exterieur);
@@ -533,18 +569,54 @@ function renderMeteo(){
   if(!c){ el.innerHTML='<p class="rien">Météo indisponible.</p>'; return; }
   const dessine=d=>{
     if(lieu!==(mv && VD.coords[mv] ? mv : 'Orbe')) return;      // le village a change entre-temps
+    setTimeout(()=>renderAir(lieu,c),0);
     const JC=['dim','lun','mar','mer','jeu','ven','sam'];
     el.innerHTML=d.time.map((t,i)=>{
       const [e,l]=WMO(d.weather_code[i]), j=new Date(t);
       const pluie=d.precipitation_probability_max && d.precipitation_probability_max[i]!=null ? ` · pluie ${d.precipitation_probability_max[i]} %` : '';
       return `<div class="met"><b>${JC[j.getDay()]} ${j.getDate()}</b><i aria-hidden="true">${e}</i><div>${l}<small>${Math.round(d.temperature_2m_min[i])}° / ${Math.round(d.temperature_2m_max[i])}°${pluie}</small></div></div>`;
-    }).join('')+`<p class="src">Prévision pour ${lieu}. Modèle ICON de MétéoSuisse, via <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>, consulté à l'instant.</p>`;
+    }).join('')+`<div class="air" id="bair" hidden></div><p class="src">Prévision pour ${lieu}. Modèle ICON de MétéoSuisse, via <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>, consulté à l'instant.</p>`;
   };
   if(METEO[lieu]){ dessine(METEO[lieu]); return; }
   el.innerHTML='<p class="rien">Chargement…</p>';
   fetch(`https://api.open-meteo.com/v1/forecast?latitude=${c[0]}&longitude=${c[1]}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FZurich&forecast_days=4&models=meteoswiss_icon_ch2`)
     .then(r=>r.json()).then(j=>{ if(!j.daily) throw 0; METEO[lieu]=j.daily; dessine(j.daily); })
     .catch(()=>{ el.innerHTML='<p class="rien">Météo indisponible pour l\'instant.</p>'; });
+}
+// Qualite de l'air (indice europeen) et pollens, quand il y en a. Meme service que la meteo.
+const AIR={};
+function renderAir(lieu,c){
+  const dessine=a=>{
+    const el=document.getElementById('bair'); if(!el || a.european_aqi==null) return;
+    const q=a.european_aqi, mot=q<=20?'bon':q<=40?'correct':q<=60?'moyen':q<=80?'mauvais':'très mauvais';
+    const P={alder_pollen:'aulne',birch_pollen:'bouleau',grass_pollen:'graminées',ragweed_pollen:'ambroisie'};
+    const pol=Object.entries(P).filter(([k])=>a[k]>=10).map(([,n])=>n);
+    el.innerHTML=`Air : <strong>${mot}</strong> (indice européen ${Math.round(q)})`+(pol.length?` · pollens : ${pol.join(', ')}`:'');
+    el.hidden=false;
+  };
+  if(AIR[lieu]){ dessine(AIR[lieu]); return; }
+  fetch(`https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${c[0]}&longitude=${c[1]}&current=european_aqi,grass_pollen,birch_pollen,alder_pollen,ragweed_pollen&timezone=Europe%2FZurich`)
+    .then(r=>r.json()).then(j=>{ if(j.current){ AIR[lieu]=j.current; dessine(j.current); } }).catch(()=>{});
+}
+// Infos pratiques de la commune : lues sur le site communal, lien vers la page a chaque ligne.
+function renderPratique(com){
+  const carte=document.getElementById('cprat'), P=VD.pratique && VD.pratique.communes && VD.pratique.communes[com];
+  if(!P || !(P.dechetterie||P.administration||P.marche)){ carte.hidden=true; return; }
+  const ligne=(titre,x,txt)=> x ? `<div class="it"><span class="quand">${titre}</span>${txt}<small><a href="${x.url}" target="_blank" rel="noopener">vérifier sur le site de la commune</a></small></div>` : '';
+  document.getElementById('bprat').innerHTML =
+      ligne('Déchetterie', P.dechetterie, P.dechetterie ? `${P.dechetterie.nom?`<strong>${P.dechetterie.nom}</strong><br>`:''}${P.dechetterie.horaires}` : '')
+    + ligne('Administration communale', P.administration, P.administration ? `${P.administration.horaires||''}${P.administration.telephone?`<br>Tél. ${P.administration.telephone}`:''}` : '')
+    + ligne('Marché', P.marche, P.marche ? `${P.marche.quand}${P.marche.lieu?` · ${P.marche.lieu}`:''}` : '')
+    + `<p class="src">Commune de ${com}. Horaires lus sur le site communal, ${releve(VD.pratique.releve)}. Ils peuvent changer : le site de la commune fait foi.</p>`;
+  carte.hidden=false;
+}
+function renderDefibs(){
+  const carte=document.getElementById('cdefib'), l=mv && VD.defibs && VD.defibs.par_village[mv];
+  if(!l || !l.length){ carte.hidden=true; return; }
+  document.getElementById('bdefib').innerHTML = l.map(x=>
+      `<div class="it"><strong>${x.lieu||'Emplacement non décrit'}</strong><small>${[x.acces, x.lat?`<a href="https://www.openstreetmap.org/?mlat=${x.lat}&mlon=${x.lon}#map=18/${x.lat}/${x.lon}" target="_blank" rel="noopener">voir sur la carte</a>`:'signalé par un habitant'].filter(Boolean).join(' · ')}</small></div>`).join('')
+    + `<p class="src">En cas d'arrêt cardiaque : appelez d'abord le 144. Liste non exhaustive : il en manque un ? <a href="mailto:annonce@lebattoir.ch?subject=D%C3%A9fibrillateur">Écrivez-nous</a>. Source : <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">contributeurs d'OpenStreetMap</a>, ${releve(VD.defibs.releve)}.</p>`;
+  carte.hidden=false;
 }
 function renderVillage(){
   if(!VD) return;
@@ -564,15 +636,30 @@ function renderVillage(){
   // entreprises : par commune (un hameau releve de sa commune)
   const com = mv ? (VD.commune_de[mv]||mv) : '';
   let e=VD.entreprises.liste.filter(x=>!com || x.commune===com);
-  const total=e.length; if(!mv) e=e.slice(0,6);
-  document.getElementById('bentr').innerHTML = (e.length ? e.map(x=>
-      `<div class="it"><strong><a href="${x.url}" target="_blank" rel="noopener">${x.nom}</a></strong>
-       <small>${x.commune} · ${x.forme} · publiée le ${dcourt(x.date)}</small>${x.but?`<small>${x.but}</small>`:''}</div>`
-    ).join('') : `<p class="rien">Aucune nouvelle société inscrite ${aLieu(com)} ces ${VD.entreprises.jours} derniers jours.</p>`)
+  const total=e.length; if(!mv) e=e.slice(0,9);
+  const fiche=x=>      `<div class="it"><strong><a href="${x.url}" target="_blank" rel="noopener">${x.nom}</a></strong>
+       <small>${x.commune} · ${x.forme} · publiée le ${dcourt(x.date)}</small>${x.but?`<small>${x.but}</small>`:''}</div>`;
+  document.getElementById('bentr').innerHTML = (e.length
+      ? e.slice(0,3).map(fiche).join('') + (e.length>3 ? `<details><summary>${e.length===4?'Voir la dernière':`Voir les ${e.length-3} autres`}</summary>${e.slice(3).map(fiche).join('')}</details>` : '')
+      : `<p class="rien">Aucune nouvelle société inscrite ${aLieu(com)} ces ${VD.entreprises.jours} derniers jours.</p>`)
     + `<p class="src">${!mv && total>e.length ? `Les ${e.length} plus récentes sur ${total}. Choisissez un village pour voir les siennes. ` : ''}Inscriptions des ${VD.entreprises.jours} derniers jours. Source : <a href="https://www.shab.ch/" target="_blank" rel="noopener">Feuille officielle suisse du commerce</a>, ${releve(VD.entreprises.releve)}. Vous ne souhaitez pas y figurer ? <a href="mailto:annonce@lebattoir.ch?subject=Retrait%20des%20nouvelles%20entreprises">Écrivez-nous</a>.</p>`;
+  renderPratique(com);
+  // sans infos pratiques (aucun village choisi), les routes montent a cote de la meteo
+  const cr=document.getElementById('croutes'), sansPrat=document.getElementById('cprat').hidden;
+  if(sansPrat) document.getElementById('mvtop').appendChild(cr); else document.getElementById('mvbas').prepend(cr);
+  renderDefibs();
   renderMeteo();
 }
-fetch('villages.json?v='+Date.now()).then(r=>r.json()).then(j=>{ VD=j; renderVillage(); }).catch(()=>{});
+// Vacances scolaires et jours feries : ils entrent dans l'agenda comme des lignes « Officiel »,
+// visibles quel que soit le village choisi.
+function ajouteCalendrier(){
+  if(!VD || !VD.calendrier || !EV.length || EV.some(e=>e._cal)) return;
+  for(const c of VD.calendrier.liste)
+    EV.push({d:c.d, fin:c.fin, t:c.t, v:'Canton de Vaud', c:'officiel', o:'', h:'', lieu:'', url:VD.calendrier.source, _cal:true});
+  EV.sort((a,b)=>a.d.localeCompare(b.d));
+  renderWeekend(); render();
+}
+fetch('villages.json?v='+Date.now()).then(r=>r.json()).then(j=>{ VD=j; renderVillage(); ajouteCalendrier(); }).catch(()=>{});
 
 const TITRE=document.title;
 function choisirVillage(v, memorise){
@@ -612,7 +699,7 @@ function render(){
   // +26 lignes sur 193 (13 %). Pour revenir en arriere : remettre `EV` a la place de
   // `deplie(EV)` ci-dessous, rien d'autre.
   const list = deplie(EV).filter(e=>finUtile(e)>=now)
-                 .filter(e=>!fv||e.v===fv)
+                 .filter(e=>!fv||e.v===fv||e._cal)
                  .filter(e=>!fcats.size||fcats.has(e.c))
                  .sort((a,b)=>a.d.localeCompare(b.d));
   const el=document.getElementById('list');
@@ -660,6 +747,7 @@ fetch('events.json?v='+Date.now())
      if(!v){ try{ v=localStorage.getItem('village')||''; }catch(_){} }
      if(!VILLAGES.includes(v)) v='';
      choisirVillage(v,false);
+     ajouteCalendrier();
   })
   .catch(()=>{document.getElementById('list').innerHTML=
      '<p class="empty">L\'agenda n\'a pas pu être chargé. Réessayez dans un instant.</p>';});
