@@ -141,7 +141,7 @@ section{padding:44px 0}
 .mvg .bloc{break-inside:avoid;margin-bottom:16px}
 .bloc details summary{cursor:pointer;padding:10px 14px;font-size:14px;font-weight:600;border-bottom:1px solid var(--trait);color:var(--rouge)}
 .bloc{border:1px solid var(--trait);border-top:4px solid var(--noir);background:#fff}
-.bloc h3{font-size:17px;letter-spacing:.04em;padding:11px 14px 9px;border-bottom:1px solid var(--trait)}
+
 .bloc .it{padding:10px 14px;border-bottom:1px solid var(--trait);font-size:14.5px;line-height:1.35}
 .bloc .it strong{font-weight:600}
 .bloc .it small{display:block;font-size:12.5px;color:var(--gris);margin-top:2px}
@@ -162,6 +162,33 @@ section{padding:44px 0}
 .urg .plus{margin:0;display:inline;background:none;font-size:12.5px;opacity:.75;text-decoration:underline}
 .air{padding:9px 14px;border-bottom:1px solid var(--trait);font-size:13.5px}
 .wkcal{margin-top:10px;font-size:14px;padding:8px 12px;background:#fff;border-left:4px solid var(--rouge)}
+
+/* ---------- telephone : raccourcis et cartes repliables (05.10.2026) ----------
+   Remarque : « sur un telephone il y a beaucoup de choses, on doit scroller beaucoup pour
+   arriver a l'agenda ». Deux reponses : une barre de raccourcis qui reste collee en haut,
+   et les cartes du village repliees par defaut sur telephone (un resume sur la ligne du titre). */
+.rac{display:none}
+details.bloc>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;padding:11px 14px 9px;border-bottom:1px solid var(--trait)}
+details.bloc>summary::-webkit-details-marker{display:none}
+details.bloc>summary h3{font-size:17px;letter-spacing:.04em;padding:0;border:0}
+details.bloc>summary .res{font-size:13px;color:var(--gris);margin-left:auto;text-align:right}
+details.bloc>summary::after{content:'+';font-family:Oswald,sans-serif;font-weight:600;font-size:20px;color:var(--rouge);line-height:1}
+details.bloc[open]>summary::after{content:'3'}
+details.bloc:not([open])>summary{border-bottom:0}
+.col details>summary{cursor:pointer;padding:9px 14px;font-size:13.5px;font-weight:600;color:var(--rouge);border-top:1px solid var(--trait)}
+@media(max-width:700px){
+  .rac{display:flex;position:sticky;top:0;z-index:6;background:#fff;border-bottom:2px solid var(--noir)}
+  .rac a{flex:1;text-align:center;text-decoration:none;font-family:Oswald,sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.03em;font-size:12px;padding:11px 1px;border-right:1px solid var(--trait)}
+  .rac a:last-child{border-right:0}
+  .rac a.u{color:var(--rouge)}
+  header nav{display:none}
+  .jour{top:41px}
+  section[id],div[id=urgences]{scroll-margin-top:44px}
+  .mvs{padding:26px 0 0}
+  .mvtop,.mvg{gap:10px;margin-top:10px}.mvg{column-gap:10px}.mvg .bloc{margin-bottom:10px}
+  .wk{padding:26px 0 22px}
+}
 
 /* ---------- sociétés ---------- */
 .soc{background:var(--creme);border-top:3px solid var(--noir);border-bottom:3px solid var(--noir)}
@@ -241,6 +268,14 @@ footer a{color:var(--noir);text-decoration:underline}
   <div class="baseline">Tout ce qui se passe dans les 36 villages de la plaine de l'Orbe</div>
 </header>
 
+<nav class="rac" aria-label="Raccourcis">
+  <a href="#weekend">Week-end</a>
+  <a href="#agenda">Agenda</a>
+  <a href="#village">Village</a>
+  <a href="#societes">Annoncer</a>
+  <a class="u" href="#urgences">Urgences</a>
+</nav>
+
 <div class="wrap hero">
   <h1>Vous ne raterez plus <em>rien</em> de ce qui se passe près de chez vous.</h1>
   <p>Lotos, soirées de sociétés, concerts, matchs, bals de jeunesse, marchés, séances communales.
@@ -293,13 +328,13 @@ footer a{color:var(--noir);text-decoration:underline}
     <span id="mvsous">météo, routes, nouvelles entreprises, infos pratiques</span>
   </div>
   <div class="mvtop" id="mvtop">
-    <div class="bloc"><h3>La météo</h3><div id="bmeteo"><p class="rien">Chargement…</p></div></div>
-    <div class="bloc" id="cprat" hidden><h3>Pratique</h3><div id="bprat"></div></div>
+    <details class="bloc"><summary><h3>La météo</h3><span class="res" id="rmeteo"></span></summary><div id="bmeteo"><p class="rien">Chargement…</p></div></details>
+    <details class="bloc" id="cprat" hidden><summary><h3>Pratique</h3><span class="res" id="rprat"></span></summary><div id="bprat"></div></details>
   </div>
   <div class="mvg" id="mvbas">
-    <div class="bloc" id="croutes"><h3>Sur les routes</h3><div id="broutes"></div></div>
-    <div class="bloc" id="cdefib" hidden><h3>Défibrillateurs</h3><div id="bdefib"></div></div>
-    <div class="bloc"><h3>Nouvelles entreprises</h3><div id="bentr"></div></div>
+    <details class="bloc" id="croutes"><summary><h3>Sur les routes</h3><span class="res" id="rroutes"></span></summary><div id="broutes"></div></details>
+    <details class="bloc" id="cdefib" hidden><summary><h3>Défibrillateurs</h3><span class="res" id="rdefib"></span></summary><div id="bdefib"></div></details>
+    <details class="bloc"><summary><h3>Nouvelles entreprises</h3><span class="res" id="rentr"></span></summary><div id="bentr"></div></details>
   </div>
 </section>
 
@@ -523,7 +558,7 @@ function mini(e){
 function colonnes(list){
   return `<div class="wkg">`+parJour(list).map(([iso,l])=>{
     const j=nomJour(iso);
-    return `<div class="col${j.we?' we':''}"><h3>${j.txt.replace(/ \d+ \S+$/,'')}<small>${new Date(iso).getDate()} ${MOIS[new Date(iso).getMonth()]} · ${l.length}</small></h3>${l.map(mini).join('')}</div>`;
+    return `<div class="col${j.we?' we':''}"><h3>${j.txt.replace(/ \d+ \S+$/,'')}<small>${new Date(iso).getDate()} ${MOIS[new Date(iso).getMonth()]} · ${l.length}</small></h3>${l.slice(0,6).map(mini).join('')}${l.length>6?`<details><summary>Voir les ${l.length-6} autres</summary>${l.slice(6).map(mini).join('')}</details>`:''}</div>`;
   }).join('')+`</div>`;
 }
 function renderWeekend(){
@@ -571,6 +606,7 @@ function renderMeteo(){
     if(lieu!==(mv && VD.coords[mv] ? mv : 'Orbe')) return;      // le village a change entre-temps
     setTimeout(()=>renderAir(lieu,c),0);
     const JC=['dim','lun','mar','mer','jeu','ven','sam'];
+    res('rmeteo', `${WMO(d.weather_code[0])[0]} ${Math.round(d.temperature_2m_min[0])}° / ${Math.round(d.temperature_2m_max[0])}° aujourd'hui`);
     el.innerHTML=d.time.map((t,i)=>{
       const [e,l]=WMO(d.weather_code[i]), j=new Date(t);
       const pluie=d.precipitation_probability_max && d.precipitation_probability_max[i]!=null ? ` · pluie ${d.precipitation_probability_max[i]} %` : '';
@@ -603,6 +639,7 @@ function renderPratique(com){
   const carte=document.getElementById('cprat'), P=VD.pratique && VD.pratique.communes && VD.pratique.communes[com];
   if(!P || !(P.dechetterie||P.administration||P.marche)){ carte.hidden=true; return; }
   const ligne=(titre,x,txt)=> x ? `<div class="it"><span class="quand">${titre}</span>${txt}<small><a href="${x.url}" target="_blank" rel="noopener">vérifier sur le site de la commune</a></small></div>` : '';
+  res('rprat', [P.dechetterie&&'déchetterie', P.administration&&'administration', P.marche&&'marché'].filter(Boolean).join(', '));
   document.getElementById('bprat').innerHTML =
       ligne('Déchetterie', P.dechetterie, P.dechetterie ? `${P.dechetterie.nom?`<strong>${P.dechetterie.nom}</strong><br>`:''}${P.dechetterie.horaires}` : '')
     + ligne('Administration communale', P.administration, P.administration ? `${P.administration.horaires||''}${P.administration.telephone?`<br>Tél. ${P.administration.telephone}`:''}` : '')
@@ -613,11 +650,17 @@ function renderPratique(com){
 function renderDefibs(){
   const carte=document.getElementById('cdefib'), l=mv && VD.defibs && VD.defibs.par_village[mv];
   if(!l || !l.length){ carte.hidden=true; return; }
+  res('rdefib', `${l.length} appareil${l.length>1?'s':''}`);
   document.getElementById('bdefib').innerHTML = l.map(x=>
       `<div class="it"><strong>${x.lieu||'Emplacement non décrit'}</strong><small>${[x.acces, x.lat?`<a href="https://www.openstreetmap.org/?mlat=${x.lat}&mlon=${x.lon}#map=18/${x.lat}/${x.lon}" target="_blank" rel="noopener">voir sur la carte</a>`:'signalé par un habitant'].filter(Boolean).join(' · ')}</small></div>`).join('')
     + `<p class="src">En cas d'arrêt cardiaque : appelez d'abord le 144. Liste non exhaustive : il en manque un ? <a href="mailto:annonce@lebattoir.ch?subject=D%C3%A9fibrillateur">Écrivez-nous</a>. Source : <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">contributeurs d'OpenStreetMap</a>, ${releve(VD.defibs.releve)}.</p>`;
   carte.hidden=false;
 }
+const res=(id,t)=>{ const e=document.getElementById(id); if(e) e.textContent=t; };
+// grand ecran : cartes ouvertes ; telephone : repliees, le resume suffit le plus souvent
+const TEL=window.matchMedia('(max-width:700px)');
+function ouvreCartes(){ document.querySelectorAll('details.bloc').forEach(d=>{ d.open=!TEL.matches; }); }
+ouvreCartes(); TEL.addEventListener('change',ouvreCartes);
 function renderVillage(){
   if(!VD) return;
   document.getElementById('village').hidden=false;
@@ -625,6 +668,7 @@ function renderVillage(){
   const auj=isoL(new Date());
   // routes : celles qui citent le village, et qui ne sont pas terminees
   const r=VD.routes.liste.filter(x=>x.fin>=auj && (!mv || x.villages.includes(mv)));
+  res('rroutes', r.length ? `${r.length} restriction${r.length>1?'s':''}` : 'rien à signaler');
   document.getElementById('broutes').innerHTML = (r.length ? r.map(x=>{
       const quand = x.debut<=auj ? `En cours, jusqu'au ${dcourt(x.fin)}`
                   : x.debut===x.fin ? `Le ${dcourt(x.debut)}` : `Du ${dcourt(x.debut)} au ${dcourt(x.fin)}`;
@@ -637,6 +681,7 @@ function renderVillage(){
   const com = mv ? (VD.commune_de[mv]||mv) : '';
   let e=VD.entreprises.liste.filter(x=>!com || x.commune===com);
   const total=e.length; if(!mv) e=e.slice(0,9);
+  res('rentr', total ? `${total} nouvelle${total>1?'s':''}` : 'aucune');
   const fiche=x=>      `<div class="it"><strong><a href="${x.url}" target="_blank" rel="noopener">${x.nom}</a></strong>
        <small>${x.commune} · ${x.forme} · publiée le ${dcourt(x.date)}</small>${x.but?`<small>${x.but}</small>`:''}</div>`;
   document.getElementById('bentr').innerHTML = (e.length
