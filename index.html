@@ -245,6 +245,13 @@ footer a{color:var(--noir);text-decoration:underline}
 .vid video{width:190px;max-width:42vw;aspect-ratio:9/16;background:#000;flex:none}
 .vid figcaption{font-size:16px;line-height:1.45}
 .vid figcaption span{font-size:13px;color:#666}
+.vidarch{margin:-10px 0 22px;font-size:15px}
+.vidarch summary{cursor:pointer;color:var(--rouge);font-weight:600;padding:6px 0}
+.vidarch #vidl{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
+.vidarch figure{margin:0;width:150px}
+.vidarch video{width:150px;aspect-ratio:9/16;background:#000;display:block}
+.vidarch figcaption{font-size:13px;color:#666;margin-top:4px}
+@media(max-width:600px){.vid{flex-direction:column;align-items:center;text-align:center;gap:10px}.vid video{width:240px;max-width:70vw}}
 </style>
 </head>
 <body>
@@ -318,14 +325,16 @@ footer a{color:var(--noir);text-decoration:underline}
       <h2 id="wkt">Ce week-end près de chez vous</h2>
       <span id="wkd"></span>
     </div>
-    <!-- 08.10.2026 : la video de la semaine. Chaque jeudi : remplacer firmin.mp4 et firmin.jpg,
-         puis changer les deux dates ci-dessous (?v= et data-jusqu). Apres data-jusqu, le bloc se cache seul. -->
-    <figure class="vid" id="vid" data-jusqu="2026-10-11" hidden>
-      <video controls playsinline preload="none" poster="firmin.jpg?v=2026-10-08" onerror="this.parentNode.hidden=true">
-        <source src="firmin.mp4?v=2026-10-08" type="video/mp4">
-      </video>
-      <figcaption><b>Le week-end vu par Firmin</b>, la chouette du Battoir, en 50 secondes.<br><span>Chanson et images réalisées avec l'aide de l'intelligence artificielle.</span></figcaption>
-    </figure>
+    <!-- 08.10.2026 : les videos de Firmin. Chaque jeudi : deposer firmin-AAAA-MM-JJ.mp4 et .jpg (date du jeudi)
+         dans site/, puis ajouter UNE ligne en tete de la liste VIDEOS du script. La plus recente s'affiche
+         jusqu'a sa date « jusqu » ; les autres vont seules dans « Les semaines precedentes ». -->
+    <div id="vids" hidden>
+      <figure class="vid" id="vid" hidden>
+        <video controls playsinline preload="none"></video>
+        <figcaption><b>Le week-end vu par Firmin</b>, la chouette du Battoir, en 50 secondes.<br><span>Chanson et images réalisées avec l'aide de l'intelligence artificielle.</span></figcaption>
+      </figure>
+      <details class="vidarch" id="vidarch" hidden><summary>Firmin, les semaines précédentes</summary><div id="vidl"></div></details>
+    </div>
     <div class="filters">
       <select id="mv" aria-label="Choisir mon village"><option value="">Choisir mon village</option></select>
     </div>
@@ -574,8 +583,26 @@ function colonnes(list){
     return `<div class="col${j.we?' we':''}"><h3>${j.txt.replace(/ \d+ \S+$/,'')}<small>${new Date(iso).getDate()} ${MOIS[new Date(iso).getMonth()]} · ${l.length}</small></h3>${l.slice(0,6).map(mini).join('')}${l.length>6?`<details><summary>Voir les ${l.length-6} autres</summary>${l.slice(6).map(mini).join('')}</details>`:''}</div>`;
   }).join('')+`</div>`;
 }
-(function(){var v=document.getElementById('vid');if(!v)return;
-  var j=new Date(v.dataset.jusqu+'T23:59:59');if(new Date()<=j)v.hidden=false;})();
+const VIDEOS=[
+  {d:'2026-10-08',jusqu:'2026-10-11',titre:'Week-end du 9 au 11 octobre'},
+  {d:'2026-09-24',jusqu:'2026-09-27',titre:'Week-end du 25 au 27 septembre'},
+];
+(function(){
+  const bloc=document.getElementById('vids'); if(!bloc||!VIDEOS.length) return;
+  const src=v=>`firmin-${v.d}.mp4`, img=v=>`firmin-${v.d}.jpg`;
+  const auj=new Date(), une=VIDEOS[0], enCours=auj<=new Date(une.jusqu+'T23:59:59');
+  if(enCours){
+    const f=document.getElementById('vid'), v=f.querySelector('video');
+    v.poster=img(une); v.src=src(une); v.onerror=()=>{f.hidden=true}; f.hidden=false;
+  }
+  const anciennes=enCours?VIDEOS.slice(1):VIDEOS;
+  if(anciennes.length){
+    document.getElementById('vidl').innerHTML=anciennes.map(v=>
+      `<figure><video controls playsinline preload="none" poster="${img(v)}" src="${src(v)}"></video><figcaption>${v.titre}</figcaption></figure>`).join('');
+    document.getElementById('vidarch').hidden=false;
+  }
+  bloc.hidden=false;
+})();
 function renderWeekend(){
   const {ven,dim,auj}=bornesWeekend();
   const a=isoL(ven>auj?ven:auj), b=isoL(dim);
