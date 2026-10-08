@@ -176,17 +176,6 @@
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
  },
  {
-  "d": "2026-09-06",
-  "fin": "2026-10-04",
-  "t": "Série : Parentalité",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Armée du Salut",
-  "h": "Les dimanches du 06 septembre au 04 octobre à 9h45",
-  "lieu": "Rue Sainte-Claire 5, 1350 Orbe",
-  "url": "https://orbe.armeedusalut.ch/"
- },
- {
   "d": "2026-09-10",
   "fin": "2026-09-10",
   "t": "AS FC Napoli Vevey – FC Bavois -Chavornay",
@@ -1403,17 +1392,6 @@
  },
  {
   "d": "2026-10-01",
-  "fin": "2026-11-01",
-  "t": "Activités d'intégration",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Commune d'Orbe - Jeunesse & Intégration",
-  "h": "Selon le programme d'activités",
-  "lieu": "Maison des Jeunes, Ch. du Puisoir 1, 1350 Orbe (sauf mention contraire selon l'activité)",
-  "url": "https://www.orbe.ch/ma-ville/integration/activites-integration.html"
- },
- {
-  "d": "2026-10-01",
   "fin": "2026-10-31",
   "t": "Activités octobre 2026 café contact et créatif de Chavornay",
   "v": "Essert-Pittet",
@@ -1464,7 +1442,7 @@
   "c": "officiel",
   "o": "ADNV",
   "h": "",
-  "lieu": "Salle Polyvalente",
+  "lieu": "",
   "url": ""
  },
  {
@@ -1501,17 +1479,6 @@
   "lieu": "Terrain Gérald Magnenat, Vuarrens",
   "url": "https://matchcenter-acvf.football.ch/",
   "exterieur": true
- },
- {
-  "d": "2026-10-02",
-  "fin": "2026-10-02",
-  "t": "Ouverture de saison",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "de 18h à 23h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/"
  },
  {
   "d": "2026-10-03",
@@ -1575,21 +1542,10 @@
   "t": "Loto",
   "v": "Chavornay",
   "c": "loto",
-  "o": "Giron des lotos",
+  "o": "",
   "h": "",
-  "lieu": "Foyer de la Salle Polyvalente",
+  "lieu": "",
   "url": ""
- },
- {
-  "d": "2026-10-03",
-  "fin": "2026-10-03",
-  "t": "Orbe à pas contés à la Tournelle",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "de 14h à 18h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/"
  },
  {
   "d": "2026-10-03",
@@ -1623,17 +1579,6 @@
   "h": "9h-16h",
   "lieu": "Grande salle de Mathod",
   "url": ""
- },
- {
-  "d": "2026-10-04",
-  "fin": "2026-10-04",
-  "t": "Concert Intemplo Gu'Band",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Association Intemplo Orbe et Région",
-  "h": "de 17h à 19h",
-  "lieu": "Temple d'Orbe, Rue du Château 5, 1350 Orbe",
-  "url": "https://monbillet.ch/events/in-templo-26-gu-band"
  },
  {
   "d": "2026-10-04",
@@ -1795,17 +1740,6 @@
   "url": ""
  },
  {
-  "d": "2026-10-04",
-  "fin": "2026-10-04",
-  "t": "Thé Dansant",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "AVIVO-Orbe et environs",
-  "h": "De 14 h. 00 à 17 h. 00",
-  "lieu": "Restaurant des Ducats Orbe",
-  "url": "https://avivo-vaud.ch/sections/#orbe"
- },
- {
   "d": "2026-10-05",
   "fin": "2026-10-05",
   "t": "FC Bavois -Chavornay – FC Lausanne-Sport",
@@ -1873,26 +1807,15 @@
   "url": "https://www.ballaigues.ch/images/pdf/PDF_divers_/DDS_2026.pdf"
  },
  {
-  "d": "2026-10-07",
-  "fin": "2026-10-07",
-  "t": "Lis-moi une histoire",
+  "d": "2026-10-08",
+  "fin": "2026-10-12",
+  "t": "Activités d'intégration",
   "v": "Orbe",
   "c": "fete",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "De 15h à 15h45",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
- },
- {
-  "d": "2026-10-07",
-  "fin": "2026-10-07",
-  "t": "Mercredi Forêt Famille",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Association Point Nature",
-  "h": "De 9h00 à 17h00",
-  "lieu": "Forêt de Chassagne, près d'Orbe",
-  "url": "https://point-nature.ch/ateliers.html"
+  "o": "Commune d'Orbe - Jeunesse & Intégration",
+  "h": "Selon le programme d'activités",
+  "lieu": "Maison des Jeunes, Ch. du Puisoir 1, 1350 Orbe (sauf mention contraire selon l'activité)",
+  "url": "https://www.orbe.ch/ma-ville/integration/activites-integration.html"
  },
  {
   "d": "2026-10-08",
@@ -2060,7 +1983,7 @@
   "v": "Romainmôtier-Envy",
   "c": "fete",
   "o": "Echo du Nozon Juriens-Romainmôtier",
-  "h": "",
+  "h": "ve 10h-20h · sa 10h-20h · di 10h-17h",
   "lieu": "Cantine de Champbaillard",
   "url": "https://www.lessonnailles.ch"
  },
@@ -2072,7 +1995,7 @@
   "c": "sport",
   "o": "Jeunesse de Baulmes",
   "h": "",
-  "lieu": "",
+  "lieu": "Salle des Fêtes",
   "url": "https://www.fvjc.ch/agenda/#tournoideunihockey-1022"
  },
  {
@@ -2083,7 +2006,7 @@
   "c": "fete",
   "o": "Jeunesse de Baulmes",
   "h": "",
-  "lieu": "",
+  "lieu": "Salle des Fêtes",
   "url": "https://www.fvjc.ch/agenda/#bal-1023"
  },
  {
@@ -2185,7 +2108,7 @@
   "c": "sport",
   "o": "Jeunesse de Baulmes",
   "h": "",
-  "lieu": "",
+  "lieu": "Salle des Fêtes",
   "url": "https://www.fvjc.ch/agenda/#tournoidevolleyindoor-1030"
  },
  {
@@ -2281,6 +2204,41 @@
   "exterieur": true
  },
  {
+  "d": "2026-10-11",
+  "fin": "2026-10-11",
+  "t": "Gilles Chabenat : vielle à roue, entre tradition et modernité",
+  "v": "Romainmôtier-Envy",
+  "c": "musique",
+  "o": "Centre culturel Henosis",
+  "h": "20h",
+  "lieu": "Centre culturel Henosis",
+  "url": "https://henosis.ch/evenements/gilles-chabenat-vielle-a-roue-entre-tradition-et-modernite/"
+ },
+ {
+  "d": "2026-10-12",
+  "fin": "2026-10-12",
+  "t": "ES Malley - Crissier – Grp 13 coteaux - Arnex",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "Seniors 40+ Groupe 1",
+  "h": "20h45",
+  "lieu": "Stade de la Tuilière, Lausanne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-12",
+  "fin": "2026-10-12",
+  "t": "FC Yvonand – FC Bavois -Chavornay",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 40+ Groupe 1",
+  "h": "20h00",
+  "lieu": "Terrain Grassy, Chavannes-le-Chêne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
   "d": "2026-10-12",
   "fin": "2026-10-15",
   "t": "Programme activités vacances octobre 2026 EJED",
@@ -2305,6 +2263,28 @@
  {
   "d": "2026-10-14",
   "fin": "2026-10-14",
+  "t": "FC Vallorbe-Ballaigues I – FC Genolier-Begnins I",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "Coupe des actifs 1/8",
+  "h": "20h30",
+  "lieu": "Stade Prés-Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-14",
+  "fin": "2026-10-14",
+  "t": "Pause-café",
+  "v": "L'Abergement",
+  "c": "fete",
+  "o": "",
+  "h": "8h30-10h30",
+  "lieu": "Pressoir",
+  "url": "https://www.labergement.ch/agenda-fr1401.html"
+ },
+ {
+  "d": "2026-10-14",
+  "fin": "2026-10-14",
   "t": "Soirée jeux",
   "v": "Orbe",
   "c": "fete",
@@ -2312,6 +2292,74 @@
   "h": "A partir de 18h30 et jusqu'à 22h30",
   "lieu": "Rue Davall 3, 1350 Orbe",
   "url": "https://tasoulesjeux.ch/"
+ },
+ {
+  "d": "2026-10-15",
+  "fin": "2026-10-15",
+  "t": "FC Thierrens II – FC Bavois III",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "20h00",
+  "lieu": "Le Marais, Thierrens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-17",
+  "fin": "2026-10-17",
+  "t": "FC Basel 1893 U-21 – FC Bavois",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Promotion League",
+  "h": "15h30",
+  "lieu": "Sportanlagen St. Jakob, Basel",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-17",
+  "fin": "2026-10-17",
+  "t": "FC Champvent I – FC Crans I",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "18h15",
+  "lieu": "Stade Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-17",
+  "fin": "2026-10-17",
+  "t": "FC Chavornay Sports I – FC Echallens Région II",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "17h00",
+  "lieu": "En Courtes-Raies N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-17",
+  "fin": "2026-10-17",
+  "t": "FC Ependes – FC Bosna Yverdon II",
+  "v": "Ependes",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "19h00",
+  "lieu": "Stade des Cartes",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-17",
+  "fin": "2026-10-17",
+  "t": "FC Orbe I – FC Pied du Jura I",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "3e ligue Groupe 4",
+  "h": "19h00",
+  "lieu": "Stade du Puisoir N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
  },
  {
   "d": "2026-10-17",
@@ -2323,6 +2371,200 @@
   "h": "dès 19h",
   "lieu": "Grande salle de Vaulion",
   "url": "https://www.instagram.com/jeunesse_vaulion/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "2e tour de l'élection à la Municipalité",
+  "v": "Suscévaz",
+  "c": "officiel",
+  "o": "Commune de Suscévaz",
+  "h": "",
+  "lieu": "",
+  "url": "https://www.suscevaz.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Arnex IA – FC Sainte-Croix/La Sagne II",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "14h30",
+  "lieu": "En Bullandaz",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Arnex IB – FC Bussigny IIA",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 5",
+  "h": "10h30",
+  "lieu": "En Bullandaz",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Baulmes I – FC Corcelles-Payerne IB",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "15h00",
+  "lieu": "Stade Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Baulmes II – FC Jorat-Mézières II",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "11h00",
+  "lieu": "Stade Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Chavornay Sports II – FC Romanel I",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "10h30",
+  "lieu": "En Courtes-Raies N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Chavornay Sports – FC Champagne Sports",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Féminine 4e ligue Groupe 1",
+  "h": "14h00",
+  "lieu": "En Courtes-Raies N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Echallens Région I – FC Vallon du Nozon",
+  "v": "Vaulion",
+  "c": "foot",
+  "o": "Féminine 4e ligue Groupe 1",
+  "h": "10h00",
+  "lieu": "Stade En Champ-Giroud, Etagnières",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Etoile Bonvillars – FC Vallorbe-Ballaigues I",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "11h00",
+  "lieu": "La Cour, Bonvillars",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Etoile-Broye III – FC Vallorbe-Ballaigues II",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "11h00",
+  "lieu": "Ch. des Vignes, Moudon",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Genolier-Begnins I – FC Bavois II",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "14h00",
+  "lieu": "Terrain du Pesant d'Or, Genolier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Grandson-Tuileries II – FC Champvent II",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "16h00",
+  "lieu": "Place de Sports des Tuileries, Grandson",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Le Mont II – FC Montcherand",
+  "v": "Montcherand",
+  "c": "foot",
+  "o": "4e ligue Groupe 3",
+  "h": "17h30",
+  "lieu": "Centre sportif du Châtaignier, Le Mont-sur-Lausanne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Orbe II – FC Vallon du Nozon",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Stade du Puisoir N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Sainte-Croix/La Sagne I – FC Rances",
+  "v": "Rances",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h30",
+  "lieu": "Stade de La Sagne, Sainte-Croix",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-18",
+  "fin": "2026-10-18",
+  "t": "FC Suchy-Sports – FC Bercher",
+  "v": "Suchy",
+  "c": "foot",
+  "o": "5e ligue Groupe 3",
+  "h": "10h30",
+  "lieu": "Terrain de Suchy",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-21",
+  "fin": "2026-10-21",
+  "t": "Poste mobile de gendarmerie",
+  "v": "Juriens",
+  "c": "officiel",
+  "o": "Commune de Juriens",
+  "h": "le matin",
+  "lieu": "",
+  "url": "https://www.juriens.ch/"
  },
  {
   "d": "2026-10-22",
@@ -2348,6 +2590,17 @@
  },
  {
   "d": "2026-10-24",
+  "fin": "2026-10-25",
+  "t": "Anniversaire des Krepiuls 30 ans",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Guggenmusik les Krepiuls",
+  "h": "Ouverture des portes à 18:00",
+  "lieu": "Casino",
+  "url": ""
+ },
+ {
+  "d": "2026-10-24",
   "fin": "2026-10-24",
   "t": "Journée débarras de la Jeunesse",
   "v": "Ballaigues",
@@ -2369,15 +2622,26 @@
   "url": "https://www.fvjc.ch/agenda/#souperfondue-1054"
  },
  {
+  "d": "2026-10-24",
+  "fin": "2026-10-25",
+  "t": "Week-end « Raisinée »",
+  "v": "Vaulion",
+  "c": "fete",
+  "o": "Abbaye des Amis",
+  "h": "dès 10h",
+  "lieu": "Cantine",
+  "url": "https://vaulion.ch/agenda"
+ },
+ {
   "d": "2026-10-25",
   "fin": "2026-10-25",
   "t": "Repas de soutien du Chœur mixte d'Arnex",
   "v": "Arnex-sur-Orbe",
   "c": "fete",
   "o": "Chœur mixte d'Arnex",
-  "h": "",
+  "h": "dès 11h",
   "lieu": "Grande salle",
-  "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
+  "url": "https://choeurmixtearnex.blogspot.com/2026/09/repas-de-soutien-2026.html"
  },
  {
   "d": "2026-10-26",
@@ -2438,6 +2702,17 @@
   "d": "2026-10-29",
   "fin": "2026-10-29",
   "t": "Conseil communal",
+  "v": "Vaulion",
+  "c": "officiel",
+  "o": "Commune de Vaulion",
+  "h": "20h",
+  "lieu": "Salle du Conseil",
+  "url": "https://vaulion.ch/agenda"
+ },
+ {
+  "d": "2026-10-29",
+  "fin": "2026-10-29",
+  "t": "Conseil communal",
   "v": "Chavornay",
   "c": "officiel",
   "o": "Commune",
@@ -2479,6 +2754,28 @@
   "url": "https://www.fvjc.ch/agenda/#souperdesoutienhalloween-1055"
  },
  {
+  "d": "2026-10-30",
+  "fin": "2026-10-31",
+  "t": "Spectacle « Mathilde »",
+  "v": "Baulmes",
+  "c": "culture",
+  "o": "Compagnie des Rochettes",
+  "h": "",
+  "lieu": "Hôtel de Ville",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
+  "d": "2026-10-31",
+  "fin": "2026-11-01",
+  "t": "Exposition d'oiseaux d'agrément",
+  "v": "Baulmes",
+  "c": "culture",
+  "o": "Pinsons du Nord",
+  "h": "",
+  "lieu": "Salle des Fêtes",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
   "d": "2026-10-31",
   "fin": "2026-10-31",
   "t": "Les Monstres du Coeur",
@@ -2512,6 +2809,28 @@
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
  },
  {
+  "d": "2026-10-31",
+  "fin": "2026-10-31",
+  "t": "Repas de soutien du FC Champvent",
+  "v": "Champvent",
+  "c": "fete",
+  "o": "FC Champvent",
+  "h": "",
+  "lieu": "",
+  "url": "https://champvent.ch/manifestations"
+ },
+ {
+  "d": "2026-11-01",
+  "fin": "2026-11-01",
+  "t": "Concert",
+  "v": "Baulmes",
+  "c": "musique",
+  "o": "Association culturelle de Baulmes",
+  "h": "",
+  "lieu": "Temple",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
   "d": "2026-11-01",
   "fin": "2026-11-01",
   "t": "Thé Dansant",
@@ -2521,6 +2840,17 @@
   "h": "De 14 h. 00 à 17 h. 00",
   "lieu": "Restaurant des Ducats Orbe",
   "url": "https://avivo-vaud.ch/sections/#orbe"
+ },
+ {
+  "d": "2026-11-02",
+  "fin": "2026-11-02",
+  "t": "Ensemble Sankyoku — musique de chambre japonaise",
+  "v": "Romainmôtier-Envy",
+  "c": "musique",
+  "o": "Centre culturel Henosis",
+  "h": "20h (portes 19h30)",
+  "lieu": "Abbatiale de Romainmôtier",
+  "url": "https://henosis.ch/evenements/ensemble-sankyoku-abbatiale-de-romainmotier/"
  },
  {
   "d": "2026-11-06",
@@ -2543,6 +2873,28 @@
   "h": "Dès 20h jusqu'à 23h45",
   "lieu": "Rue Davall 3, 1350 Orbe",
   "url": "https://www.facebook.com/events/1598540068938099"
+ },
+ {
+  "d": "2026-11-06",
+  "fin": "2026-11-07",
+  "t": "Soirée raclette du Ski-club",
+  "v": "Baulmes",
+  "c": "fete",
+  "o": "Ski-club de Baulmes",
+  "h": "",
+  "lieu": "Caveau Perusset",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
+  "d": "2026-11-06",
+  "fin": "2026-11-08",
+  "t": "Spectacle « Projection Claquettiste »",
+  "v": "Baulmes",
+  "c": "culture",
+  "o": "Compagnie des Rochettes",
+  "h": "",
+  "lieu": "Hôtel de Ville",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
  },
  {
   "d": "2026-11-07",
@@ -2576,6 +2928,28 @@
   "h": "",
   "lieu": "Foyer de la Salle Polyvalente",
   "url": ""
+ },
+ {
+  "d": "2026-11-07",
+  "fin": "2026-11-07",
+  "t": "Mise de bois communale",
+  "v": "Croy",
+  "c": "officiel",
+  "o": "Commune de Croy",
+  "h": "",
+  "lieu": "Refuge forestier communal",
+  "url": "https://croy.ch/agenda/"
+ },
+ {
+  "d": "2026-11-07",
+  "fin": "2026-11-07",
+  "t": "Portes ouvertes de la source Mercier (AISM)",
+  "v": "Premier",
+  "c": "officiel",
+  "o": "AISM",
+  "h": "",
+  "lieu": "",
+  "url": "https://premier.ch/"
  },
  {
   "d": "2026-11-07",
@@ -2620,6 +2994,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#balice-1054"
+ },
+ {
+  "d": "2026-11-08",
+  "fin": "2026-11-08",
+  "t": "Brunch du Ski-Club",
+  "v": "Vaulion",
+  "c": "fete",
+  "o": "Ski-Club de Vaulion",
+  "h": "",
+  "lieu": "Grande salle",
+  "url": "https://vaulion.ch/agenda"
  },
  {
   "d": "2026-11-10",
@@ -2677,6 +3062,39 @@
   "url": "https://point-nature.ch/ateliers.html"
  },
  {
+  "d": "2026-11-11",
+  "fin": "2026-11-11",
+  "t": "Pause-café",
+  "v": "L'Abergement",
+  "c": "fete",
+  "o": "",
+  "h": "8h30-10h30",
+  "lieu": "Pressoir",
+  "url": "https://www.labergement.ch/agenda-fr1401.html"
+ },
+ {
+  "d": "2026-11-13",
+  "fin": "2026-11-13",
+  "t": "80 ans des Paysannes Vaudoises",
+  "v": "Baulmes",
+  "c": "fete",
+  "o": "Paysannes Vaudoises (APV)",
+  "h": "",
+  "lieu": "Salle des Fêtes",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
+  "d": "2026-11-13",
+  "fin": "2026-11-13",
+  "t": "Adaya & In Gowan Ring",
+  "v": "Romainmôtier-Envy",
+  "c": "musique",
+  "o": "Centre culturel Henosis",
+  "h": "20h",
+  "lieu": "Centre culturel Henosis",
+  "url": "https://henosis.ch/evenements/adaya-in-gowan-ring/"
+ },
+ {
   "d": "2026-11-13",
   "fin": "2026-11-13",
   "t": "Repas de soutien du FC Chavornay",
@@ -2686,6 +3104,17 @@
   "h": "",
   "lieu": "Foyer de la Salle Polyvalente",
   "url": ""
+ },
+ {
+  "d": "2026-11-14",
+  "fin": "2026-11-14",
+  "t": "« La gendarmerie à votre porte »",
+  "v": "Premier",
+  "c": "officiel",
+  "o": "Commune de Premier",
+  "h": "",
+  "lieu": "",
+  "url": "https://premier.ch/"
  },
  {
   "d": "2026-11-17",
@@ -2756,6 +3185,17 @@
  {
   "d": "2026-11-21",
   "fin": "2026-11-21",
+  "t": "Marché artisanal de Noël",
+  "v": "Croy",
+  "c": "marche",
+  "o": "",
+  "h": "",
+  "lieu": "",
+  "url": "https://vallondunozon.ch/agenda/"
+ },
+ {
+  "d": "2026-11-21",
+  "fin": "2026-11-21",
   "t": "Marché de Noël",
   "v": "Ballaigues",
   "c": "marche",
@@ -2774,6 +3214,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
+ },
+ {
+  "d": "2026-11-22",
+  "fin": "2026-11-22",
+  "t": "Fête paroissiale",
+  "v": "Baulmes",
+  "c": "fete",
+  "o": "Paroisse",
+  "h": "",
+  "lieu": "Salle des Fêtes",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
  },
  {
   "d": "2026-11-22",
@@ -2811,6 +3262,17 @@
  {
   "d": "2026-11-26",
   "fin": "2026-11-26",
+  "t": "Conseil général",
+  "v": "Valeyres-sous-Rances",
+  "c": "officiel",
+  "o": "Commune de Valeyres-sous-Rances",
+  "h": "",
+  "lieu": "",
+  "url": "https://www.valeyres-sous-rances.ch/"
+ },
+ {
+  "d": "2026-11-26",
+  "fin": "2026-11-26",
   "t": "Poste de gendarmerie mobile",
   "v": "Pompaples",
   "c": "officiel",
@@ -2840,6 +3302,28 @@
   "h": "19h",
   "lieu": "Grande salle de Suchy",
   "url": ""
+ },
+ {
+  "d": "2026-11-28",
+  "fin": "2026-11-28",
+  "t": "Loto fribourgeois",
+  "v": "Ependes",
+  "c": "loto",
+  "o": "USL Ependes",
+  "h": "portes 18h30 · début 20h",
+  "lieu": "Grande salle",
+  "url": ""
+ },
+ {
+  "d": "2026-11-28",
+  "fin": "2026-11-29",
+  "t": "Marché de Noël",
+  "v": "Baulmes",
+  "c": "marche",
+  "o": "Association du Marché de Noël",
+  "h": "",
+  "lieu": "Salle des Fêtes",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
  },
  {
   "d": "2026-11-28",
@@ -2906,6 +3390,61 @@
   "h": "10h-11h",
   "lieu": "Bureau de vote, Route de Juriens 1",
   "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
+  "d": "2026-12-01",
+  "fin": "2026-12-01",
+  "t": "Conseil général",
+  "v": "Premier",
+  "c": "officiel",
+  "o": "Commune de Premier",
+  "h": "",
+  "lieu": "Salle du Tirage",
+  "url": "https://premier.ch/"
+ },
+ {
+  "d": "2026-12-02",
+  "fin": "2026-12-02",
+  "t": "Conseil général",
+  "v": "La Praz",
+  "c": "officiel",
+  "o": "Commune de La Praz",
+  "h": "20h15",
+  "lieu": "Grande Salle",
+  "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
+  "d": "2026-12-03",
+  "fin": "2026-12-03",
+  "t": "Repas de Noël des Aînés",
+  "v": "Baulmes",
+  "c": "fete",
+  "o": "Aînés de Baulmes",
+  "h": "",
+  "lieu": "Salle des Fêtes",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
+  "d": "2026-12-04",
+  "fin": "2026-12-05",
+  "t": "Soirée de gymnastique",
+  "v": "Baulmes",
+  "c": "sport",
+  "o": "FSG Baulmes",
+  "h": "",
+  "lieu": "Salle des Fêtes",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
+  "d": "2026-12-04",
+  "fin": "2026-12-05",
+  "t": "Spectacle « Sherlock Holmes »",
+  "v": "Baulmes",
+  "c": "culture",
+  "o": "Compagnie des Rochettes",
+  "h": "",
+  "lieu": "Hôtel de Ville",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
  },
  {
   "d": "2026-12-05",
@@ -2987,6 +3526,17 @@
  {
   "d": "2026-12-08",
   "fin": "2026-12-08",
+  "t": "Conseil général",
+  "v": "Croy",
+  "c": "officiel",
+  "o": "Commune de Croy",
+  "h": "",
+  "lieu": "Salle du Conseil, rue des Fontaines 12",
+  "url": "https://croy.ch/agenda/"
+ },
+ {
+  "d": "2026-12-08",
+  "fin": "2026-12-08",
   "t": "Table au bistrot",
   "v": "Orny",
   "c": "fete",
@@ -2994,6 +3544,17 @@
   "h": "",
   "lieu": "Auberge communale Les Rupiants",
   "url": ""
+ },
+ {
+  "d": "2026-12-09",
+  "fin": "2026-12-09",
+  "t": "Collation de fin d'année",
+  "v": "L'Abergement",
+  "c": "fete",
+  "o": "",
+  "h": "8h30-10h30",
+  "lieu": "Pressoir",
+  "url": "https://www.labergement.ch/agenda-fr1401.html"
  },
  {
   "d": "2026-12-09",
@@ -3027,6 +3588,17 @@
   "h": "De 9h00 à 17h00",
   "lieu": "Forêt de Chassagne, près d'Orbe",
   "url": "https://point-nature.ch/ateliers.html"
+ },
+ {
+  "d": "2026-12-10",
+  "fin": "2026-12-10",
+  "t": "Conseil communal",
+  "v": "Vaulion",
+  "c": "officiel",
+  "o": "Commune de Vaulion",
+  "h": "20h",
+  "lieu": "Salle du Conseil",
+  "url": "https://vaulion.ch/agenda"
  },
  {
   "d": "2026-12-10",
@@ -3093,6 +3665,17 @@
   "h": "21h00",
   "lieu": "Grande salle Jura",
   "url": "https://www.fvjc.ch/agenda/#baldelenfervol4-1093"
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Distribution des sapins de Noël",
+  "v": "Croy",
+  "c": "marche",
+  "o": "Commune de Croy",
+  "h": "",
+  "lieu": "Place de la Lavandière",
+  "url": "https://croy.ch/agenda/"
  },
  {
   "d": "2026-12-12",
@@ -3194,6 +3777,17 @@
   "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
  },
  {
+  "d": "2026-12-18",
+  "fin": "2026-12-19",
+  "t": "Spectacle Brigitte Rosset",
+  "v": "Baulmes",
+  "c": "culture",
+  "o": "Compagnie des Rochettes",
+  "h": "",
+  "lieu": "Hôtel de Ville",
+  "url": "https://www.baulmes.ch/fr/28/manifestations"
+ },
+ {
   "d": "2026-12-19",
   "fin": "2026-12-19",
   "t": "Bal de Noël",
@@ -3227,6 +3821,28 @@
   "url": "https://point-nature.ch/ateliers.html"
  },
  {
+  "d": "2026-12-23",
+  "fin": "2026-12-23",
+  "t": "Vin chaud de la Commune",
+  "v": "Vaulion",
+  "c": "fete",
+  "o": "Commune de Vaulion",
+  "h": "",
+  "lieu": "Place de l'Hôtel-de-Ville",
+  "url": "https://vaulion.ch/agenda"
+ },
+ {
+  "d": "2026-12-25",
+  "fin": "2026-12-25",
+  "t": "Noël à l'église",
+  "v": "Vaulion",
+  "c": "fete",
+  "o": "",
+  "h": "19h",
+  "lieu": "Église",
+  "url": "https://vaulion.ch/agenda"
+ },
+ {
   "d": "2026-12-26",
   "fin": "2026-12-26",
   "t": "LE BAL DU 26 !!!",
@@ -3258,6 +3874,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#nouvelan-1104"
+ },
+ {
+  "d": "2026-12-31",
+  "fin": "2026-12-31",
+  "t": "Nouvel-An",
+  "v": "Vaulion",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Grande salle",
+  "url": "https://vaulion.ch/agenda"
  },
  {
   "d": "2027-01-09",
@@ -3335,6 +3962,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#petitnouvel-an2027-1133"
+ },
+ {
+  "d": "2027-01-23",
+  "fin": "2027-01-23",
+  "t": "Bal de jeunesse",
+  "v": "Suscévaz",
+  "c": "fete",
+  "o": "Jeunesse de Mathod / Suscévaz",
+  "h": "",
+  "lieu": "",
+  "url": "https://www.fvjc.ch/agenda/#baldejeunesse-1141"
  },
  {
   "d": "2027-01-27",
