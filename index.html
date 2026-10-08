@@ -240,6 +240,11 @@ details.bloc:not([open])>summary{border-bottom:0}
 footer{border-top:3px solid var(--noir);padding:30px 0 44px;font-size:14px;color:var(--gris)}
 footer .r{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center}
 footer a{color:var(--noir);text-decoration:underline}
+.vid{display:flex;gap:18px;align-items:center;margin:4px 0 22px;padding:14px;background:var(--creme);border-left:4px solid var(--rouge)}
+.vid[hidden]{display:none}
+.vid video{width:190px;max-width:42vw;aspect-ratio:9/16;background:#000;flex:none}
+.vid figcaption{font-size:16px;line-height:1.45}
+.vid figcaption span{font-size:13px;color:#666}
 </style>
 </head>
 <body>
@@ -313,6 +318,14 @@ footer a{color:var(--noir);text-decoration:underline}
       <h2 id="wkt">Ce week-end près de chez vous</h2>
       <span id="wkd"></span>
     </div>
+    <!-- 08.10.2026 : la video de la semaine. Chaque jeudi : remplacer firmin.mp4 et firmin.jpg,
+         puis changer les deux dates ci-dessous (?v= et data-jusqu). Apres data-jusqu, le bloc se cache seul. -->
+    <figure class="vid" id="vid" data-jusqu="2026-10-11" hidden>
+      <video controls playsinline preload="none" poster="firmin.jpg?v=2026-10-08" onerror="this.parentNode.hidden=true">
+        <source src="firmin.mp4?v=2026-10-08" type="video/mp4">
+      </video>
+      <figcaption><b>Le week-end vu par Firmin</b>, la chouette du Battoir, en 50 secondes.<br><span>Chanson et images réalisées avec l'aide de l'intelligence artificielle.</span></figcaption>
+    </figure>
     <div class="filters">
       <select id="mv" aria-label="Choisir mon village"><option value="">Choisir mon village</option></select>
     </div>
@@ -561,6 +574,8 @@ function colonnes(list){
     return `<div class="col${j.we?' we':''}"><h3>${j.txt.replace(/ \d+ \S+$/,'')}<small>${new Date(iso).getDate()} ${MOIS[new Date(iso).getMonth()]} · ${l.length}</small></h3>${l.slice(0,6).map(mini).join('')}${l.length>6?`<details><summary>Voir les ${l.length-6} autres</summary>${l.slice(6).map(mini).join('')}</details>`:''}</div>`;
   }).join('')+`</div>`;
 }
+(function(){var v=document.getElementById('vid');if(!v)return;
+  var j=new Date(v.dataset.jusqu+'T23:59:59');if(new Date()<=j)v.hidden=false;})();
 function renderWeekend(){
   const {ven,dim,auj}=bornesWeekend();
   const a=isoL(ven>auj?ven:auj), b=isoL(dim);
