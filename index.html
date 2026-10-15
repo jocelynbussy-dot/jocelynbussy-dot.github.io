@@ -109,6 +109,11 @@ section{padding:44px 0}
 .wk .sep{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.1em;
   font-size:13px;color:var(--rouge);border-bottom:1.5px solid #d9d0c0;padding-bottom:6px;margin:24px 0 4px}
 .wk .empty{padding:18px 0 6px}
+.wk .mt{margin:6px 0 2px}
+.wk .mt .lab{display:block;font-size:13px;color:var(--gris);margin-bottom:6px}
+.wk .mt .chips{margin-bottom:6px}
+.nv{display:inline-block;font-family:Inter,sans-serif;font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;
+  background:var(--rouge);color:#fff;border-radius:9px;padding:1px 7px;margin-left:6px;vertical-align:2px;white-space:nowrap}
 .wk .suite{margin-top:18px;font-size:14.5px}
 .donnees{margin-top:18px;font-size:13px;line-height:1.5;max-width:74ch}
 
@@ -293,9 +298,12 @@ footer a{color:var(--noir);text-decoration:underline}
   <p>Lotos, soirées de sociétés, concerts, matchs, bals de jeunesse, marchés, séances communales.
      Tout est ici — et chaque jeudi soir, l'essentiel du week-end arrive en <strong>un seul message</strong>.</p>
   <div class="cta">
-    <a class="btn p" id="sub" target="_blank" rel="noopener"
-       href="https://whatsapp.com/channel/0029Vb8DjmlHbFVApHXmTK23">Rejoindre la chaîne WhatsApp</a>
+    <!-- 13.10.2026 : « Autour de chez moi ». Le premier bouton garde le visiteur sur le site ;
+         WhatsApp reste, en troisieme. Avant : 31 visites sur 36 s'arretaient a l'accueil. -->
+    <a class="btn p" id="cmv" href="#weekend">Choisir mon village</a>
     <a class="btn s" href="#agenda">Voir l'agenda</a>
+    <a class="btn s" id="sub" target="_blank" rel="noopener"
+       href="https://whatsapp.com/channel/0029Vb8DjmlHbFVApHXmTK23">Rejoindre la chaîne WhatsApp</a>
   </div>
   <p class="note"><strong>Rien à installer, aucun compte à créer</strong> — vous êtes déjà sur WhatsApp.
      Un message le jeudi soir, jamais plus. Personne ne voit votre numéro, pas même nous,
@@ -337,6 +345,10 @@ footer a{color:var(--noir);text-decoration:underline}
     </div>
     <div class="filters">
       <select id="mv" aria-label="Choisir mon village"><option value="">Choisir mon village</option></select>
+    </div>
+    <div class="mt" id="mtb" hidden>
+      <span class="lab">Dans toute la plaine, montrez-moi aussi (3 au plus)&nbsp;:</span>
+      <div class="chips" id="mt"></div>
     </div>
     <div class="wkcal" id="wkcal" hidden></div>
     <div id="wkl"></div>
@@ -423,7 +435,7 @@ footer a{color:var(--noir);text-decoration:underline}
   </div>
   <div class="wrap">
     <p class="donnees" id="donnees"><strong>Vos données.</strong> Le Battoir ne dépose aucun cookie et ne demande aucun compte.
-    Si vous choisissez votre village, ce choix est gardé dans votre navigateur, pour vous le reproposer à la prochaine visite.
+    Si vous choisissez votre village et vos thèmes, ces choix sont gardés dans votre navigateur, pour vous les reproposer à la prochaine visite ; il garde aussi la liste des dates déjà affichées, pour vous signaler les nouvelles. Rien de cela ne nous est envoyé.
     <span id="dgc" hidden>Nous comptons les visites avec GoatCounter, un outil sans cookie qui ne permet pas de vous identifier.</span>
     Les polices d'écriture sont chargées depuis Google Fonts, et la météo est demandée au service Open-Meteo (avec la qualité de l'air) quand vous ouvrez la page&nbsp;: tous deux reçoivent de ce fait votre adresse IP.
     Une question&nbsp;: <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
@@ -543,7 +555,7 @@ function ligne(e){
     return `<article class="ev">
       <div class="d">${hc?`<b class="hh">${hc}</b>`:`<i aria-hidden="true">${CATS[e.c].e}</i>`}</div>
       <div>
-        <h3>${titreLien(e)}</h3>
+        <h3>${titreLien(e)}${nouv(e)}</h3>
         <div class="meta"><span class="tag">${CATS[e.c].e} ${CATS[e.c].l}</span>${det}</div>
       </div></article>`;
 }
@@ -575,7 +587,7 @@ function bornesWeekend(){
 function mini(e){
   const hc=heureCourte(e);
   const ou=[e.exterieur?`${e.v} (à l’extérieur)`:e.v, hc?'':(e.h||''), e.lieu||''].filter(Boolean).join(' · ');
-  return `<div class="mini"><span class="h">${hc||CATS[e.c].e}</span><div><strong>${titreLien(e)}</strong><small>${hc?CATS[e.c].e+' ':''}${ou}</small></div></div>`;
+  return `<div class="mini"><span class="h">${hc||CATS[e.c].e}</span><div><strong>${titreLien(e)}${nouv(e)}</strong><small>${hc?CATS[e.c].e+' ':''}${ou}</small></div></div>`;
 }
 function colonnes(list){
   return `<div class="wkg">`+parJour(list).map(([iso,l])=>{
@@ -603,13 +615,51 @@ const VIDEOS=[
   }
   bloc.hidden=false;
 })();
+// ---- Autour de chez moi (13.10.2026) : voisins par la distance, themes, « nouveau » ----
+const RAYON_KM=8;
+function km(a,b){
+  if(!VD || !VD.coords) return null;
+  const p=VD.coords[a], q=VD.coords[b]; if(!p||!q) return null;
+  const r=x=>x*Math.PI/180, h=Math.sin(r(q[0]-p[0])/2)**2+Math.cos(r(p[0]))*Math.cos(r(q[0]))*Math.sin(r(q[1]-p[1])/2)**2;
+  return 12742*Math.asin(Math.sqrt(h));
+}
+let mesThemes=new Set();
+try{ JSON.parse(localStorage.getItem('themes')||'[]').forEach(c=>{ if(CATS[c]) mesThemes.add(c); }); }catch(_){}
+function renderThemes(){
+  document.getElementById('mtb').hidden=!mv;
+  document.getElementById('mt').innerHTML=Object.entries(CATS)
+    .map(([k,c])=>`<button class="chip" data-c="${k}" aria-pressed="${mesThemes.has(k)}">${c.e} ${c.l}</button>`).join('');
+}
+document.getElementById('mt').addEventListener('click',e=>{
+  const b=e.target.closest('.chip'); if(!b) return;
+  const c=b.dataset.c;
+  if(mesThemes.has(c)) mesThemes.delete(c);
+  else{ if(mesThemes.size>=3) mesThemes.delete([...mesThemes][0]); mesThemes.add(c); }
+  try{ localStorage.setItem('themes',JSON.stringify([...mesThemes])); }catch(_){}
+  renderThemes(); renderWeekend();
+});
+// « nouveau » : ce qui n'etait pas dans l'agenda a la visite d'avant. Tout reste dans le navigateur
+// (empreintes courtes des dates deja affichees), rien n'est envoye. La premiere visite ne marque rien.
+const cleEv=e=>{ const s=(e._d0||e.d)+'|'+e.v+'|'+e.t; let h=0; for(let i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return (h>>>0).toString(36); };
+let NOUV=new Set();
+function marqueNouveaux(){
+  try{
+    const cur=EV.filter(e=>!e._cal).map(cleEv), s=JSON.parse(localStorage.getItem('vus')||'null');
+    const neufs=s && s.k ? cur.filter(k=>!new Set(s.k).has(k)) : [];
+    if(s && s.k) NOUV=new Set([...(s.n||[]), ...neufs]);
+    if(!s || Date.now()-s.t>20*3600e3) localStorage.setItem('vus',JSON.stringify({t:Date.now(),k:cur,n:neufs}));
+  }catch(_){}
+}
+const nouv=e=>NOUV.has(cleEv(e))?'<span class="nv">nouveau</span>':'';
 function renderWeekend(){
   const {ven,dim,auj}=bornesWeekend();
   const a=isoL(ven>auj?ven:auj), b=isoL(dim);
   document.getElementById('wkd').textContent = ven.getMonth()===dim.getMonth()
     ? `du vendredi ${ven.getDate()} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`
     : `du vendredi ${ven.getDate()} ${MOIS[ven.getMonth()]} au dimanche ${dim.getDate()} ${MOIS[dim.getMonth()]}`;
-  document.getElementById('wkt').textContent = mv ? `Ce week-end ${aLieu(mv)}` : 'Ce week-end près de chez vous';
+  document.getElementById('wkt').textContent = mv ? `Ce week-end ${aLieu(mv)} et autour` : 'Ce week-end près de chez vous';
+  renderThemes();
+  document.getElementById('cmv').textContent = mv ? `Mon coin : ${mv}` : 'Choisir mon village';
   // une colonne par jour ; une manifestation de plusieurs jours parait dans chacun.
   // Au-dela de 10 jours c'est un programme : il ne parait qu'a son debut (meme regle que l'agenda).
   const wk=deplie(EV).filter(e=>!e._cal && e.d>=a && e.d<=b);
@@ -623,10 +673,20 @@ function renderWeekend(){
     el.innerHTML = l.length ? colonnes(l) : '<p class="empty">Rien d\'annoncé pour ce week-end pour l\'instant.</p>';
     return;
   }
-  const ici=wk.filter(e=>e.v===mv), ailleurs=wk.filter(e=>e.v!==mv && e.c!=='foot');
+  // 13.10.2026, « Autour de chez moi » (remarque de Jocelyn : on sait ce qui se passe chez soi,
+  // on veut voir plus large). Trois etages : le village, les voisins a moins de RAYON_KM,
+  // puis toute la plaine pour les themes coches (sans theme : tout sauf le foot, comme avant).
+  const ici=wk.filter(e=>e.v===mv), autres=wk.filter(e=>e.v!==mv && !e.exterieur);
+  const pres=autres.filter(e=>{ const d=km(mv,e.v); return d!==null && d<=RAYON_KM; });
+  const loin=autres.filter(e=>!pres.includes(e));
+  const plaine=mesThemes.size ? loin.filter(e=>mesThemes.has(e.c)) : loin.filter(e=>e.c!=='foot');
   let out = ici.length ? colonnes(ici)
     : `<p class="empty">Rien d'annoncé ${aLieu(mv)} ce week-end. Vous organisez quelque chose ? <a href="#societes">Dites-le-nous</a>.</p>`;
-  if(ailleurs.length) out+=`<div class="sep">Ailleurs dans la plaine</div>`+colonnes(ailleurs);
+  if(pres.length) out+=`<div class="sep">Tout près, à moins de ${RAYON_KM} km</div>`+colonnes(pres);
+  if(plaine.length) out+=`<div class="sep">${mesThemes.size
+      ? 'Dans toute la plaine : '+[...mesThemes].map(c=>CATS[c].l.toLowerCase()).join(', ')
+      : 'Ailleurs dans la plaine'}</div>`+colonnes(plaine);
+  else if(mesThemes.size) out+=`<p class="empty">Rien d'autre ce week-end dans la plaine pour vos thèmes. <a href="#agenda">Voir tout l'agenda</a>.</p>`;
   el.innerHTML=out;
 }
 // ---- Mon village : meteo, routes, nouvelles entreprises (03.10.2026) ----
@@ -746,7 +806,7 @@ function ajouteCalendrier(){
   EV.sort((a,b)=>a.d.localeCompare(b.d));
   renderWeekend(); render();
 }
-fetch('villages.json?v='+Date.now()).then(r=>r.json()).then(j=>{ VD=j; renderVillage(); ajouteCalendrier(); }).catch(()=>{});
+fetch('villages.json?v='+Date.now()).then(r=>r.json()).then(j=>{ VD=j; renderVillage(); ajouteCalendrier(); if(EV.length) renderWeekend(); }).catch(()=>{});
 
 const TITRE=document.title;
 function choisirVillage(v, memorise){
@@ -813,6 +873,8 @@ function render(){
 }
 document.getElementById('fv').addEventListener('change',e=>{fv=e.target.value;nbJours=NB_JOURS;render()});
 document.getElementById('mv').addEventListener('change',e=>choisirVillage(e.target.value,true));
+// le bouton d'accueil mene au choix du village
+document.getElementById('cmv').addEventListener('click',()=>{ setTimeout(()=>document.getElementById('mv').focus(),350); });
 document.getElementById('fc').addEventListener('click',e=>{
   const b=e.target.closest('.chip'); if(!b)return;
   const c=b.dataset.c, on=fcats.has(c);
@@ -823,7 +885,7 @@ document.getElementById('fc').addEventListener('click',e=>{
 fetch('events.json?v='+Date.now())
   .then(r=>r.json())
   .then(j=>{
-     EV=j;
+     EV=j; marqueNouveaux();
      const fvSel=document.getElementById('fv');
      [...new Set(EV.map(e=>e.v))].sort().forEach(v=>{
         const o=document.createElement('option'); o.value=v; o.textContent=v; fvSel.appendChild(o);
