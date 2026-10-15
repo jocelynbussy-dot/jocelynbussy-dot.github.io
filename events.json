@@ -1808,17 +1808,6 @@
  },
  {
   "d": "2026-10-08",
-  "fin": "2026-10-12",
-  "t": "Activités d'intégration",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Commune d'Orbe - Jeunesse & Intégration",
-  "h": "Selon le programme d'activités",
-  "lieu": "Maison des Jeunes, Ch. du Puisoir 1, 1350 Orbe (sauf mention contraire selon l'activité)",
-  "url": "https://www.orbe.ch/ma-ville/integration/activites-integration.html"
- },
- {
-  "d": "2026-10-08",
   "fin": "2026-10-08",
   "t": "Conseil général",
   "v": "Pompaples",
@@ -1896,28 +1885,6 @@
   "lieu": "Terrain des 5 Communes, Chamblon",
   "url": "https://matchcenter-acvf.football.ch/",
   "exterieur": true
- },
- {
-  "d": "2026-10-08",
-  "fin": "2026-10-08",
-  "t": "Projection d'archives : Le Théâtre des Jeunes d'Orbe (1976)",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "20h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/"
- },
- {
-  "d": "2026-10-09",
-  "fin": "2026-10-09",
-  "t": "A la croisée de l'art et du chamanisme",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "HESSEL",
-  "h": "18h30",
-  "lieu": "Rue Davall 3, 1350 Orbe",
-  "url": "https://www.sham-art.ch"
  },
  {
   "d": "2026-10-09",
@@ -2076,17 +2043,6 @@
   "lieu": "Terrain Grassy, Chavannes-le-Chêne",
   "url": "https://matchcenter-acvf.football.ch/",
   "exterieur": true
- },
- {
-  "d": "2026-10-10",
-  "fin": "2026-10-10",
-  "t": "Fournée au four à pain",
-  "v": "Chavornay",
-  "c": "fete",
-  "o": "Association Four à pain",
-  "h": "",
-  "lieu": "Four à pain du Vieux Moulin",
-  "url": ""
  },
  {
   "d": "2026-10-10",
@@ -2250,17 +2206,6 @@
   "url": ""
  },
  {
-  "d": "2026-10-13",
-  "fin": "2026-10-13",
-  "t": "Table au bistrot",
-  "v": "Orny",
-  "c": "fete",
-  "o": "Pro Senectute",
-  "h": "",
-  "lieu": "Auberge communale Les Rupiants",
-  "url": ""
- },
- {
   "d": "2026-10-14",
   "fin": "2026-10-14",
   "t": "FC Vallorbe-Ballaigues I – FC Genolier-Begnins I",
@@ -2281,17 +2226,6 @@
   "h": "8h30-10h30",
   "lieu": "Pressoir",
   "url": "https://www.labergement.ch/agenda-fr1401.html"
- },
- {
-  "d": "2026-10-14",
-  "fin": "2026-10-14",
-  "t": "Soirée jeux",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "T'as où les jeux",
-  "h": "A partir de 18h30 et jusqu'à 22h30",
-  "lieu": "Rue Davall 3, 1350 Orbe",
-  "url": "https://tasoulesjeux.ch/"
  },
  {
   "d": "2026-10-15",
@@ -2360,6 +2294,17 @@
   "h": "19h00",
   "lieu": "Stade du Puisoir N°1",
   "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-17",
+  "fin": "2026-10-17",
+  "t": "Robin Chessex, humour (1re partie : Agata)",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Association Hessel Espace Culturel",
+  "h": "20h · entrée libre, sortie au chapeau · réservation conseillée : reservations@hesselespaceculturel.ch",
+  "lieu": "Centre culturel Hessel, rue Davall 3",
+  "url": ""
  },
  {
   "d": "2026-10-17",
@@ -2481,7 +2426,7 @@
   "c": "foot",
   "o": "5e ligue Groupe 4",
   "h": "11h00",
-  "lieu": "Ch. des Vignes, Moudon",
+  "lieu": "Parc des Sports, Lucens",
   "url": "https://matchcenter-acvf.football.ch/",
   "exterieur": true
  },
@@ -2556,6 +2501,73 @@
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
+  "d": "2026-10-19",
+  "fin": "2026-10-19",
+  "t": "Grp 13 coteaux - Arnex – FC Venoge",
+  "v": "Rances",
+  "c": "foot",
+  "o": "Seniors 40+ Groupe 1",
+  "h": "20h00",
+  "lieu": "Goran's Park",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-20",
+  "fin": "2026-10-20",
+  "t": "FC Bavois -Chavornay – FC Romanel",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 40+ Groupe 1",
+  "h": "20h00",
+  "lieu": "Les Peupliers",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-21",
+  "fin": "2026-10-21",
+  "t": "FC Bavois -Chavornay – FC Venoge",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 50+ Groupe 4",
+  "h": "20h00",
+  "lieu": "Les Peupliers N°3",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-21",
+  "fin": "2026-10-21",
+  "t": "FC Champvent II – FC Etoile Bonvillars",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "20h00",
+  "lieu": "Stade Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-21",
+  "fin": "2026-10-21",
+  "t": "FC Veyron-Venoge – FC Chavornay Sports - Bavois",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 4",
+  "h": "20h00",
+  "lieu": "Terrain Champmarpaud, La Chaux",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-21",
+  "fin": "2026-10-21",
+  "t": "Maquillage gratuit pour les enfants (Halloween)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Centre commercial Gruvatiez",
+  "h": "gratuit",
+  "lieu": "Centre commercial Gruvatiez",
+  "url": "https://www.loisirs.ch/category/region/vaud/?page=55"
+ },
+ {
   "d": "2026-10-21",
   "fin": "2026-10-21",
   "t": "Poste mobile de gendarmerie",
@@ -2565,6 +2577,39 @@
   "h": "le matin",
   "lieu": "",
   "url": "https://www.juriens.ch/"
+ },
+ {
+  "d": "2026-10-22",
+  "fin": "2026-10-22",
+  "t": "FC Bavois -Chavornay – Pully Football",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 30+ champion Groupe 1",
+  "h": "20h00",
+  "lieu": "Les Peupliers",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-22",
+  "fin": "2026-10-22",
+  "t": "FC Vallon du Nozon – FC Vallorbe-Ballaigues",
+  "v": "Croy",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 2",
+  "h": "20h00",
+  "lieu": "Terrain du Praz-Amiet",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-22",
+  "fin": "2026-10-22",
+  "t": "Grp 13 coteaux – FC Champagne Sports I",
+  "v": "Rances",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 2",
+  "h": "20h00",
+  "lieu": "Goran's Park",
+  "url": "https://matchcenter-acvf.football.ch/"
  },
  {
   "d": "2026-10-22",
@@ -2589,6 +2634,28 @@
   "url": "https://suchy.ch/events/raisinee-de-la-jeunesse-5/"
  },
  {
+  "d": "2026-10-23",
+  "fin": "2026-10-23",
+  "t": "FC Bavois III – FC Ependes",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "20h00",
+  "lieu": "Les Peupliers",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-23",
+  "fin": "2026-10-23",
+  "t": "FC Champvent I – FC Forward-Morges I",
+  "v": "Baulmes",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "20h30",
+  "lieu": "Stade Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
   "d": "2026-10-24",
   "fin": "2026-10-25",
   "t": "Anniversaire des Krepiuls 30 ans",
@@ -2602,6 +2669,51 @@
  {
   "d": "2026-10-24",
   "fin": "2026-10-24",
+  "t": "Choix du futur Sapin Président",
+  "v": "Baulmes",
+  "c": "fete",
+  "o": "Municipalité de Baulmes",
+  "h": "programme à venir",
+  "lieu": "",
+  "url": "https://www.baulmes.ch/fr/1201/sapin-president"
+ },
+ {
+  "d": "2026-10-24",
+  "fin": "2026-10-24",
+  "t": "FC Bavois II – FC Grandson-Tuileries I",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "18h15",
+  "lieu": "Les Peupliers N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-24",
+  "fin": "2026-10-24",
+  "t": "FC Bavois – FC Schaffhausen",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Promotion League",
+  "h": "16h00",
+  "lieu": "Les Peupliers N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-24",
+  "fin": "2026-10-24",
+  "t": "FC Epalinges I – FC Orbe I",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "3e ligue Groupe 4",
+  "h": "19h30",
+  "lieu": "Stade de la Croix-Blanche, Epalinges",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-24",
+  "fin": "2026-10-24",
   "t": "Journée débarras de la Jeunesse",
   "v": "Ballaigues",
   "c": "fete",
@@ -2609,6 +2721,28 @@
   "h": "",
   "lieu": "",
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
+ },
+ {
+  "d": "2026-10-24",
+  "fin": "2026-10-24",
+  "t": "Maquillage gratuit pour les enfants (Halloween)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Centre commercial Gruvatiez",
+  "h": "gratuit",
+  "lieu": "Centre commercial Gruvatiez",
+  "url": "https://www.loisirs.ch/category/region/vaud/?page=55"
+ },
+ {
+  "d": "2026-10-24",
+  "fin": "2026-10-24",
+  "t": "Repas de soutien du FC Champvent",
+  "v": "Champvent",
+  "c": "fete",
+  "o": "FC Champvent",
+  "h": "",
+  "lieu": "",
+  "url": "https://champvent.ch/manifestations"
  },
  {
   "d": "2026-10-24",
@@ -2631,6 +2765,166 @@
   "h": "dès 10h",
   "lieu": "Cantine",
   "url": "https://vaulion.ch/agenda"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "A Chantar : regards féminins (Ensemble Antiphona)",
+  "v": "Romainmôtier-Envy",
+  "c": "musique",
+  "o": "Les Concerts de Romainmôtier",
+  "h": "16h · billets sur monbillet.ch ou 024 453 14 65",
+  "lieu": "Abbatiale",
+  "url": "https://www.concerts-romainmotier.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Chavornay Sports II – FC Donneloye II",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "4e ligue Groupe 4",
+  "h": "10h30",
+  "lieu": "En Courtes-Raies N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Froideville – FC Suchy-Sports",
+  "v": "Suchy",
+  "c": "foot",
+  "o": "5e ligue Groupe 3",
+  "h": "10h00",
+  "lieu": "Centre Sportif Pré-Camuz, Froideville",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Gland I – FC Chavornay Sports I",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "2e ligue Groupe 1",
+  "h": "15h00",
+  "lieu": "Centre sportif En Bord, Gland",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Mont-Goulin IB – FC Arnex IB",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 5",
+  "h": "12h30",
+  "lieu": "Stade de la Tuilière, Lausanne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Orbe II – FC Sainte-Croix/La Sagne I",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Stade du Puisoir N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Prilly-Sports IA – FC Montcherand",
+  "v": "Montcherand",
+  "c": "foot",
+  "o": "4e ligue Groupe 3",
+  "h": "10h30",
+  "lieu": "Fleurs de Lys, Prilly",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Rances – FC Grandson-Tuileries II",
+  "v": "Rances",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Goran's Park",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Vallon du Nozon – FC Renens II",
+  "v": "Croy",
+  "c": "foot",
+  "o": "Féminine 4e ligue Groupe 1",
+  "h": "10h00",
+  "lieu": "Terrain du Praz-Amiet",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Vallon du Nozon – FC Vallée de Joux I",
+  "v": "Croy",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h00",
+  "lieu": "Terrain du Praz-Amiet",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Vallorbe-Ballaigues I – FC Baulmes I",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "14h30",
+  "lieu": "Stade Prés-Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Vallorbe-Ballaigues II – FC Baulmes II",
+  "v": "Vallorbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "11h00",
+  "lieu": "Stade Prés-Sous-Ville",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Vallée de Joux – FC Chavornay Sports",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Féminine 4e ligue Groupe 1",
+  "h": "11h00",
+  "lieu": "Terrain des Crêtets, Le Sentier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-10-25",
+  "fin": "2026-10-25",
+  "t": "FC Yvonand II – FC Arnex IA",
+  "v": "Arnex-sur-Orbe",
+  "c": "foot",
+  "o": "5e ligue Groupe 4",
+  "h": "10h30",
+  "lieu": "Stade Municipal En Brit, Yvonand",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-10-25",
@@ -2675,6 +2969,28 @@
   "h": "De 18h à 19h30",
   "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
   "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
+ },
+ {
+  "d": "2026-10-27",
+  "fin": "2026-11-03",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
+  "d": "2026-10-28",
+  "fin": "2026-10-28",
+  "t": "Maquillage gratuit pour les enfants (Halloween)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Centre commercial Gruvatiez",
+  "h": "gratuit",
+  "lieu": "Centre commercial Gruvatiez",
+  "url": "https://www.loisirs.ch/category/region/vaud/?page=55"
  },
  {
   "d": "2026-10-28",
@@ -2778,6 +3094,17 @@
  {
   "d": "2026-10-31",
   "fin": "2026-10-31",
+  "t": "Fondue et concert Les Snieulettes",
+  "v": "La Praz",
+  "c": "musique",
+  "o": "GALP",
+  "h": "19h",
+  "lieu": "",
+  "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
+  "d": "2026-10-31",
+  "fin": "2026-10-31",
   "t": "Les Monstres du Coeur",
   "v": "Orny",
   "c": "fete",
@@ -2800,6 +3127,17 @@
  {
   "d": "2026-10-31",
   "fin": "2026-10-31",
+  "t": "Maquillage gratuit pour les enfants (Halloween)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Centre commercial Gruvatiez",
+  "h": "gratuit",
+  "lieu": "Centre commercial Gruvatiez",
+  "url": "https://www.loisirs.ch/category/region/vaud/?page=55"
+ },
+ {
+  "d": "2026-10-31",
+  "fin": "2026-10-31",
   "t": "Portes ouvertes de la Fromagerie de Ballaigues",
   "v": "Ballaigues",
   "c": "fete",
@@ -2807,17 +3145,6 @@
   "h": "dès 10h",
   "lieu": "Fromagerie",
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
- },
- {
-  "d": "2026-10-31",
-  "fin": "2026-10-31",
-  "t": "Repas de soutien du FC Champvent",
-  "v": "Champvent",
-  "c": "fete",
-  "o": "FC Champvent",
-  "h": "",
-  "lieu": "",
-  "url": "https://champvent.ch/manifestations"
  },
  {
   "d": "2026-11-01",
@@ -2943,13 +3270,24 @@
  {
   "d": "2026-11-07",
   "fin": "2026-11-07",
-  "t": "Portes ouvertes de la source Mercier (AISM)",
-  "v": "Premier",
-  "c": "officiel",
-  "o": "AISM",
+  "t": "Plateau Stand-Up",
+  "v": "Vallorbe",
+  "c": "fete",
+  "o": "Commission culturelle Vallorbe",
   "h": "",
-  "lieu": "",
-  "url": "https://premier.ch/"
+  "lieu": "Casino de Vallorbe",
+  "url": ""
+ },
+ {
+  "d": "2026-11-07",
+  "fin": "2026-11-07",
+  "t": "Portes ouvertes de la source Mercier (AISM)",
+  "v": "Les Clées",
+  "c": "officiel",
+  "o": "AISM (Association intercommunale d'amenée d'eau de la Source Mercier)",
+  "h": "9h",
+  "lieu": "Rendez-vous devant l'église des Clées, puis réservoir et station de Lignerolle (en voiture)",
+  "url": "https://montcherand.ch/data/files/montcherand/manifestations/aism-portesouverte.pdf"
  },
  {
   "d": "2026-11-07",
@@ -3005,6 +3343,28 @@
   "h": "",
   "lieu": "Grande salle",
   "url": "https://vaulion.ch/agenda"
+ },
+ {
+  "d": "2026-11-08",
+  "fin": "2026-11-08",
+  "t": "Voyages en cartes postales et en petites voitures",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "14h et 16h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/voyages-en-cartes-postales-et-en-petites-voitures/"
+ },
+ {
+  "d": "2026-11-10",
+  "fin": "2026-11-17",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
  },
  {
   "d": "2026-11-10",
@@ -3073,6 +3433,28 @@
   "url": "https://www.labergement.ch/agenda-fr1401.html"
  },
  {
+  "d": "2026-11-11",
+  "fin": "2026-11-11",
+  "t": "Soirée jeux de société avec « T'as où les jeux ? »",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association Hessel Espace Culturel",
+  "h": "dès 18h30 · entrée libre",
+  "lieu": "Centre culturel Hessel, rue Davall 3",
+  "url": "https://www.facebook.com/hesselespaceculturel.ch"
+ },
+ {
+  "d": "2026-11-12",
+  "fin": "2026-11-12",
+  "t": "RDV du jeudi - Entrez dans le conte",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "20h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/rdv-du-jeudi-entrez-dans-le-conte/"
+ },
+ {
   "d": "2026-11-13",
   "fin": "2026-11-13",
   "t": "80 ans des Paysannes Vaudoises",
@@ -3108,6 +3490,17 @@
  {
   "d": "2026-11-14",
   "fin": "2026-11-14",
+  "t": "Adrienne",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "20h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/adrienne/"
+ },
+ {
+  "d": "2026-11-14",
+  "fin": "2026-11-14",
   "t": "« La gendarmerie à votre porte »",
   "v": "Premier",
   "c": "officiel",
@@ -3115,6 +3508,17 @@
   "h": "",
   "lieu": "",
   "url": "https://premier.ch/"
+ },
+ {
+  "d": "2026-11-15",
+  "fin": "2026-11-15",
+  "t": "Cum Jubilo : Duruflé (Les Chantres de Paris)",
+  "v": "Romainmôtier-Envy",
+  "c": "musique",
+  "o": "Les Concerts de Romainmôtier",
+  "h": "16h · billets sur monbillet.ch ou 024 453 14 65",
+  "lieu": "Abbatiale",
+  "url": "https://www.concerts-romainmotier.ch/"
  },
  {
   "d": "2026-11-17",
@@ -3150,6 +3554,39 @@
   "url": "https://www.connaissance3.ch"
  },
  {
+  "d": "2026-11-19",
+  "fin": "2026-11-19",
+  "t": "Soirée jeux de société",
+  "v": "La Praz",
+  "c": "fete",
+  "o": "GALP",
+  "h": "",
+  "lieu": "",
+  "url": "https://www.lapraz.ch/agenda/"
+ },
+ {
+  "d": "2026-11-20",
+  "fin": "2026-11-20",
+  "t": "Contée au coin du feu",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Pro Urba",
+  "h": "",
+  "lieu": "Caveau du musée",
+  "url": "https://www.pro-urba.ch/activites/"
+ },
+ {
+  "d": "2026-11-20",
+  "fin": "2026-11-20",
+  "t": "Dominique y los Cuchumatanes",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "20h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/dominique-y-los-cuchumatanes/"
+ },
+ {
   "d": "2026-11-20",
   "fin": "2026-11-20",
   "t": "Soirée de gymnastique — spectacle",
@@ -3170,6 +3607,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#balanne80-1077"
+ },
+ {
+  "d": "2026-11-21",
+  "fin": "2026-11-21",
+  "t": "Conférence : Bally, Bocion, Vallotton, les peintres vaudois à l'épreuve de leur identité (Philippe Clerc)",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Pro Urba",
+  "h": "10h30",
+  "lieu": "Caveau du musée",
+  "url": "https://www.pro-urba.ch/activites/"
  },
  {
   "d": "2026-11-21",
@@ -3216,6 +3664,17 @@
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
  },
  {
+  "d": "2026-11-21",
+  "fin": "2026-11-21",
+  "t": "Vernissage de la Revue historique vaudoise consacrée à Orbe",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Pro Urba",
+  "h": "l'après-midi",
+  "lieu": "Temple et Casino",
+  "url": "https://www.pro-urba.ch/activites/"
+ },
+ {
   "d": "2026-11-22",
   "fin": "2026-11-22",
   "t": "Fête paroissiale",
@@ -3238,6 +3697,28 @@
   "url": "https://monbillet.ch/events/in-templo-26-hechizo-flamenco-group"
  },
  {
+  "d": "2026-11-23",
+  "fin": "2026-11-23",
+  "t": "Poste de gendarmerie mobile",
+  "v": "Montcherand",
+  "c": "officiel",
+  "o": "Gendarmerie vaudoise",
+  "h": "le matin",
+  "lieu": "",
+  "url": "https://montcherand.ch/data/files/montcherand/manifestations/postemobilegendarmeriemontcherand.pdf"
+ },
+ {
+  "d": "2026-11-24",
+  "fin": "2026-12-01",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2026-11-25",
   "fin": "2026-11-25",
   "t": "Atelier dessin « Créativi’thé »",
@@ -3258,6 +3739,17 @@
   "h": "De 9h00 à 17h00",
   "lieu": "Forêt de Chassagne, près d'Orbe",
   "url": "https://point-nature.ch/ateliers.html"
+ },
+ {
+  "d": "2026-11-25",
+  "fin": "2026-11-25",
+  "t": "Présentation du défibrillateur du village",
+  "v": "Romainmôtier-Envy",
+  "c": "officiel",
+  "o": "Commune de Romainmôtier-Envy",
+  "h": "19h · inscription : commune@romainmotier-envy.ch ou 024 453 15 86",
+  "lieu": "Salle du Conseil",
+  "url": "https://romainmotier.ch/actualite-manifestations/agenda/"
  },
  {
   "d": "2026-11-26",
@@ -3302,6 +3794,17 @@
   "h": "19h",
   "lieu": "Grande salle de Suchy",
   "url": ""
+ },
+ {
+  "d": "2026-11-28",
+  "fin": "2026-11-28",
+  "t": "Crâmée",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "20h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/cramee/"
  },
  {
   "d": "2026-11-28",
@@ -3416,6 +3919,17 @@
  {
   "d": "2026-12-03",
   "fin": "2026-12-03",
+  "t": "RDV du jeudi - C'est pas moi, c'est vous",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "20h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/rdv-du-jeudi-cest-pas-moi-cest-vous/"
+ },
+ {
+  "d": "2026-12-03",
+  "fin": "2026-12-03",
   "t": "Repas de Noël des Aînés",
   "v": "Baulmes",
   "c": "fete",
@@ -3504,6 +4018,17 @@
  {
   "d": "2026-12-06",
   "fin": "2026-12-06",
+  "t": "L'Avent méconnu de la Pologne au 17e siècle (Gli Angeli Genève)",
+  "v": "Romainmôtier-Envy",
+  "c": "musique",
+  "o": "Les Concerts de Romainmôtier",
+  "h": "16h · billets sur monbillet.ch ou 024 453 14 65",
+  "lieu": "Abbatiale",
+  "url": "https://www.concerts-romainmotier.ch/"
+ },
+ {
+  "d": "2026-12-06",
+  "fin": "2026-12-06",
   "t": "Thé Dansant",
   "v": "Orbe",
   "c": "culture",
@@ -3533,6 +4058,17 @@
   "h": "",
   "lieu": "Salle du Conseil, rue des Fontaines 12",
   "url": "https://croy.ch/agenda/"
+ },
+ {
+  "d": "2026-12-08",
+  "fin": "2026-12-15",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
  },
  {
   "d": "2026-12-08",
@@ -3590,6 +4126,17 @@
   "url": "https://point-nature.ch/ateliers.html"
  },
  {
+  "d": "2026-12-09",
+  "fin": "2026-12-09",
+  "t": "Soirée jeux de société avec « T'as où les jeux ? »",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association Hessel Espace Culturel",
+  "h": "dès 18h30 · entrée libre",
+  "lieu": "Centre culturel Hessel, rue Davall 3",
+  "url": "https://www.facebook.com/hesselespaceculturel.ch"
+ },
+ {
   "d": "2026-12-10",
   "fin": "2026-12-10",
   "t": "Conseil communal",
@@ -3643,6 +4190,17 @@
   "h": "20h00",
   "lieu": "Grande salle Jura",
   "url": "https://www.suchy.ch/events/"
+ },
+ {
+  "d": "2026-12-11",
+  "fin": "2026-12-12",
+  "t": "La Fin",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "Théâtre de la Tournelle",
+  "h": "20h",
+  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://tournelle.ch/spectacle/la-fin/"
  },
  {
   "d": "2026-12-11",
@@ -3810,6 +4368,17 @@
   "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
  },
  {
+  "d": "2026-12-22",
+  "fin": "2027-01-12",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2026-12-23",
   "fin": "2026-12-23",
   "t": "Mercredi Forêt Enfants (4 à 8+ans)",
@@ -3964,6 +4533,17 @@
   "url": "https://www.fvjc.ch/agenda/#petitnouvel-an2027-1133"
  },
  {
+  "d": "2027-01-19",
+  "fin": "2027-01-26",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2027-01-23",
   "fin": "2027-01-23",
   "t": "Bal de jeunesse",
@@ -3975,6 +4555,17 @@
   "url": "https://www.fvjc.ch/agenda/#baldejeunesse-1141"
  },
  {
+  "d": "2027-01-24",
+  "fin": "2027-01-24",
+  "t": "RepairMôtier : le repair café",
+  "v": "Romainmôtier-Envy",
+  "c": "culture",
+  "o": "Commune et Nozon en transition",
+  "h": "14h-17h",
+  "lieu": "Salle des commissions, place du Bourg 7",
+  "url": "https://repair.romainmotier.ch/repair-cafe-a-romainmotier/"
+ },
+ {
   "d": "2027-01-27",
   "fin": "2027-01-27",
   "t": "Don du sang",
@@ -3984,6 +4575,17 @@
   "h": "16h-20h",
   "lieu": "",
   "url": "https://www.mathod.ch/"
+ },
+ {
+  "d": "2027-02-02",
+  "fin": "2027-02-16",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
  },
  {
   "d": "2027-02-04",
@@ -4041,6 +4643,17 @@
   "url": ""
  },
  {
+  "d": "2027-02-23",
+  "fin": "2027-03-02",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2027-02-27",
   "fin": "2027-02-27",
   "t": "Souper Malakoff",
@@ -4085,6 +4698,17 @@
   "url": "https://www.fvjc.ch/agenda/#tournoidevolley-1147"
  },
  {
+  "d": "2027-03-09",
+  "fin": "2027-03-16",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2027-03-15",
   "fin": "2027-03-15",
   "t": "Don du sang",
@@ -4105,6 +4729,28 @@
   "h": "De 9h00 à 17h00",
   "lieu": "Forêt de Chassagne, près d'Orbe",
   "url": "https://point-nature.ch/ateliers.html"
+ },
+ {
+  "d": "2027-03-23",
+  "fin": "2027-04-13",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
+  "d": "2027-03-24",
+  "fin": "2027-03-24",
+  "t": "Conseil général",
+  "v": "Bretonnières",
+  "c": "officiel",
+  "o": "Commune de Bretonnières",
+  "h": "",
+  "lieu": "",
+  "url": "https://bretonnieres.ch/"
  },
  {
   "d": "2027-03-26",
@@ -4173,6 +4819,17 @@
   "url": "https://www.fvjc.ch/agenda/#brunch-1159"
  },
  {
+  "d": "2027-04-20",
+  "fin": "2027-04-27",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2027-04-21",
   "fin": "2027-04-21",
   "t": "Don du sang",
@@ -4206,6 +4863,17 @@
   "url": "https://point-nature.ch/ateliers.html"
  },
  {
+  "d": "2027-05-04",
+  "fin": "2027-05-11",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2027-05-07",
   "fin": "2027-05-07",
   "t": "Tour de jeunesse",
@@ -4226,6 +4894,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#tourdejeunesse-1164"
+ },
+ {
+  "d": "2027-05-09",
+  "fin": "2027-05-09",
+  "t": "RepairMôtier : le repair café",
+  "v": "Romainmôtier-Envy",
+  "c": "culture",
+  "o": "Commune et Nozon en transition",
+  "h": "14h-17h",
+  "lieu": "Salle des commissions, place du Bourg 7",
+  "url": "https://repair.romainmotier.ch/repair-cafe-a-romainmotier/"
  },
  {
   "d": "2027-05-12",
@@ -4250,6 +4929,17 @@
   "url": "https://point-nature.ch/ateliers.html"
  },
  {
+  "d": "2027-05-18",
+  "fin": "2027-05-25",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
   "d": "2027-05-26",
   "fin": "2027-05-26",
   "t": "Mercredi Forêt Enfants (4 à 8+ans)",
@@ -4261,6 +4951,28 @@
   "url": "https://point-nature.ch/ateliers.html"
  },
  {
+  "d": "2027-06-01",
+  "fin": "2027-06-08",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
+ },
+ {
+  "d": "2027-06-09",
+  "fin": "2027-06-09",
+  "t": "Conseil général",
+  "v": "Bretonnières",
+  "c": "officiel",
+  "o": "Commune de Bretonnières",
+  "h": "",
+  "lieu": "",
+  "url": "https://bretonnieres.ch/"
+ },
+ {
   "d": "2027-06-09",
   "fin": "2027-06-09",
   "t": "Mercredi Forêt Famille",
@@ -4270,6 +4982,17 @@
   "h": "De 9h00 à 17h00",
   "lieu": "Forêt de Chassagne, près d'Orbe",
   "url": "https://point-nature.ch/ateliers.html"
+ },
+ {
+  "d": "2027-06-15",
+  "fin": "2027-06-22",
+  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association ARC-Echange",
+  "h": "9h à 11h",
+  "lieu": "Rue Davall 5, 1350 Orbe",
+  "url": "https://www.arc-echange.ch"
  },
  {
   "d": "2027-06-16",
@@ -4316,6 +5039,17 @@
   "url": ""
  },
  {
+  "d": "2027-09-26",
+  "fin": "2027-09-26",
+  "t": "RepairMôtier : le repair café",
+  "v": "Romainmôtier-Envy",
+  "c": "culture",
+  "o": "Commune et Nozon en transition",
+  "h": "14h-17h",
+  "lieu": "Salle des commissions, place du Bourg 7",
+  "url": "https://repair.romainmotier.ch/repair-cafe-a-romainmotier/"
+ },
+ {
   "d": "2027-10-01",
   "fin": "2027-10-02",
   "t": "40 ans de la jeunesse",
@@ -4336,5 +5070,16 @@
   "h": "17h-19h30",
   "lieu": "",
   "url": "https://www.mathod.ch/"
+ },
+ {
+  "d": "2027-10-06",
+  "fin": "2027-10-06",
+  "t": "Conseil général",
+  "v": "Bretonnières",
+  "c": "officiel",
+  "o": "Commune de Bretonnières",
+  "h": "",
+  "lieu": "",
+  "url": "https://bretonnieres.ch/"
  }
 ]
