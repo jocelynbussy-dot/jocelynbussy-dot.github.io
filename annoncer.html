@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Annoncer un événement — Le Battoir</title>
+<meta name="description" content="Annoncez gratuitement votre loto, soirée, concert ou match dans l'agenda du Battoir, plaine de l'Orbe.">
+<meta property="og:title" content="Annoncer un événement — Le Battoir">
+<meta property="og:image" content="https://lebattoir.ch/partage.png">
+<meta property="og:url" content="https://lebattoir.ch/annoncer.html">
+<link rel="canonical" href="https://lebattoir.ch/annoncer.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- 21.10.2026 : formulaire « Annoncer un événement » (idée 2 de la fiche n8n). Envoie à n8n sur le serveur
+     atelier-naho (n8n.lebattoir.ch/webhook/annonce), seule porte publique. Source du flux :
+     Context/dossiers/serveur/n8n/fabrique_flux_annonce.py. Mêmes couleurs et polices que index.html. -->
+<style>
+:root{--rouge:#C2412E;--noir:#222222;--creme:#F5F0E7;--gris:#6b6560;--trait:#e2dbd0;--blanc:#fff}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--noir);background:var(--blanc);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,.osw{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{border-bottom:3px solid var(--noir)}
+header .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:18px 20px}
+header a{color:var(--noir);text-decoration:none}
+.n{font-family:Oswald,sans-serif;font-weight:700;font-size:28px;letter-spacing:.02em}
+.t{font-weight:600;font-size:10.5px;letter-spacing:.18em;color:var(--rouge);text-transform:uppercase}
+.retour{font-size:14px;color:var(--gris)!important;text-decoration:underline!important}
+.tete{background:var(--creme);border-bottom:3px solid var(--noir);padding:28px 0 24px}
+.tete h1{font-size:30px}
+.tete p{margin-top:10px;font-size:16.5px;max-width:60ch}
+form{padding:26px 0 10px}
+fieldset{border:0;padding:0;margin:0 0 22px}
+legend{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:18px;margin-bottom:8px;border-bottom:2px solid var(--noir);width:100%;padding-bottom:4px}
+label{display:block;font-weight:600;font-size:15px;margin:12px 0 4px}
+.aide{font-weight:400;color:var(--gris);font-size:13.5px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--trait);background:#fff;color:var(--noir);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--noir)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media (max-width:520px){.deux{grid-template-columns:1fr}}
+.piege{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+button{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;
+  padding:14px 26px;border:2px solid var(--rouge);background:var(--rouge);color:#fff;cursor:pointer;margin-top:6px}
+button[disabled]{opacity:.6;cursor:wait}
+.msg{margin-top:16px;padding:14px 16px;border-left:5px solid var(--noir);background:var(--creme);display:none}
+.msg.ok{border-color:#3a7d3a}.msg.err{border-color:var(--rouge)}
+.donnees{font-size:13.5px;color:var(--gris);border-top:1px solid var(--trait);margin-top:28px;padding:16px 0 40px}
+.donnees a{color:var(--gris)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/"><div class="n">LE BATTOIR</div><div class="t">Plaine de l'Orbe</div></a>
+  <a class="retour" href="/">Retour à l'agenda</a>
+</div></header>
+
+<section class="tete"><div class="wrap">
+  <h1>Annoncer un événement</h1>
+  <p>Un loto, un repas de soutien, une soirée, un concert, un tournoi : remplissez ces quelques lignes,
+     on relit et on publie dans l'agenda, en principe le jeudi qui suit. <strong>C'est gratuit, et ça le restera.</strong></p>
+</div></section>
+
+<div class="wrap">
+<form id="f" novalidate>
+  <fieldset>
+    <legend>L'événement</legend>
+    <label for="titre">Quoi ?</label>
+    <input id="titre" name="titre" maxlength="120" required placeholder="Loto de la Jeunesse, Soirée annuelle de la gym…">
+    <div class="deux">
+      <div><label for="village">Village</label>
+        <select id="village" name="village" required><option value="">Choisir…</option></select></div>
+      <div><label for="categorie">Genre</label>
+        <select id="categorie" name="categorie">
+          <option value="">Choisir…</option><option value="fete">Fête, soirée, repas</option>
+          <option value="loto">Loto</option><option value="musique">Concert, musique</option>
+          <option value="culture">Culture, théâtre, exposition</option><option value="sport">Sport</option>
+          <option value="marche">Marché, vide-grenier</option><option value="officiel">Commune, séance publique</option>
+        </select></div>
+    </div>
+    <label for="lieu">Où exactement ? <span class="aide">(salle, adresse)</span></label>
+    <input id="lieu" name="lieu" maxlength="120" placeholder="Grande salle, Battoir, terrain de foot…">
+    <div class="deux">
+      <div><label for="debut">Date</label><input id="debut" name="debut" type="date" required></div>
+      <div><label for="fin">Jusqu'au <span class="aide">(si plusieurs jours)</span></label><input id="fin" name="fin" type="date"></div>
+    </div>
+    <label for="horaires">Horaires <span class="aide">(jour par jour s'il y en a plusieurs : « ve 19h-2h · sa 10h-2h »)</span></label>
+    <input id="horaires" name="horaires" maxlength="200" required placeholder="Portes 18h30, début 20h">
+    <label for="details">Ce qu'il faut savoir <span class="aide">(entrée, repas, inscription… facultatif)</span></label>
+    <textarea id="details" name="details" rows="3" maxlength="1000"></textarea>
+    <label for="lien">Un lien <span class="aide">(site, page Facebook… facultatif)</span></label>
+    <input id="lien" name="lien" maxlength="300" inputmode="url" placeholder="https://">
+  </fieldset>
+
+  <fieldset>
+    <legend>Vous</legend>
+    <label for="organisateur">Société ou organisateur <span class="aide">(publié avec l'annonce)</span></label>
+    <input id="organisateur" name="organisateur" maxlength="120" required placeholder="Jeunesse de…, FC…, Société de gym…">
+    <div class="deux">
+      <div><label for="nom">Votre nom</label><input id="nom" name="nom" maxlength="80" required autocomplete="name"></div>
+      <div><label for="email">Votre e-mail</label><input id="email" name="email" type="email" maxlength="120" required autocomplete="email"></div>
+    </div>
+    <label for="telephone">Téléphone <span class="aide">(facultatif, seulement si on doit vous appeler)</span></label>
+    <input id="telephone" name="telephone" type="tel" maxlength="30" autocomplete="tel">
+    <div class="piege" aria-hidden="true"><label for="site_web">Ne pas remplir</label><input id="site_web" name="site_web" tabindex="-1" autocomplete="off"></div>
+  </fieldset>
+
+  <button id="b" type="submit">Envoyer l'annonce</button>
+  <div id="m" class="msg" role="status" aria-live="polite"></div>
+</form>
+
+<p class="donnees"><strong>Vos données.</strong> Votre nom, votre e-mail et votre téléphone ne sont pas publiés : ils servent seulement
+à vous confirmer la réception, à vous prévenir quand l'annonce est en ligne et, si besoin, à vous poser une question.
+Ils sont gardés sur notre serveur en Suisse et effacés après la manifestation. Seuls l'événement et le nom de la société paraissent dans l'agenda.
+Une question, une correction : <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
+</div>
+
+<script>
+const ADRESSE = 'https://n8n.lebattoir.ch/webhook/annonce';
+const VILLAGES = ["Agiez","Arnex-sur-Orbe","Ballaigues","Baulmes","Bavois","Bofflens","Bretonnières","Champvent","Chavornay",
+  "Corcelles-sur-Chavornay","Croy","Ependes","Essert-Pittet","Essert-sous-Champvent","Juriens","L'Abergement","La Praz",
+  "La Russille","Les Clées","Lignerolle","Mathod","Montcherand","Orbe","Orny","Pompaples","Premier","Rances",
+  "Romainmôtier-Envy","Sergey","Suchy","Suscévaz","Valeyres-sous-Rances","Vallorbe","Vaulion","Villars-sous-Champvent","Vuiteboeuf"];
+const sv = document.getElementById('village');
+for (const v of VILLAGES) sv.add(new Option(v, v));
+sv.add(new Option('Autre village (préciser dans « Où exactement ? »)', 'Autre'));
+const auj = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+document.getElementById('debut').min = auj; document.getElementById('fin').min = auj;
+
+const f = document.getElementById('f'), b = document.getElementById('b'), m = document.getElementById('m');
+function dire(texte, ok) { m.textContent = texte; m.className = 'msg ' + (ok ? 'ok' : 'err'); m.style.display = 'block'; }
+f.addEventListener('submit', async e => {
+  e.preventDefault();
+  const manque = [...f.querySelectorAll('[required]')].filter(x => !x.value.trim());
+  if (manque.length) { manque[0].focus(); dire('Il manque : ' + manque.map(x => f.querySelector('label[for=' + x.id + ']').firstChild.textContent.trim()).join(', ') + '.', false); return; }
+  if (!f.email.checkValidity()) { f.email.focus(); dire("L'adresse e-mail semble incomplète.", false); return; }
+  b.disabled = true; b.textContent = 'Envoi…';
+  try {
+    const r = await fetch(ADRESSE, { method: 'POST', body: new URLSearchParams(new FormData(f)) });
+    const j = await r.json().catch(() => ({}));
+    if (r.ok && j.ok) {
+      f.querySelectorAll('fieldset').forEach(x => x.style.display = 'none'); b.style.display = 'none';
+      dire("Bien reçu, merci ! On la relit et elle paraît dans l'agenda, en principe le jeudi qui suit. Un mail de confirmation vient de partir à " + f.email.value.trim() + ' (pensez à regarder dans les indésirables).', true);
+    } else {
+      dire((j.erreur || "L'envoi n'a pas abouti.") + ' Vous pouvez aussi écrire à annonce@lebattoir.ch.', false);
+    }
+  } catch (err) {
+    dire("Le formulaire ne répond pas pour le moment. Écrivez-nous à annonce@lebattoir.ch : quoi, où, quand, et c'est parti.", false);
+  }
+  b.disabled = false; b.textContent = "Envoyer l'annonce";
+});
+</script>
+</body>
+</html>
