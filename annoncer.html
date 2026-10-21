@@ -35,6 +35,8 @@ fieldset{border:0;padding:0;margin:0 0 22px}
 legend{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:18px;margin-bottom:8px;border-bottom:2px solid var(--noir);width:100%;padding-bottom:4px}
 label{display:block;font-weight:600;font-size:15px;margin:12px 0 4px}
 .aide{font-weight:400;color:var(--gris);font-size:13.5px}
+.ob{color:var(--rouge);font-weight:700}
+.oblig{font-size:14px;color:var(--gris);margin:0 0 6px}
 input,select,textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--trait);background:#fff;color:var(--noir);border-radius:0}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--noir)}
 .deux{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
@@ -63,12 +65,13 @@ button[disabled]{opacity:.6;cursor:wait}
 
 <div class="wrap">
 <form id="f" novalidate>
+  <p class="oblig"><span class="ob">*</span> champ obligatoire</p>
   <fieldset>
     <legend>L'événement</legend>
-    <label for="titre">Quoi ?</label>
+    <label for="titre">Quoi ? <span class="ob">*</span></label>
     <input id="titre" name="titre" maxlength="120" required placeholder="Loto de la Jeunesse, Soirée annuelle de la gym…">
     <div class="deux">
-      <div><label for="village">Village</label>
+      <div><label for="village">Village <span class="ob">*</span></label>
         <select id="village" name="village" required><option value="">Choisir…</option></select></div>
       <div><label for="categorie">Genre</label>
         <select id="categorie" name="categorie">
@@ -81,10 +84,10 @@ button[disabled]{opacity:.6;cursor:wait}
     <label for="lieu">Où exactement ? <span class="aide">(salle, adresse)</span></label>
     <input id="lieu" name="lieu" maxlength="120" placeholder="Grande salle, Battoir, terrain de foot…">
     <div class="deux">
-      <div><label for="debut">Date</label><input id="debut" name="debut" type="date" required></div>
+      <div><label for="debut">Date <span class="ob">*</span></label><input id="debut" name="debut" type="date" required></div>
       <div><label for="fin">Jusqu'au <span class="aide">(si plusieurs jours)</span></label><input id="fin" name="fin" type="date"></div>
     </div>
-    <label for="horaires">Horaires <span class="aide">(jour par jour s'il y en a plusieurs : « ve 19h-2h · sa 10h-2h »)</span></label>
+    <label for="horaires">Horaires <span class="ob">*</span> <span class="aide">(jour par jour s'il y en a plusieurs : « ve 19h-2h · sa 10h-2h »)</span></label>
     <input id="horaires" name="horaires" maxlength="200" required placeholder="Portes 18h30, début 20h">
     <label for="details">Ce qu'il faut savoir <span class="aide">(entrée, repas, inscription… facultatif)</span></label>
     <textarea id="details" name="details" rows="3" maxlength="1000"></textarea>
@@ -94,11 +97,11 @@ button[disabled]{opacity:.6;cursor:wait}
 
   <fieldset>
     <legend>Vous</legend>
-    <label for="organisateur">Société ou organisateur <span class="aide">(publié avec l'annonce)</span></label>
+    <label for="organisateur">Société ou organisateur <span class="ob">*</span> <span class="aide">(publié avec l'annonce)</span></label>
     <input id="organisateur" name="organisateur" maxlength="120" required placeholder="Jeunesse de…, FC…, Société de gym…">
     <div class="deux">
-      <div><label for="nom">Votre nom</label><input id="nom" name="nom" maxlength="80" required autocomplete="name"></div>
-      <div><label for="email">Votre e-mail</label><input id="email" name="email" type="email" maxlength="120" required autocomplete="email"></div>
+      <div><label for="nom">Votre nom <span class="ob">*</span></label><input id="nom" name="nom" maxlength="80" required autocomplete="name"></div>
+      <div><label for="email">Votre e-mail <span class="ob">*</span></label><input id="email" name="email" type="email" maxlength="120" required autocomplete="email"></div>
     </div>
     <label for="telephone">Téléphone <span class="aide">(facultatif, seulement si on doit vous appeler)</span></label>
     <input id="telephone" name="telephone" type="tel" maxlength="30" autocomplete="tel">
