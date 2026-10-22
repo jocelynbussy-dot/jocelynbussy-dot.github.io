@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recevoir l'agenda par mail — Le Battoir</title>
+<meta name="description" content="Recevez chaque jeudi l'agenda des villages qui vous intéressent, plaine de l'Orbe. Gratuit.">
+<meta property="og:title" content="Recevoir l'agenda par mail — Le Battoir">
+<meta property="og:image" content="https://lebattoir.ch/partage.png">
+<meta property="og:url" content="https://lebattoir.ch/inscription.html">
+<link rel="canonical" href="https://lebattoir.ch/inscription.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- 22.10.2026 : inscription a l'agenda par mail, version legere (decision de Jocelyn du 22.10).
+     Aucun serveur : le bouton prepare un mail vers annonce@lebattoir.ch avec les choix ; l'inscription
+     vaut des que ce mail est recu. Envoi du jeudi a la main, en copie cachee. Version serveur plus tard
+     (meme chemin que annoncer.html, porte /webhook/inscription a ouvrir par Jocelyn). -->
+<style>
+:root{--rouge:#C2412E;--noir:#222222;--creme:#F5F0E7;--gris:#6b6560;--trait:#e2dbd0;--blanc:#fff}
+*{box-sizing:border-box;margin:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--noir);background:var(--blanc);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,.osw{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+header{border-bottom:3px solid var(--noir)}
+header .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:18px 20px}
+header a{color:var(--noir);text-decoration:none}
+.n{font-family:Oswald,sans-serif;font-weight:700;font-size:28px;letter-spacing:.02em}
+.t{font-weight:600;font-size:10.5px;letter-spacing:.18em;color:var(--rouge);text-transform:uppercase}
+.retour{font-size:14px;color:var(--gris)!important;text-decoration:underline!important}
+.tete{background:var(--creme);border-bottom:3px solid var(--noir);padding:28px 0 24px}
+.tete h1{font-size:30px}
+.tete p{margin-top:10px;font-size:16.5px;max-width:60ch}
+form{padding:26px 0 10px}
+fieldset{border:0;padding:0;margin:0 0 22px}
+legend{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:18px;margin-bottom:8px;border-bottom:2px solid var(--noir);width:100%;padding-bottom:4px}
+label{display:block;font-weight:600;font-size:15px;margin:12px 0 4px}
+.aide{font-weight:400;color:var(--gris);font-size:13.5px}
+.ob{color:var(--rouge);font-weight:700}
+.oblig{font-size:14px;color:var(--gris);margin:0 0 6px}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--trait);background:#fff;color:var(--noir);border-radius:0}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--noir)}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+@media (max-width:520px){.deux{grid-template-columns:1fr}}
+.piege{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
+button{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;
+  padding:14px 26px;border:2px solid var(--rouge);background:var(--rouge);color:#fff;cursor:pointer;margin-top:6px}
+button[disabled]{opacity:.6;cursor:wait}
+.msg{margin-top:16px;padding:14px 16px;border-left:5px solid var(--noir);background:var(--creme);display:none}
+.msg.ok{border-color:#3a7d3a}.msg.err{border-color:var(--rouge)}
+.donnees{font-size:13.5px;color:var(--gris);border-top:1px solid var(--trait);margin-top:28px;padding:16px 0 40px}
+.donnees a{color:var(--gris)}
+.cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:2px 14px}
+.cases label{font-weight:400;font-size:15.5px;margin:4px 0;display:flex;gap:8px;align-items:center}
+.cases input{width:auto}
+.tous{font-weight:600!important}
+#copie{display:none;margin-top:14px}#copie pre{white-space:pre-wrap;background:var(--creme);padding:12px;font-size:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a href="/"><div class="n">LE BATTOIR</div><div class="t">Plaine de l'Orbe</div></a>
+  <a class="retour" href="/">Retour à l'agenda</a>
+</div></header>
+
+<section class="tete"><div class="wrap">
+  <h1>Recevoir l'agenda par mail</h1>
+  <p>Chaque jeudi, les rendez-vous du week-end <strong>dans les villages que vous choisissez</strong>, et seulement les thèmes qui vous intéressent. Gratuit, un mail par semaine, et vous arrêtez quand vous voulez.</p>
+</div></section>
+
+<div class="wrap">
+<form id="f" novalidate onsubmit="return false">
+  <fieldset>
+    <legend>Mes villages</legend>
+    <div class="cases"><label class="tous"><input type="checkbox" id="tousv"> Toute la plaine (36 villages)</label><label><input type="checkbox" name="v" value="Agiez"> Agiez</label><label><input type="checkbox" name="v" value="Arnex-sur-Orbe"> Arnex-sur-Orbe</label><label><input type="checkbox" name="v" value="Ballaigues"> Ballaigues</label><label><input type="checkbox" name="v" value="Baulmes"> Baulmes</label><label><input type="checkbox" name="v" value="Bavois"> Bavois</label><label><input type="checkbox" name="v" value="Bofflens"> Bofflens</label><label><input type="checkbox" name="v" value="Bretonnières"> Bretonnières</label><label><input type="checkbox" name="v" value="Champvent"> Champvent</label><label><input type="checkbox" name="v" value="Chavornay"> Chavornay</label><label><input type="checkbox" name="v" value="Corcelles-sur-Chavornay"> Corcelles-sur-Chavornay</label><label><input type="checkbox" name="v" value="Croy"> Croy</label><label><input type="checkbox" name="v" value="Ependes"> Ependes</label><label><input type="checkbox" name="v" value="Essert-Pittet"> Essert-Pittet</label><label><input type="checkbox" name="v" value="Essert-sous-Champvent"> Essert-sous-Champvent</label><label><input type="checkbox" name="v" value="Juriens"> Juriens</label><label><input type="checkbox" name="v" value="L'Abergement"> L'Abergement</label><label><input type="checkbox" name="v" value="La Praz"> La Praz</label><label><input type="checkbox" name="v" value="La Russille"> La Russille</label><label><input type="checkbox" name="v" value="Les Clées"> Les Clées</label><label><input type="checkbox" name="v" value="Lignerolle"> Lignerolle</label><label><input type="checkbox" name="v" value="Mathod"> Mathod</label><label><input type="checkbox" name="v" value="Montcherand"> Montcherand</label><label><input type="checkbox" name="v" value="Orbe"> Orbe</label><label><input type="checkbox" name="v" value="Orny"> Orny</label><label><input type="checkbox" name="v" value="Pompaples"> Pompaples</label><label><input type="checkbox" name="v" value="Premier"> Premier</label><label><input type="checkbox" name="v" value="Rances"> Rances</label><label><input type="checkbox" name="v" value="Romainmôtier-Envy"> Romainmôtier-Envy</label><label><input type="checkbox" name="v" value="Sergey"> Sergey</label><label><input type="checkbox" name="v" value="Suchy"> Suchy</label><label><input type="checkbox" name="v" value="Suscévaz"> Suscévaz</label><label><input type="checkbox" name="v" value="Valeyres-sous-Rances"> Valeyres-sous-Rances</label><label><input type="checkbox" name="v" value="Vallorbe"> Vallorbe</label><label><input type="checkbox" name="v" value="Vaulion"> Vaulion</label><label><input type="checkbox" name="v" value="Villars-sous-Champvent"> Villars-sous-Champvent</label><label><input type="checkbox" name="v" value="Vuiteboeuf"> Vuiteboeuf</label></div>
+  </fieldset>
+  <fieldset>
+    <legend>Mes thèmes</legend>
+    <div class="cases"><label><input type="checkbox" name="th" value="foot" data-l="Football" checked> Football</label><label><input type="checkbox" name="th" value="fete" data-l="Fêtes, soirées, repas" checked> Fêtes, soirées, repas</label><label><input type="checkbox" name="th" value="culture" data-l="Culture, théâtre, expositions" checked> Culture, théâtre, expositions</label><label><input type="checkbox" name="th" value="musique" data-l="Concerts, musique" checked> Concerts, musique</label><label><input type="checkbox" name="th" value="sport" data-l="Autres sports" checked> Autres sports</label><label><input type="checkbox" name="th" value="marche" data-l="Marchés" checked> Marchés</label><label><input type="checkbox" name="th" value="loto" data-l="Lotos" checked> Lotos</label><label><input type="checkbox" name="th" value="officiel" data-l="Infos officielles (conseils, dons du sang…)" checked> Infos officielles (conseils, dons du sang…)</label></div>
+  </fieldset>
+  <fieldset>
+    <legend>Mon adresse</legend>
+    <label for="email">E-mail <span class="ob">*</span></label>
+    <input id="email" name="email" type="email" maxlength="120" required autocomplete="email">
+    <label for="prenom">Prénom <span class="aide">(facultatif, pour vous saluer)</span></label>
+    <input id="prenom" name="prenom" maxlength="40" autocomplete="given-name">
+    <div class="piege" aria-hidden="true"><label for="site_web">Ne pas remplir</label><input id="site_web" name="site_web" tabindex="-1" autocomplete="off"></div>
+  </fieldset>
+  <button type="button" id="go">Je m'inscris</button>
+  <div class="msg" id="m"></div>
+  <div id="copie"><p>Si rien ne s'ouvre, envoyez ce texte à <strong>annonce@lebattoir.ch</strong>, objet « Inscription à l'agenda » :</p><pre id="txt"></pre></div>
+</form>
+
+<div class="donnees">
+  <p><strong>Comment ça marche.</strong> Vous recevez tout de suite un mail avec un lien : cliquez dessus pour confirmer votre adresse. Sans ce clic, rien ne se passe. Ensuite, l'agenda arrive chaque jeudi depuis annonce@lebattoir.ch.</p>
+  <p style="margin-top:8px"><strong>Vos données.</strong> Votre adresse sert uniquement à vous envoyer l'agenda du Battoir. Elle n'est transmise à personne et n'apparaît jamais aux autres abonnés (envoi en copie cachée). Pour vous désinscrire ou changer vos choix, répondez simplement à un de nos mails. Le Battoir est édité par Atelier Naho, 1433 Suchy. <a href="comment-on-travaille.html">Comment on travaille</a></p>
+</div>
+</div>
+<script>
+const ADRESSE='https://n8n.lebattoir.ch/webhook/inscription';
+const $=s=>document.querySelector(s), vs=()=>[...document.querySelectorAll('input[name=v]')], m=$('#m');
+function dire(t,ok){m.textContent=t;m.className='msg '+(ok?'ok':'err');m.style.display='block';}
+const q=new URLSearchParams(location.search);
+if(q.has('confirme')){$('#f').style.display='none';dire("C'est confirmé, merci ! Vous recevrez l'agenda dès jeudi prochain.",true);$('#f').before(m);}
+if(q.has('expire')){dire("Ce lien n'est plus valable (il dure 7 jours). Inscrivez-vous à nouveau ci-dessous.",false);}
+$('#tousv').onchange=e=>vs().forEach(c=>c.checked=e.target.checked);
+function parMail(v,t,p){
+  const corps="Bonjour,\n\nJe souhaite recevoir l'agenda du Battoir chaque jeudi par mail.\n\nVillages : "+v+"\nThèmes : "+t+"\n"+(p?"Prénom : "+p+"\n":"")+"\nMerci !";
+  $('#txt').textContent=corps;$('#copie').style.display='block';
+  dire("Notre formulaire ne répond pas pour le moment : votre messagerie va s'ouvrir avec un mail déjà rempli, envoyez-le tel quel.",true);
+  location.href='mailto:annonce@lebattoir.ch?subject='+encodeURIComponent("Inscription à l'agenda")+'&body='+encodeURIComponent(corps);
+}
+$('#go').onclick=async()=>{
+  const v=vs().filter(c=>c.checked).map(c=>c.value), th=[...document.querySelectorAll('input[name=th]:checked')];
+  const e=$('#email').value.trim(), p=$('#prenom').value.trim(), tous=v.length===vs().length;
+  if(!v.length||!th.length){dire('Choisissez au moins un village et un thème.',false);return;}
+  if(!$('#email').checkValidity()||!e){$('#email').focus();dire("L'adresse e-mail semble incomplète.",false);return;}
+  const b=$('#go');b.disabled=true;b.textContent='Envoi…';
+  const corps=new URLSearchParams({email:e,prenom:p,villages:v.join('|'),themes:th.map(x=>x.value).join('|'),tous:tous?'1':'',site_web:$('#site_web').value});
+  try{
+    const r=await fetch(ADRESSE,{method:'POST',body:corps});
+    const j=await r.json().catch(()=>null);
+    if(r.ok&&j&&j.ok){document.querySelectorAll('#f fieldset').forEach(x=>x.style.display='none');b.style.display='none';
+      dire('Presque fini : un mail vient de partir à '+e+'. Cliquez sur le lien pour confirmer (pensez aux indésirables).',true);return;}
+    if(j&&j.erreur){dire(j.erreur,false);}
+    else parMail(tous?'toute la plaine':v.join(', '),th.map(x=>x.dataset.l).join(' · '),p);
+  }catch(err){parMail(tous?'toute la plaine':v.join(', '),th.map(x=>x.dataset.l).join(' · '),p);}
+  b.disabled=false;b.textContent="Je m'inscris";
+};
+</script>
+</body>
+</html>
