@@ -250,6 +250,10 @@ footer a{color:var(--noir);text-decoration:underline}
 .vid video{width:190px;max-width:42vw;aspect-ratio:9/16;background:#000;flex:none}
 .vid figcaption{font-size:16px;line-height:1.45}
 .vid figcaption span{font-size:13px;color:#666}
+.radio{margin:0 0 22px;padding:14px 16px;background:var(--creme);border-left:4px solid var(--rouge)}
+.radio b{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em;font-size:18px}
+.radio audio{width:100%;margin:8px 0 6px;display:block}
+.radio small{display:block;color:var(--gris);font-size:13px;line-height:1.45}
 .vidarch{margin:-10px 0 22px;font-size:15px}
 .vidarch summary{cursor:pointer;color:var(--rouge);font-weight:600;padding:6px 0}
 .vidarch #vidl{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
@@ -304,6 +308,7 @@ footer a{color:var(--noir);text-decoration:underline}
     <a class="btn s" href="#agenda">Voir l'agenda</a>
     <a class="btn s" id="sub" target="_blank" rel="noopener"
        href="https://whatsapp.com/channel/0029Vb8DjmlHbFVApHXmTK23">Rejoindre la chaîne WhatsApp</a>
+    <a class="btn s" href="inscription.html">Recevoir par mail</a>
   </div>
   <p class="note"><strong>Rien à installer, aucun compte à créer</strong> — vous êtes déjà sur WhatsApp.
      Un message le jeudi soir, jamais plus. Personne ne voit votre numéro, pas même nous,
@@ -336,6 +341,13 @@ footer a{color:var(--noir);text-decoration:underline}
     <!-- 08.10.2026 : les videos de Firmin. Chaque jeudi : deposer firmin-AAAA-MM-JJ.mp4 et .jpg (date du jeudi)
          dans site/, puis ajouter UNE ligne en tete de la liste VIDEOS du script. La plus recente s'affiche
          jusqu'a sa date « jusqu » ; les autres vont seules dans « Les semaines precedentes ». -->
+    <!-- 22.10.2026 : la radio du Battoir, premier episode public. Chaque jeudi : deposer radio-AAAA-MM-JJ.mp3
+         (date du jeudi, mono 96k) dans site/ et changer src, titre et duree ci-dessous. -->
+    <figure class="radio" id="radio">
+      <figcaption><b>La radio du Battoir</b> · le week-end du 23 au 25 octobre, en 6 minutes</figcaption>
+      <audio controls preload="none" src="radio-2026-10-22.mp3"></audio>
+      <small>Firmin et Margot sont des voix artificielles. Une personne écoute chaque émission en entier avant diffusion. <a href="comment-on-travaille.html">Comment on travaille</a></small>
+    </figure>
     <div id="vids" hidden>
       <figure class="vid" id="vid" hidden>
         <video controls playsinline preload="none"></video>
@@ -422,6 +434,7 @@ footer a{color:var(--noir);text-decoration:underline}
     <span><strong>Le Battoir</strong> — Plaine de l'Orbe</span>
     <span><a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a></span>
     <span>Une manifestation à annoncer, une correction à signaler&nbsp;: écrivez-nous.</span>
+    <span><a href="inscription.html">Recevoir l'agenda par mail</a> · <a href="comment-on-travaille.html">Comment on travaille</a></span>
     <!-- 26.08.2026 : la citation de la source est la contrepartie de la decision
          de relever les horaires sur le match center. Elle n'est pas decorative :
          voir foot-perimetre.md §3. Ne pas retirer. -->
