@@ -50,6 +50,9 @@ button[disabled]{opacity:.6;cursor:wait}
 .msg.ok{border-color:#3a7d3a}.msg.err{border-color:var(--rouge)}
 .donnees{font-size:13.5px;color:var(--gris);border-top:1px solid var(--trait);margin-top:28px;padding:16px 0 40px}
 .donnees a{color:var(--gris)}
+.donnees summary{cursor:pointer;text-decoration:underline;margin-top:8px}
+.donnees details p{margin-top:6px}
+@media print{.donnees details{display:block}.donnees details>*{display:block}}
 .cases{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:2px 14px}
 .cases label{font-weight:400;font-size:15.5px;margin:4px 0;display:flex;gap:8px;align-items:center}
 .cases input{width:auto}
@@ -94,13 +97,14 @@ button[disabled]{opacity:.6;cursor:wait}
 
 <div class="donnees">
   <p><strong>Comment ça marche.</strong> Vous recevez tout de suite un mail avec un lien : cliquez dessus pour confirmer votre adresse. Sans ce clic, rien ne se passe. Ensuite, l'agenda arrive chaque jeudi depuis annonce@lebattoir.ch.</p>
-  <p style="margin-top:8px"><strong>Vos données.</strong> Responsable : Atelier Naho, 1433 Suchy, <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.
+  <p style="margin-top:8px"><strong>Vos données.</strong> Elles servent seulement à vous envoyer l'agenda, restent en Suisse et ne sont jamais vendues ni transmises. Désinscription en un mail. Responsable : Atelier Naho, 1433 Suchy, <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
+  <details><summary>Tout savoir sur vos données</summary><p>
   Ce que nous gardons : votre adresse e-mail, votre prénom si vous le donnez, vos villages, vos thèmes et votre choix pour les offres.
   À quoi ça sert : à vous envoyer l'agenda du Battoir chaque jeudi. Le mail peut nommer les commerces qui soutiennent Le Battoir, toujours signalés comme tels. Si, et seulement si, vous cochez la case des offres, nous vous envoyons en plus, de temps en temps, une offre choisie d'un commerce de la plaine. Ces offres partent toujours de chez nous : votre adresse n'est jamais donnée au commerce. Vous pouvez retirer cet accord à tout moment, sans quitter l'agenda.
   Où : sur notre serveur et notre messagerie chez Infomaniak, en Suisse. Votre adresse n'est ni vendue ni transmise à personne, et n'apparaît jamais aux autres abonnés (envoi en copie cachée).
   Combien de temps : tant que vous êtes inscrit. Si vous ne confirmez pas, elle est oubliée dans les 7 jours ; si vous vous désinscrivez, elle est effacée.
-  Vos droits : pour savoir ce que nous avons sur vous, corriger vos choix ou vous désinscrire, répondez simplement à un de nos mails ou écrivez à annonce@lebattoir.ch.
-  <a href="comment-on-travaille.html">Comment on travaille</a></p>
+  Vos droits : pour savoir ce que nous avons sur vous, corriger vos choix ou vous désinscrire, répondez simplement à un de nos mails ou écrivez à annonce@lebattoir.ch.</p></details>
+  <p style="margin-top:8px"><a href="comment-on-travaille.html">Comment on travaille</a></p>
 </div>
 </div>
 <script>
