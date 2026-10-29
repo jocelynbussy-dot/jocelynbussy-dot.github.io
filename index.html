@@ -616,9 +616,11 @@ function colonnes(list){
     return `<div class="col${j.we?' we':''}"><h3>${j.txt.replace(/ \d+ \S+$/,'')}<small>${new Date(iso).getDate()} ${MOIS[new Date(iso).getMonth()]} · ${l.length}</small></h3>${l.slice(0,6).map(mini).join('')}${l.length>6?`<details><summary>Voir les ${l.length-6} autres</summary>${l.slice(6).map(mini).join('')}</details>`:''}</div>`;
   }).join('')+`</div>`;
 }
+// 29.10.2026 : videos de Firmin retirees de l'accueil (Jocelyn : « oui, retire-les »), la radio suffit.
+// Les fichiers restent en ligne ; pour les remettre, decommenter les lignes.
 const VIDEOS=[
-  {d:'2026-10-08',jusqu:'2026-10-11',titre:'Week-end du 9 au 11 octobre'},
-  {d:'2026-09-24',jusqu:'2026-09-27',titre:'Week-end du 25 au 27 septembre'},
+  // {d:'2026-10-08',jusqu:'2026-10-11',titre:'Week-end du 9 au 11 octobre'},
+  // {d:'2026-09-24',jusqu:'2026-09-27',titre:'Week-end du 25 au 27 septembre'},
 ];
 (function(){
   const bloc=document.getElementById('vids'); if(!bloc||!VIDEOS.length) return;
