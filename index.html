@@ -254,6 +254,9 @@ footer a{color:var(--noir);text-decoration:underline}
 .radio b{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em;font-size:18px}
 .radio audio{width:100%;margin:8px 0 6px;display:block}
 .radio small{display:block;color:var(--gris);font-size:13px;line-height:1.45}
+.radio details{margin-top:8px;font-size:15px}
+.radio summary{cursor:pointer;color:var(--rouge);font-weight:600;padding:4px 0}
+.radio details p{margin:8px 0 2px;font-size:14px}
 .vidarch{margin:-10px 0 22px;font-size:15px}
 .vidarch summary{cursor:pointer;color:var(--rouge);font-weight:600;padding:6px 0}
 .vidarch #vidl{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px}
@@ -347,6 +350,10 @@ footer a{color:var(--noir);text-decoration:underline}
       <figcaption><b>La radio du Battoir</b> · le week-end du 30 octobre au 1er novembre, en 7 minutes</figcaption>
       <audio controls preload="none" src="radio-2026-10-29.mp3"></audio>
       <small>Firmin et Margot sont des voix artificielles. Une personne écoute chaque émission en entier avant diffusion. <a href="comment-on-travaille.html">Comment on travaille</a></small>
+      <!-- Chaque jeudi : l'episode de la semaine passee descend ici, en tete de la liste. -->
+      <details><summary>Les émissions précédentes</summary>
+        <p>Le week-end du 23 au 25 octobre</p><audio controls preload="none" src="radio-2026-10-22.mp3"></audio>
+      </details>
     </figure>
     <div id="vids" hidden>
       <figure class="vid" id="vid" hidden>
