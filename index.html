@@ -457,7 +457,7 @@ footer a{color:var(--noir);text-decoration:underline}
   <div class="wrap">
     <p class="donnees" id="donnees"><strong>Vos données.</strong> Le Battoir ne dépose aucun cookie et ne demande aucun compte.
     Si vous choisissez votre village et vos thèmes, ces choix sont gardés dans votre navigateur, pour vous les reproposer à la prochaine visite ; il garde aussi la liste des dates déjà affichées, pour vous signaler les nouvelles. Rien de cela ne nous est envoyé.
-    <span id="dgc" hidden>Nous comptons les visites avec GoatCounter, un outil sans cookie qui ne permet pas de vous identifier.</span>
+    <span id="dgc" hidden>Nous comptons les visites et les écoutes de la radio avec GoatCounter, un outil sans cookie qui ne permet pas de vous identifier.</span>
     Les polices d'écriture sont chargées depuis Google Fonts, et la météo est demandée au service Open-Meteo (avec la qualité de l'air) quand vous ouvrez la page&nbsp;: tous deux reçoivent de ce fait votre adresse IP.
     Une question&nbsp;: <a href="mailto:annonce@lebattoir.ch">annonce@lebattoir.ch</a>.</p>
   </div>
@@ -498,6 +498,16 @@ if(GC_CODE && /(^|\.)lebattoir\.ch$/.test(location.hostname)){
   g.dataset.goatcounter=`https://${GC_CODE}.goatcounter.com/count`; document.head.appendChild(g);
   document.getElementById('dgc').hidden=false;
 }
+// 04.11.2026 : compter les ecoutes de la radio (evenements GoatCounter, sans cookie, rien sur la personne).
+// radio-AAAA-MM-JJ = lecture lancee ; radio-AAAA-MM-JJ-fin = ecoutee a 90 %. Une fois chacun par visite de la page.
+function compteRadio(a){
+  const ep=(a.getAttribute('src')||'').match(/radio-[0-9]{4}-[0-9]{2}-[0-9]{2}/); if(!ep) return;
+  const vu=new Set(), envoie=s=>{ const gc=window.goatcounter;
+    if(vu.has(s)||!gc||!gc.count) return; vu.add(s); gc.count({path:ep[0]+s, title:'Radio '+ep[0].slice(6)+(s?' (fin)':''), event:true}); };
+  a.addEventListener('play',()=>envoie(''));
+  a.addEventListener('timeupdate',()=>{ if(a.duration && a.currentTime>=0.9*a.duration) envoie('-fin'); });
+}
+document.querySelectorAll('#radio audio').forEach(compteRadio);
 document.getElementById('fc').innerHTML = Object.entries(CATS)
   .map(([k,c])=>`<button class="chip" data-c="${k}" aria-pressed="false">${c.e} ${c.l}</button>`).join('');
 
