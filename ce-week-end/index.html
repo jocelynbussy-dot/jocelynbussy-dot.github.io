@@ -87,6 +87,16 @@ g.src='https://gc.zgo.at/count.js';g.dataset.goatcounter='https://lebattoir.goat
 // La radio : un bouton lecture / pause, pas la barre du navigateur (une seule ligne sur un téléphone).
 const rb=document.getElementById('rb'),ra=document.getElementById('ra');
 if(rb){rb.onclick=()=>ra.paused?ra.play():ra.pause();ra.onplay=()=>rb.textContent='❚❚';ra.onpause=ra.onended=()=>rb.textContent='▶';}
+// 04.11.2026 : compter les ecoutes de la radio (evenements GoatCounter, sans cookie, rien sur la personne).
+// radio-AAAA-MM-JJ = lecture lancee ; radio-AAAA-MM-JJ-fin = ecoutee a 90 %. Une fois chacun par visite de la page.
+function compteRadio(a){
+  const ep=(a.getAttribute('src')||'').match(/radio-[0-9]{4}-[0-9]{2}-[0-9]{2}/); if(!ep) return;
+  const vu=new Set(), envoie=s=>{ const gc=window.goatcounter;
+    if(vu.has(s)||!gc||!gc.count) return; vu.add(s); gc.count({path:ep[0]+s, title:'Radio '+ep[0].slice(6)+(s?' (fin)':''), event:true}); };
+  a.addEventListener('play',()=>envoie(''));
+  a.addEventListener('timeupdate',()=>{ if(a.duration && a.currentTime>=0.9*a.duration) envoie('-fin'); });
+}
+if(ra) compteRadio(ra);
 </script>
 </body>
 </html>
