@@ -1392,17 +1392,6 @@
  },
  {
   "d": "2026-10-01",
-  "fin": "2026-10-31",
-  "t": "Activités octobre 2026 café contact et créatif de Chavornay",
-  "v": "Essert-Pittet",
-  "c": "fete",
-  "o": "Café contact",
-  "h": "",
-  "lieu": "Salle Essert-Pittet",
-  "url": ""
- },
- {
-  "d": "2026-10-01",
   "fin": "2026-10-01",
   "t": "FC Bavois -Chavornay – FC La Sarraz-Eclépens",
   "v": "Bavois",
@@ -2905,17 +2894,6 @@
   "url": "https://choeurmixtearnex.blogspot.com/2026/09/repas-de-soutien-2026.html"
  },
  {
-  "d": "2026-10-27",
-  "fin": "2026-11-03",
-  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Association ARC-Echange",
-  "h": "9h à 11h",
-  "lieu": "Rue Davall 5, 1350 Orbe",
-  "url": "https://www.arc-echange.ch"
- },
- {
   "d": "2026-10-28",
   "fin": "2026-10-28",
   "t": "FC Champvent I – FC Gland I",
@@ -2968,19 +2946,8 @@
   "c": "officiel",
   "o": "Commune",
   "h": "",
-  "lieu": "Salle du Conseil communal",
+  "lieu": "",
   "url": ""
- },
- {
-  "d": "2026-10-30",
-  "fin": "2026-10-30",
-  "t": "Né pour lire",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "De 10h15 à 11h15",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
  },
  {
   "d": "2026-10-30",
@@ -3104,17 +3071,6 @@
   "lieu": "Peterswinkel, Lachen SZ",
   "url": "https://matchcenter-acvf.football.ch/",
   "exterieur": true
- },
- {
-  "d": "2026-10-31",
-  "fin": "2026-10-31",
-  "t": "Les Monstres du Coeur",
-  "v": "Orny",
-  "c": "fete",
-  "o": "",
-  "h": "",
-  "lieu": "",
-  "url": ""
  },
  {
   "d": "2026-10-31",
@@ -3380,17 +3336,6 @@
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
-  "d": "2026-11-01",
-  "fin": "2026-11-01",
-  "t": "Thé Dansant",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "AVIVO-Orbe et environs",
-  "h": "De 14 h. 00 à 17 h. 00",
-  "lieu": "Restaurant des Ducats Orbe",
-  "url": "https://avivo-vaud.ch/sections/#orbe"
- },
- {
   "d": "2026-11-02",
   "fin": "2026-11-02",
   "t": "Ensemble Sankyoku — musique de chambre japonaise",
@@ -3422,6 +3367,17 @@
   "h": "20h00",
   "lieu": "La Gravière",
   "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-11-03",
+  "fin": "2026-12-04",
+  "t": "Activités d'intégration",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Commune d'Orbe - Jeunesse & Intégration",
+  "h": "Selon le programme d'activités",
+  "lieu": "Maison des Jeunes, Ch. du Puisoir 1, 1350 Orbe (sauf mention contraire selon l'activité)",
+  "url": "https://www.orbe.ch/ma-ville/integration/activites-integration.html"
  },
  {
   "d": "2026-11-03",
@@ -3500,7 +3456,7 @@
   "v": "Mathod",
   "c": "culture",
   "o": "Nord en scène - Troupe de théâtre",
-  "h": "ve portes 18h · sa portes 18h30 · di portes 11h",
+  "h": "ve complet · sa réservations closes · di brunch portes 11h spectacle 13h",
   "lieu": "Grande salle de Mathod",
   "url": "https://nordenscene.ch"
  },
@@ -3830,6 +3786,30 @@
  {
   "d": "2026-11-09",
   "fin": "2026-11-09",
+  "t": "FC Assens – FC Bavois -Chavornay",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 30+ champion Groupe 1",
+  "h": "20h00",
+  "lieu": "Terrain FC Assens N°1, Assens",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-11-09",
+  "fin": "2026-11-09",
+  "t": "FC Le Mont – FC Bavois -Chavornay",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 40+ Groupe 1",
+  "h": "20h30",
+  "lieu": "Centre sportif du Châtaignier N°1, Le Mont-sur-Lausanne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-11-09",
+  "fin": "2026-11-09",
   "t": "Mise des lots de bois",
   "v": "Montcherand",
   "c": "officiel",
@@ -3837,6 +3817,17 @@
   "h": "19h",
   "lieu": "Administration communale",
   "url": "https://montcherand.ch/data/files/montcherand/informations/fentresdelavent2026-sapins-misedebois.pdf"
+ },
+ {
+  "d": "2026-11-10",
+  "fin": "2026-11-10",
+  "t": "FC Bavois -Chavornay – FC Venoge",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Seniors 50+ Groupe 4",
+  "h": "20h00",
+  "lieu": "Les Peupliers N° 3",
+  "url": "https://matchcenter-acvf.football.ch/"
  },
  {
   "d": "2026-11-10",
@@ -3929,6 +3920,18 @@
  {
   "d": "2026-11-12",
   "fin": "2026-11-12",
+  "t": "FC Chavannes-Yvonand – Grp 13 coteaux",
+  "v": "Rances",
+  "c": "foot",
+  "o": "Seniors 30+ Groupe 2",
+  "h": "20h00",
+  "lieu": "Terrain Grassy, Chavannes-le-Chêne",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-11-12",
+  "fin": "2026-11-12",
   "t": "RDV du jeudi - Entrez dans le conte",
   "v": "Orbe",
   "c": "culture",
@@ -3962,6 +3965,18 @@
  {
   "d": "2026-11-13",
   "fin": "2026-11-13",
+  "t": "FC Grandson-Tuileries II – FC Orbe II",
+  "v": "Orbe",
+  "c": "foot",
+  "o": "4e ligue Groupe 5",
+  "h": "20h00",
+  "lieu": "Place de Sports des Tuileries, Grandson",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
+ },
+ {
+  "d": "2026-11-13",
+  "fin": "2026-11-13",
   "t": "Repas de soutien du FC Chavornay",
   "v": "Chavornay",
   "c": "loto",
@@ -3980,6 +3995,18 @@
   "h": "20h",
   "lieu": "Rue de la Tournelle 2, 1350 Orbe",
   "url": "https://tournelle.ch/spectacle/adrienne/"
+ },
+ {
+  "d": "2026-11-14",
+  "fin": "2026-11-14",
+  "t": "FC Kreuzlingen – FC Bavois",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Promotion League",
+  "h": "15h00",
+  "lieu": "Hafenareal, Kreuzlingen",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-11-14",
@@ -4013,6 +4040,18 @@
   "h": "16h · billets sur monbillet.ch ou 024 453 14 65",
   "lieu": "Abbatiale",
   "url": "https://www.concerts-romainmotier.ch/"
+ },
+ {
+  "d": "2026-11-15",
+  "fin": "2026-11-15",
+  "t": "FC Vallée de Joux – FC Chavornay Sports",
+  "v": "Chavornay",
+  "c": "foot",
+  "o": "Féminine 4e ligue Groupe 1",
+  "h": "11h00",
+  "lieu": "Terrain des Crêtets, Le Sentier",
+  "url": "https://matchcenter-acvf.football.ch/",
+  "exterieur": true
  },
  {
   "d": "2026-11-17",
@@ -4226,6 +4265,17 @@
  {
   "d": "2026-11-22",
   "fin": "2026-11-22",
+  "t": "Concert des Baladins du Faubourg",
+  "v": "Montcherand",
+  "c": "culture",
+  "o": "Baladins du Faubourg",
+  "h": "17h",
+  "lieu": "Église Saint-Étienne",
+  "url": "https://montcherand.ch/"
+ },
+ {
+  "d": "2026-11-22",
+  "fin": "2026-11-22",
   "t": "Fête paroissiale",
   "v": "Baulmes",
   "c": "fete",
@@ -4368,6 +4418,17 @@
  },
  {
   "d": "2026-11-28",
+  "fin": "2026-11-29",
+  "t": "Comptoir de Noël 2026",
+  "v": "Vallorbe",
+  "c": "fete",
+  "o": "Juraparc SA",
+  "h": "",
+  "lieu": "Juraparc SA",
+  "url": ""
+ },
+ {
+  "d": "2026-11-28",
   "fin": "2026-11-28",
   "t": "Crâmée",
   "v": "Orbe",
@@ -4394,10 +4455,21 @@
   "t": "Marché de Noël",
   "v": "Baulmes",
   "c": "marche",
-  "o": "Association du Marché de Noël",
+  "o": "Comité du Marché de Noël de Baulmes",
+  "h": "sa 10h-20h · di 10h-18h",
+  "lieu": "Grande salle, sous-gare",
+  "url": "https://www.instagram.com/marchedenoel_baulmes/"
+ },
+ {
+  "d": "2026-11-28",
+  "fin": "2026-11-28",
+  "t": "Sortie en forêt (état des forêts)",
+  "v": "Vaulion",
+  "c": "officiel",
+  "o": "Commune de Vaulion",
   "h": "",
-  "lieu": "Salle des Fêtes",
-  "url": "https://www.baulmes.ch/fr/28/manifestations"
+  "lieu": "",
+  "url": "https://vaulion.ch/agenda"
  },
  {
   "d": "2026-11-28",
@@ -4512,6 +4584,17 @@
  {
   "d": "2026-12-02",
   "fin": "2026-12-02",
+  "t": "Calendrier de l'Avent des Urbigènes",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du Marché de Noël d'Orbe",
+  "h": "De 14h à 16h",
+  "lieu": "Place du Marché, 1350 Orbe",
+  "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-02",
+  "fin": "2026-12-02",
   "t": "Conseil général",
   "v": "La Praz",
   "c": "officiel",
@@ -4527,9 +4610,9 @@
   "v": "Orbe",
   "c": "fete",
   "o": "Association du Marché de Noël d'Orbe",
-  "h": "Le 3 décembre dès 16h",
+  "h": "de 8h à 12h",
   "lieu": "Place du Marché, 1350 Orbe",
-  "url": "https://www.orbe.ch/"
+  "url": "https://www.orbe.ch"
  },
  {
   "d": "2026-12-03",
@@ -4600,6 +4683,17 @@
  {
   "d": "2026-12-05",
   "fin": "2026-12-05",
+  "t": "Calendrier de L'Avent des Urbigènes",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du Marché de Noël",
+  "h": "De 9h à 14h",
+  "lieu": "Place du Marché, 1350 Orbe",
+  "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
   "t": "Concert Alexandre Cellier (piano)",
   "v": "Chavornay",
   "c": "musique",
@@ -4650,6 +4744,17 @@
   "o": "Société du four à pain",
   "h": "",
   "lieu": "",
+  "url": ""
+ },
+ {
+  "d": "2026-12-06",
+  "fin": "2026-12-06",
+  "t": "Brunch offert pour les familles EJED",
+  "v": "Chavornay",
+  "c": "sport",
+  "o": "EJED",
+  "h": "",
+  "lieu": "Foyer du Verneret",
   "url": ""
  },
  {
@@ -4794,6 +4899,17 @@
   "h": "dès 18h30 · entrée libre",
   "lieu": "Centre culturel Hessel, rue Davall 3",
   "url": "https://www.facebook.com/hesselespaceculturel.ch"
+ },
+ {
+  "d": "2026-12-10",
+  "fin": "2026-12-10",
+  "t": "Calendrier de l'Avent",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du marché de Noël",
+  "h": "De 8h30 à 12h",
+  "lieu": "Place du Marché, 1350 Orbe",
+  "url": "https://www.orbe.ch"
  },
  {
   "d": "2026-12-10",
@@ -4963,6 +5079,17 @@
  {
   "d": "2026-12-13",
   "fin": "2026-12-13",
+  "t": "Calendrier de l'Avent des Urbigènes",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du Marché de Noël d'Orbe",
+  "h": "De 14h à 16h",
+  "lieu": "Place du Marché, 1350 Orbe",
+  "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-13",
+  "fin": "2026-12-13",
   "t": "Loto du FC Arnex",
   "v": "Arnex-sur-Orbe",
   "c": "fete",
@@ -5027,6 +5154,17 @@
   "url": "https://vaulion.ch/agenda"
  },
  {
+  "d": "2026-12-17",
+  "fin": "2026-12-17",
+  "t": "Calendrier de l'Avent des Urbigènes",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du Marché de Noël d'Orbe",
+  "h": "dès 18h",
+  "lieu": "Place du Marché, 1350 Orbe",
+  "url": "https://www.orbe.ch"
+ },
+ {
   "d": "2026-12-18",
   "fin": "2026-12-18",
   "t": "Bal année 80",
@@ -5055,7 +5193,7 @@
   "v": "Orbe",
   "c": "fete",
   "o": "Association du Marché de Noël d'Orbe",
-  "h": "de 16h à 20h",
+  "h": "De 16h à 20h",
   "lieu": "Place du Marché, 1350 Orbe",
   "url": "https://www.orbe.ch"
  },
