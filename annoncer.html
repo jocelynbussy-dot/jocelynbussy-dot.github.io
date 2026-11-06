@@ -2,6 +2,11 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<!-- 06.11.2026, audit de securite (F-2026-11-06-10) : CSP. N'autorise que ce que la page charge vraiment : son script
+     (par son empreinte), Google Fonts, et l'envoi du formulaire a n8n.lebattoir.ch. L'empreinte change a chaque
+     modification du script du bas de page : deploy.py refuse alors de publier ; recalculer depuis site/ avec
+     python deploy.py --recalculer -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-nff3AuiUCGo4IA4pJMADj7JZihuD6wHTbK/X4/rBMAk='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://n8n.lebattoir.ch; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Annoncer un événement — Le Battoir</title>
 <meta name="description" content="Annoncez gratuitement votre loto, soirée, concert ou match dans l'agenda du Battoir, plaine de l'Orbe.">
@@ -143,7 +148,7 @@ f.addEventListener('submit', async e => {
     const j = await r.json().catch(() => ({}));
     if (r.ok && j.ok) {
       f.querySelectorAll('fieldset').forEach(x => x.style.display = 'none'); b.style.display = 'none';
-      dire("Bien reçu, merci ! On la relit et elle paraît dans l'agenda, en principe le jeudi qui suit. Un mail de confirmation vient de partir à " + f.email.value.trim() + ' (pensez à regarder dans les indésirables).', true);
+      dire("Bien reçu, merci ! On la relit et elle paraît dans l'agenda, en principe le jeudi qui suit. Si c'est votre premier envoi du jour, une confirmation arrive par mail à " + f.email.value.trim() + ' (pensez à regarder dans les indésirables).', true);
     } else {
       dire((j.erreur || "L'envoi n'a pas abouti.") + ' Vous pouvez aussi écrire à annonce@lebattoir.ch.', false);
     }
