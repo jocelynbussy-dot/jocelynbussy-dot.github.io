@@ -2,6 +2,13 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<!-- 06.11.2026, audit de securite : CSP. Elle n'autorise que ce que la page charge vraiment : son propre script
+     (par son empreinte), GoatCounter, Google Fonts, Open-Meteo, et les fichiers du site. Un script glisse dans un
+     titre d'agenda ne s'execute pas, meme si un echappement venait a manquer.
+     L'EMPREINTE CHANGE A CHAQUE MODIFICATION DU SCRIPT DU BAS DE PAGE (meme un commentaire). Une empreinte fausse =
+     page sans agenda (erreur dans la console seulement). Depuis le 06.11.2026, deploy.py REFUSE de publier si elle
+     ne correspond plus (garde csp.py). La recalculer, depuis site/ :  python deploy.py --recalculer -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-88nrK/L0SZvLy7wBo/QknetN+jGOAUYZwBJA1iawXi8=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://lebattoir.goatcounter.com; media-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://lebattoir.goatcounter.com; object-src 'none'; base-uri 'none'; form-action 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le Battoir — Plaine de l'Orbe · tout ce qui se passe près de chez vous</title>
 <meta name="description" content="Chaque jeudi, tout ce qui se passe dans les 36 villages de la plaine de l'Orbe : lotos, soirées de sociétés, concerts, matchs, bals, marchés. Un seul message. Gratuit.">
@@ -253,6 +260,10 @@ footer a{color:var(--noir);text-decoration:underline}
 .radio{margin:0 0 22px;padding:14px 16px;background:var(--creme);border-left:4px solid var(--rouge)}
 .radio b{font-family:Oswald,sans-serif;text-transform:uppercase;letter-spacing:.02em;font-size:18px}
 .radio audio{width:100%;margin:8px 0 6px;display:block}
+.radio .plat{margin:2px 0 8px;font-size:14px;display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.radio .plat svg{width:20px;height:20px;flex:none}
+.radio .plat a{display:inline-flex;align-items:center;gap:7px;padding:4px 12px 4px 5px;border:1.5px solid var(--rouge);border-radius:999px;color:var(--rouge);font-weight:600;text-decoration:none}
+.radio .plat a:hover{background:var(--rouge);color:#fff}
 .radio small{display:block;color:var(--gris);font-size:13px;line-height:1.45}
 .radio details{margin-top:8px;font-size:15px}
 .radio summary{cursor:pointer;color:var(--rouge);font-weight:600;padding:4px 0}
@@ -349,6 +360,8 @@ footer a{color:var(--noir);text-decoration:underline}
     <figure class="radio" id="radio">
       <figcaption><b>La radio du Battoir</b> · le week-end du 6 au 8 novembre, en 7 minutes</figcaption>
       <audio controls preload="none" src="radio-2026-11-05.mp3"></audio>
+      <!-- 06.11.2026 : le podcast (flux podcast.xml). Liens dans radio/podcast.json ; YouTube a ajouter quand le flux y sera inscrit. -->
+      <p class="plat">Aussi en podcast&nbsp;: <a href="https://open.spotify.com/show/01JsjZZ9G85Xz1hEGgx5tL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#1ED760"/><path d="M5.6 9.1c4.2-1.3 9-.9 12.9 1.2M6.4 12.5c3.5-1 7.4-.7 10.6 1M7.2 15.7c2.8-.8 5.8-.6 8.3.8" fill="none" stroke="#000" stroke-width="1.9" stroke-linecap="round"/></svg>Spotify</a> <a href="https://podcasts.apple.com/ch/podcast/la-radio-du-battoir/id6831684144" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="apg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F452FF"/><stop offset="1" stop-color="#832BC1"/></linearGradient></defs><rect width="24" height="24" rx="5.5" fill="url(#apg)"/><circle cx="12" cy="10" r="2.1" fill="#fff"/><path d="M10.6 13.4h2.8l-.5 5.4h-1.8z" fill="#fff"/><path d="M8.2 14.6a5 5 0 1 1 7.6 0M6.3 16.6a7.6 7.6 0 1 1 11.4 0" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg>Apple Podcasts</a></p>
       <small>Firmin et Margot sont des voix artificielles. Une personne écoute chaque émission en entier avant diffusion. <a href="comment-on-travaille.html">Comment on travaille</a></small>
       <!-- Chaque jeudi : l'episode de la semaine passee descend ici, en tete de la liste. -->
       <details><summary>Les émissions précédentes</summary>
@@ -465,6 +478,13 @@ footer a{color:var(--noir);text-decoration:underline}
 </footer>
 
 <script>
+/* 06.11.2026, audit de securite. ATTENTION : la CSP en tete de page autorise CE script par son empreinte
+   (sha256). Toute modification ici, meme un commentaire, la change : recalculer avec la commande ecrite
+   au-dessus de la balise Content-Security-Policy et la remplacer, sinon la page n'affiche plus rien.
+   Tout texte venu d'events.json, de villages.json ou d'un service tiers passe par esc() avant d'entrer
+   dans du HTML ; tout lien par lienSur() (http ou https, sinon pas de lien). */
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const lienSur=u=>{ const s=String(u||'').trim(); try{ const x=new URL(s); return (x.protocol==='https:'||x.protocol==='http:')?s:''; }catch(_){ return ''; } };
 /* ---- données : extraites des sites communaux le 15.08.2026 ---- */
 const CATS = {
   foot:{l:'Football',e:'⚽'}, sport:{l:'Sport',e:'🏃'},
@@ -567,7 +587,8 @@ function heureCourte(e){
   return m ? `${+m[1]}h${m[2]&&m[2]!=='00'?m[2]:''}` : '';
 }
 function titreLien(e){
-  return e.url?`<a href="${e.url}" target="_blank" rel="noopener">${e.t}</a>`:e.t;
+  const u=lienSur(e.url);
+  return u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(e.t)}</a>`:esc(e.t);
 }
 // Une exposition ou un programme de plus de 10 jours ne parait qu'a son debut :
 // on dit au moins jusqu'a quand il dure.
@@ -583,7 +604,7 @@ function ligne(e){
     // 18.09.2026 : ne pas ecrire deux fois la meme chose (lieu = organisateur).
     const org = (e.o && e.o.trim() === (e.lieu||'').trim()) ? '' : (e.o||'');
     const hc=heureCourte(e);
-    const det=[ou, plage(e), jusqua(e), hc?'':(e.h||''), e.lieu||'', org].filter(Boolean).join(' · ');
+    const det=[ou, plage(e), jusqua(e), hc?'':(e.h||''), e.lieu||'', org].filter(Boolean).map(esc).join(' · ');
     return `<article class="ev">
       <div class="d">${hc?`<b class="hh">${hc}</b>`:`<i aria-hidden="true">${CATS[e.c].e}</i>`}</div>
       <div>
@@ -618,7 +639,7 @@ function bornesWeekend(){
 }
 function mini(e){
   const hc=heureCourte(e);
-  const ou=[e.exterieur?`${e.v} (à l’extérieur)`:e.v, hc?'':(e.h||''), e.lieu||''].filter(Boolean).join(' · ');
+  const ou=[e.exterieur?`${e.v} (à l’extérieur)`:e.v, hc?'':(e.h||''), e.lieu||''].filter(Boolean).map(esc).join(' · ');
   return `<div class="mini"><span class="h">${hc||CATS[e.c].e}</span><div><strong>${titreLien(e)}${nouv(e)}</strong><small>${hc?CATS[e.c].e+' ':''}${ou}</small></div></div>`;
 }
 function colonnes(list){
@@ -700,7 +721,7 @@ function renderWeekend(){
   // rappel : vacances ou jour ferie qui touchent ce week-end
   const cal=EV.filter(e=>e._cal && e.d<=b && (e.fin||e.d)>=a), wc=document.getElementById('wkcal');
   wc.hidden=!cal.length;
-  wc.innerHTML=cal.map(e=>`${e.t}${e.fin!==e.d?`, du ${dcourt(e.d)} au ${dcourt(e.fin)}`:`, le ${dcourt(e.d)}`}`).join(' · ');
+  wc.innerHTML=cal.map(e=>`${esc(e.t)}${e.fin!==e.d?`, du ${dcourt(e.d)} au ${dcourt(e.fin)}`:`, le ${dcourt(e.d)}`}`).join(' · ');
   const el=document.getElementById('wkl');
   if(!mv){
     const l=wk.filter(e=>!e.exterieur);
@@ -745,7 +766,7 @@ function renderMeteo(){
     res('rmeteo', `${WMO(d.weather_code[0])[0]} ${Math.round(d.temperature_2m_min[0])}° / ${Math.round(d.temperature_2m_max[0])}° aujourd'hui`);
     el.innerHTML=d.time.map((t,i)=>{
       const [e,l]=WMO(d.weather_code[i]), j=new Date(t);
-      const pluie=d.precipitation_probability_max && d.precipitation_probability_max[i]!=null ? ` · pluie ${d.precipitation_probability_max[i]} %` : '';
+      const pluie=d.precipitation_probability_max && d.precipitation_probability_max[i]!=null ? ` · pluie ${Number(d.precipitation_probability_max[i])} %` : '';
       return `<div class="met"><b>${JC[j.getDay()]} ${j.getDate()}</b><i aria-hidden="true">${e}</i><div>${l}<small>${Math.round(d.temperature_2m_min[i])}° / ${Math.round(d.temperature_2m_max[i])}°${pluie}</small></div></div>`;
     }).join('')+`<div class="air" id="bair" hidden></div><p class="src">Prévision pour ${lieu}. Modèle ICON de MétéoSuisse, via <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a>, consulté à l'instant.</p>`;
   };
@@ -774,21 +795,23 @@ function renderAir(lieu,c){
 function renderPratique(com){
   const carte=document.getElementById('cprat'), P=VD.pratique && VD.pratique.communes && VD.pratique.communes[com];
   if(!P || !(P.dechetterie||P.administration||P.marche)){ carte.hidden=true; return; }
-  const ligne=(titre,x,txt)=> x ? `<div class="it"><span class="quand">${titre}</span>${txt}<small><a href="${x.url}" target="_blank" rel="noopener">vérifier sur le site de la commune</a></small></div>` : '';
+  const ligne=(titre,x,txt)=>{ if(!x) return ''; const u=lienSur(x.url);
+    return `<div class="it"><span class="quand">${titre}</span>${txt}${u?`<small><a href="${esc(u)}" target="_blank" rel="noopener">vérifier sur le site de la commune</a></small>`:''}</div>`; };
   res('rprat', [P.dechetterie&&'déchetterie', P.administration&&'administration', P.marche&&'marché'].filter(Boolean).join(', '));
   document.getElementById('bprat').innerHTML =
-      ligne('Déchetterie', P.dechetterie, P.dechetterie ? `${P.dechetterie.nom?`<strong>${P.dechetterie.nom}</strong><br>`:''}${P.dechetterie.horaires}` : '')
-    + ligne('Administration communale', P.administration, P.administration ? `${P.administration.horaires||''}${P.administration.telephone?`<br>Tél. ${P.administration.telephone}`:''}` : '')
-    + ligne('Marché', P.marche, P.marche ? `${P.marche.quand}${P.marche.lieu?` · ${P.marche.lieu}`:''}` : '')
-    + `<p class="src">Commune de ${com}. Horaires lus sur le site communal, ${releve(VD.pratique.releve)}. Ils peuvent changer : le site de la commune fait foi.</p>`;
+      ligne('Déchetterie', P.dechetterie, P.dechetterie ? `${P.dechetterie.nom?`<strong>${esc(P.dechetterie.nom)}</strong><br>`:''}${esc(P.dechetterie.horaires)}` : '')
+    + ligne('Administration communale', P.administration, P.administration ? `${esc(P.administration.horaires)}${P.administration.telephone?`<br>Tél. ${esc(P.administration.telephone)}`:''}` : '')
+    + ligne('Marché', P.marche, P.marche ? `${esc(P.marche.quand)}${P.marche.lieu?` · ${esc(P.marche.lieu)}`:''}` : '')
+    + `<p class="src">Commune de ${esc(com)}. Horaires lus sur le site communal, ${releve(VD.pratique.releve)}. Ils peuvent changer : le site de la commune fait foi.</p>`;
   carte.hidden=false;
 }
 function renderDefibs(){
   const carte=document.getElementById('cdefib'), l=mv && VD.defibs && VD.defibs.par_village[mv];
   if(!l || !l.length){ carte.hidden=true; return; }
   res('rdefib', `${l.length} appareil${l.length>1?'s':''}`);
-  document.getElementById('bdefib').innerHTML = l.map(x=>
-      `<div class="it"><strong>${x.lieu||'Emplacement non décrit'}</strong><small>${[x.acces, x.lat?`<a href="https://www.openstreetmap.org/?mlat=${x.lat}&mlon=${x.lon}#map=18/${x.lat}/${x.lon}" target="_blank" rel="noopener">voir sur la carte</a>`:'signalé par un habitant'].filter(Boolean).join(' · ')}</small></div>`).join('')
+  document.getElementById('bdefib').innerHTML = l.map(x=>{
+      const la=Number(x.lat), lo=Number(x.lon), carte=x.lat && Number.isFinite(la) && Number.isFinite(lo);
+      return `<div class="it"><strong>${esc(x.lieu||'Emplacement non décrit')}</strong><small>${[esc(x.acces||''), carte?`<a href="https://www.openstreetmap.org/?mlat=${la}&amp;mlon=${lo}#map=18/${la}/${lo}" target="_blank" rel="noopener">voir sur la carte</a>`:'signalé par un habitant'].filter(Boolean).join(' · ')}</small></div>`; }).join('')
     + `<p class="src">En cas d'arrêt cardiaque : appelez d'abord le 144. Liste non exhaustive : il en manque un ? <a href="mailto:annonce@lebattoir.ch?subject=D%C3%A9fibrillateur">Écrivez-nous</a>. Source : <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">contributeurs d'OpenStreetMap</a>, ${releve(VD.defibs.releve)}.</p>`;
   carte.hidden=false;
 }
@@ -808,9 +831,9 @@ function renderVillage(){
   document.getElementById('broutes').innerHTML = (r.length ? r.map(x=>{
       const quand = x.debut<=auj ? `En cours, jusqu'au ${dcourt(x.fin)}`
                   : x.debut===x.fin ? `Le ${dcourt(x.debut)}` : `Du ${dcourt(x.debut)} au ${dcourt(x.fin)}`;
-      const h = x.h_debut && x.h_fin ? ` · ${x.h_debut} à ${x.h_fin}` : '';
-      const det=[x.restrictions.join(', '), x.remarque, x.weekend?'':'pas le week-end'].filter(Boolean).join(' · ');
-      return `<div class="it"><span class="quand">${quand}${h}</span><strong>${x.nom}</strong><small>${det}</small></div>`;
+      const h = x.h_debut && x.h_fin ? ` · ${esc(x.h_debut)} à ${esc(x.h_fin)}` : '';
+      const det=[(x.restrictions||[]).join(', '), x.remarque, x.weekend?'':'pas le week-end'].filter(Boolean).map(esc).join(' · ');
+      return `<div class="it"><span class="quand">${quand}${h}</span><strong>${esc(x.nom)}</strong><small>${det}</small></div>`;
     }).join('') : `<p class="rien">Aucune restriction annoncée sur les routes cantonales${mv?` ${aLieu(mv)}`:''}.</p>`)
     + `<p class="src">Routes cantonales seulement. Source : <a href="https://www.vd.ch/mobilite/loffre-de-mobilite-a-votre-disposition/transports-individuels-motorises-tim/restrictions-de-circulation-et-travaux" target="_blank" rel="noopener">État de Vaud, DGMR</a>, ${releve(VD.routes.releve)}.</p>`;
   // entreprises : par commune (un hameau releve de sa commune)
@@ -818,12 +841,12 @@ function renderVillage(){
   let e=VD.entreprises.liste.filter(x=>!com || x.commune===com);
   const total=e.length; if(!mv) e=e.slice(0,9);
   res('rentr', total ? `${total} nouvelle${total>1?'s':''}` : 'aucune');
-  const fiche=x=>      `<div class="it"><strong><a href="${x.url}" target="_blank" rel="noopener">${x.nom}</a></strong>
-       <small>${x.commune} · ${x.forme} · publiée le ${dcourt(x.date)}</small>${x.but?`<small>${x.but}</small>`:''}</div>`;
+  const fiche=x=>{ const u=lienSur(x.url); return `<div class="it"><strong>${u?`<a href="${esc(u)}" target="_blank" rel="noopener">${esc(x.nom)}</a>`:esc(x.nom)}</strong>
+       <small>${esc(x.commune)} · ${esc(x.forme)} · publiée le ${dcourt(x.date)}</small>${x.but?`<small>${esc(x.but)}</small>`:''}</div>`; };
   document.getElementById('bentr').innerHTML = (e.length
       ? e.slice(0,3).map(fiche).join('') + (e.length>3 ? `<details><summary>${e.length===4?'Voir la dernière':`Voir les ${e.length-3} autres`}</summary>${e.slice(3).map(fiche).join('')}</details>` : '')
-      : `<p class="rien">Aucune nouvelle société inscrite ${aLieu(com)} ces ${VD.entreprises.jours} derniers jours.</p>`)
-    + `<p class="src">${!mv && total>e.length ? `Les ${e.length} plus récentes sur ${total}. Choisissez un village pour voir les siennes. ` : ''}Inscriptions des ${VD.entreprises.jours} derniers jours. Source : <a href="https://www.shab.ch/" target="_blank" rel="noopener">Feuille officielle suisse du commerce</a>, ${releve(VD.entreprises.releve)}. Vous ne souhaitez pas y figurer ? <a href="mailto:annonce@lebattoir.ch?subject=Retrait%20des%20nouvelles%20entreprises">Écrivez-nous</a>.</p>`;
+      : `<p class="rien">Aucune nouvelle société inscrite ${esc(aLieu(com))} ces ${esc(VD.entreprises.jours)} derniers jours.</p>`)
+    + `<p class="src">${!mv && total>e.length ? `Les ${e.length} plus récentes sur ${total}. Choisissez un village pour voir les siennes. ` : ''}Inscriptions des ${esc(VD.entreprises.jours)} derniers jours. Source : <a href="https://www.shab.ch/" target="_blank" rel="noopener">Feuille officielle suisse du commerce</a>, ${releve(VD.entreprises.releve)}. Vous ne souhaitez pas y figurer ? <a href="mailto:annonce@lebattoir.ch?subject=Retrait%20des%20nouvelles%20entreprises">Écrivez-nous</a>.</p>`;
   renderPratique(com);
   // sans infos pratiques (aucun village choisi), les routes montent a cote de la meteo
   const cr=document.getElementById('croutes'), sansPrat=document.getElementById('cprat').hidden;
