@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>La radio du Battoir</title>
+    <link>https://lebattoir.ch/</link>
+    <atom:link href="https://lebattoir.ch/podcast.xml" rel="self" type="application/rss+xml"/>
+    <language>fr-ch</language>
+    <copyright>Le Battoir, plaine de l'Orbe</copyright>
+    <description>Chaque jeudi, Firmin la chouette et Margot la pie racontent le week-end de la plaine de l'Orbe et de ses 36 villages : fêtes, lotos, théâtre, concerts, matchs de foot. Firmin et Margot sont des voix artificielles ; tout ce qu'ils disent a une source, une personne écoute chaque émission en entier avant diffusion, et une erreur se corrige l'émission suivante. Comment on travaille : https://lebattoir.ch/comment-on-travaille.html</description>
+    <itunes:subtitle>Ce qui se passe ce week-end dans la plaine de l'Orbe</itunes:subtitle>
+    <itunes:summary>Chaque jeudi, Firmin la chouette et Margot la pie racontent le week-end de la plaine de l'Orbe et de ses 36 villages : fêtes, lotos, théâtre, concerts, matchs de foot. Firmin et Margot sont des voix artificielles ; tout ce qu'ils disent a une source, une personne écoute chaque émission en entier avant diffusion, et une erreur se corrige l'émission suivante. Comment on travaille : https://lebattoir.ch/comment-on-travaille.html</itunes:summary>
+    <itunes:author>Le Battoir</itunes:author>
+    <itunes:owner><itunes:name>Le Battoir</itunes:name><itunes:email>annonce@lebattoir.ch</itunes:email></itunes:owner>
+    <itunes:image href="https://lebattoir.ch/podcast.jpg"/>
+    <image><url>https://lebattoir.ch/podcast.jpg</url><title>La radio du Battoir</title><link>https://lebattoir.ch/</link></image>
+    <itunes:category text="News"><itunes:category text="Daily News"/></itunes:category>
+    <itunes:category text="Leisure"/>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:type>episodic</itunes:type>
+    <item>
+      <title>Le week-end du 6 au 8 novembre</title>
+      <description>Le week-end du 6 au 8 novembre, raconté par Firmin et Margot. Tout le programme, les horaires et les liens : https://lebattoir.ch/ce-week-end/ . Voix artificielles ; une personne écoute l'émission en entier avant diffusion.</description>
+      <enclosure url="https://lebattoir.ch/radio-2026-11-05.mp3" length="5078176" type="audio/mpeg"/>
+      <guid isPermaLink="false">https://lebattoir.ch/radio-2026-11-05.mp3</guid>
+      <pubDate>Thu, 05 Nov 2026 18:00:00 +0100</pubDate>
+      <itunes:duration>7:03</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Le week-end du 30 octobre au 1er novembre</title>
+      <description>Le week-end du 30 octobre au 1er novembre, raconté par Firmin et Margot. Tout le programme, les horaires et les liens : https://lebattoir.ch/ce-week-end/ . Voix artificielles ; une personne écoute l'émission en entier avant diffusion.</description>
+      <enclosure url="https://lebattoir.ch/radio-2026-10-29.mp3" length="4805771" type="audio/mpeg"/>
+      <guid isPermaLink="false">https://lebattoir.ch/radio-2026-10-29.mp3</guid>
+      <pubDate>Thu, 29 Oct 2026 18:00:00 +0100</pubDate>
+      <itunes:duration>6:40</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Le week-end du 23 au 25 octobre</title>
+      <description>Le week-end du 23 au 25 octobre, raconté par Firmin et Margot. Tout le programme, les horaires et les liens : https://lebattoir.ch/ce-week-end/ . Voix artificielles ; une personne écoute l'émission en entier avant diffusion.</description>
+      <enclosure url="https://lebattoir.ch/radio-2026-10-22.mp3" length="4636811" type="audio/mpeg"/>
+      <guid isPermaLink="false">https://lebattoir.ch/radio-2026-10-22.mp3</guid>
+      <pubDate>Thu, 22 Oct 2026 18:00:00 +0100</pubDate>
+      <itunes:duration>6:26</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>
