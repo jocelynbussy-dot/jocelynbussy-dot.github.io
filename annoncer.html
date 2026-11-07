@@ -8,9 +8,9 @@
      python deploy.py --recalculer -->
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-nff3AuiUCGo4IA4pJMADj7JZihuD6wHTbK/X4/rBMAk='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://n8n.lebattoir.ch; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Annoncer un événement — Le Battoir</title>
+<title>Annoncer un événement, Le Battoir</title>
 <meta name="description" content="Annoncez gratuitement votre loto, soirée, concert ou match dans l'agenda du Battoir, plaine de l'Orbe.">
-<meta property="og:title" content="Annoncer un événement — Le Battoir">
+<meta property="og:title" content="Annoncer un événement, Le Battoir">
 <meta property="og:image" content="https://lebattoir.ch/partage.png">
 <meta property="og:url" content="https://lebattoir.ch/annoncer.html">
 <link rel="canonical" href="https://lebattoir.ch/annoncer.html">
@@ -21,37 +21,47 @@
      atelier-naho (n8n.lebattoir.ch/webhook/annonce), seule porte publique. Source du flux :
      Context/dossiers/serveur/n8n/fabrique_flux_annonce.py. Mêmes couleurs et polices que index.html. -->
 <style>
-:root{--rouge:#C2412E;--noir:#222222;--creme:#F5F0E7;--gris:#6b6560;--trait:#e2dbd0;--blanc:#fff}
+/* 07.11.2026 : style « journal local » (STYLE.md, style.json). Copie avant : annoncer.avant-style-2026-11-06.html */
+/* style.json : debut (style_css.py, ne pas editer a la main) */
+:root{--fond:#FFFFFF;--texte:#222222;--rouge:#C2412E;--gris:#6B6560;--filet:#E2DBD0;--blanc:#FFFFFF;--ty-sport:#1F7A4D;--ty-loto:#6E46A8;--ty-fete:#A86400;--ty-decouverte:#1F5FA8;--ty-officiel:#6B6560;--titre:Oswald, 'Arial Narrow', sans-serif;--police:Inter, system-ui, sans-serif}
+.c-foot,.c-sport{--ty:var(--ty-sport)}
+.c-loto{--ty:var(--ty-loto)}
+.c-fete,.c-musique{--ty:var(--ty-fete)}
+.c-culture,.c-marche{--ty:var(--ty-decouverte)}
+.c-officiel{--ty:var(--ty-officiel)}
+/* style.json : fin */
+:root{--noir:var(--texte);--trait:var(--filet)}
 *{box-sizing:border-box;margin:0}
-body{font-family:Inter,system-ui,sans-serif;color:var(--noir);background:var(--blanc);line-height:1.55;-webkit-font-smoothing:antialiased}
-h1,h2,.osw{font-family:Oswald,'Arial Narrow',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.01em;line-height:1.05}
+body{font-family:var(--police);color:var(--noir);background:var(--fond);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,.osw{font-family:var(--titre);font-weight:600;letter-spacing:.01em;line-height:1.05}
+h1,h2{text-transform:uppercase}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 header{border-bottom:3px solid var(--noir)}
 header .wrap{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:18px 20px}
 header a{color:var(--noir);text-decoration:none}
-.n{font-family:Oswald,sans-serif;font-weight:700;font-size:28px;letter-spacing:.02em}
-.t{font-weight:600;font-size:10.5px;letter-spacing:.18em;color:var(--rouge);text-transform:uppercase}
+.n{font-family:var(--titre);font-weight:700;font-size:28px;letter-spacing:.02em}
+.t{font-weight:600;font-size:12px;letter-spacing:.04em;color:var(--rouge)}
 .retour{font-size:14px;color:var(--gris)!important;text-decoration:underline!important}
-.tete{background:var(--creme);border-bottom:3px solid var(--noir);padding:28px 0 24px}
-.tete h1{font-size:30px}
+.tete{background:var(--fond);border-bottom:3px solid var(--noir);padding:28px 0 24px}
+.tete h1{font-size:clamp(30px,6vw,46px)}
 .tete p{margin-top:10px;font-size:16.5px;max-width:60ch}
 form{padding:26px 0 10px}
 fieldset{border:0;padding:0;margin:0 0 22px}
-legend{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:18px;margin-bottom:8px;border-bottom:2px solid var(--noir);width:100%;padding-bottom:4px}
+legend{font-family:var(--titre);font-weight:600;font-size:21px;margin-bottom:8px;border-bottom:2px solid var(--noir);width:100%;padding-bottom:4px}
 label{display:block;font-weight:600;font-size:15px;margin:12px 0 4px}
 .aide{font-weight:400;color:var(--gris);font-size:13.5px}
-.ob{color:var(--rouge);font-weight:700}
+.ob{color:var(--noir);font-weight:700}
 .oblig{font-size:14px;color:var(--gris);margin:0 0 6px}
-input,select,textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--trait);background:#fff;color:var(--noir);border-radius:0}
+input,select,textarea{width:100%;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--trait);background:var(--fond);color:var(--noir);border-radius:0}
 input:focus,select:focus,textarea:focus{outline:none;border-color:var(--noir)}
 .deux{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
 @media (max-width:520px){.deux{grid-template-columns:1fr}}
 .piege{position:absolute;left:-5000px;width:1px;height:1px;overflow:hidden}
-button{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:16px;
-  padding:14px 26px;border:2px solid var(--rouge);background:var(--rouge);color:#fff;cursor:pointer;margin-top:6px}
+button{font-family:var(--titre);font-weight:600;letter-spacing:.02em;font-size:17px;
+  padding:13px 26px;border:2px solid var(--rouge);background:var(--rouge);color:var(--blanc);cursor:pointer;margin-top:6px}
 button[disabled]{opacity:.6;cursor:wait}
-.msg{margin-top:16px;padding:14px 16px;border-left:5px solid var(--noir);background:var(--creme);display:none}
-.msg.ok{border-color:#3a7d3a}.msg.err{border-color:var(--rouge)}
+.msg{margin-top:16px;padding:14px 16px;border:1px solid var(--trait);border-top:4px solid var(--noir);background:var(--fond);display:none}
+.msg.ok{border-top-color:var(--noir)}.msg.err{border-top-color:var(--rouge)}
 .donnees{font-size:13.5px;color:var(--gris);border-top:1px solid var(--trait);margin-top:28px;padding:16px 0 40px}
 .donnees a{color:var(--gris)}
 </style>
