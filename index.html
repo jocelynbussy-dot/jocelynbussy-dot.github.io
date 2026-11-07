@@ -8,7 +8,7 @@
      L'EMPREINTE CHANGE A CHAQUE MODIFICATION DU SCRIPT DU BAS DE PAGE (meme un commentaire). Une empreinte fausse =
      page sans agenda (erreur dans la console seulement). Depuis le 06.11.2026, deploy.py REFUSE de publier si elle
      ne correspond plus (garde csp.py). La recalculer, depuis site/ :  python deploy.py --recalculer -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-GLk+VGjFvejECX3tDLapTet1Dd5MaIOMZ/kxrEU0Bm4=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://lebattoir.goatcounter.com; media-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://lebattoir.goatcounter.com; object-src 'none'; base-uri 'none'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-EIr5X/kZYQpEw04J3NN5uRutJAfJ9EZOhRBykiWf2lo=' https://gc.zgo.at; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://lebattoir.goatcounter.com; media-src 'self'; connect-src 'self' https://api.open-meteo.com https://air-quality-api.open-meteo.com https://lebattoir.goatcounter.com; object-src 'none'; base-uri 'none'; form-action 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le Battoir, Plaine de l'Orbe · tout ce qui se passe près de chez vous</title>
 <meta name="description" content="Chaque jeudi, tout ce qui se passe dans les 36 villages de la plaine de l'Orbe : lotos, soirées de sociétés, concerts, matchs, bals, marchés. Un seul message. Gratuit.">
@@ -662,7 +662,7 @@ function bornesWeekend(){
 function mini(e){
   const hc=heureCourte(e);
   const ou=[e.exterieur?`${e.v} (à l’extérieur)`:e.v, hc?'':(e.h||''), e.lieu||''].filter(Boolean).map(esc).join(' · ');
-  return `<div class="mini"><span class="h">${hc||CATS[e.c].e}</span><div><strong>${titreLien(e)}${nouv(e)}</strong><small>${hc?CATS[e.c].e+' ':''}${ou}</small></div></div>`;
+  return `<div class="mini"><span class="h">${hc||CATS[e.c].e}</span><div><strong>${titreLien(e)}${nouv(e)}</strong><small><span class="tag c-${e.c}">${hc?CATS[e.c].e+' ':''}${CATS[e.c].l}</span>${ou}</small></div></div>`;
 }
 function colonnes(list){
   return `<div class="wkg">`+parJour(list).map(([iso,l])=>{
