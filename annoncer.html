@@ -6,7 +6,10 @@
      (par son empreinte), Google Fonts, et l'envoi du formulaire a n8n.lebattoir.ch. L'empreinte change a chaque
      modification du script du bas de page : deploy.py refuse alors de publier ; recalculer depuis site/ avec
      python deploy.py --recalculer -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-nff3AuiUCGo4IA4pJMADj7JZihuD6wHTbK/X4/rBMAk='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://n8n.lebattoir.ch; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'sha256-RR4P16PhYkVYHbyoX3kXNcPdhyGLV/AkyBiNL83GFwY=' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://n8n.lebattoir.ch; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+<!-- 10.11.2026 : défi anti-robot Cloudflare Turnstile (audit du 09.11). Le script et son cadre viennent de
+     challenges.cloudflare.com, permis dans script-src et frame-src ci-dessus. La clé de site est publique. -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -126,6 +129,7 @@ button[disabled]{opacity:.6;cursor:wait}
     <div class="piege" aria-hidden="true"><label for="site_web">Ne pas remplir</label><input id="site_web" name="site_web" tabindex="-1" autocomplete="off"></div>
   </fieldset>
 
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAAF6oVZgc4Gi4ZPir" data-language="fr" style="margin:16px 0"></div>
   <button id="b" type="submit">Envoyer l'annonce</button>
   <div id="m" class="msg" role="status" aria-live="polite"></div>
 </form>
@@ -164,8 +168,10 @@ f.addEventListener('submit', async e => {
       dire("Bien reçu, merci ! On la relit et elle paraît dans l'agenda, en principe le jeudi qui suit. Si c'est votre premier envoi du jour, une confirmation arrive par mail à " + f.email.value.trim() + ' (pensez à regarder dans les indésirables).', true);
     } else {
       dire((j.erreur || "L'envoi n'a pas abouti.") + ' Vous pouvez aussi écrire à annonce@lebattoir.ch.', false);
+      if (window.turnstile) turnstile.reset();
     }
   } catch (err) {
+    if (window.turnstile) turnstile.reset();
     dire("Le formulaire ne répond pas pour le moment. Écrivez-nous à annonce@lebattoir.ch : quoi, où, quand, et c'est parti.", false);
   }
   b.disabled = false; b.textContent = "Envoyer l'annonce";
