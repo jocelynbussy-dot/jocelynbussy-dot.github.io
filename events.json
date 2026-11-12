@@ -3553,17 +3553,6 @@
  },
  {
   "d": "2026-11-06",
-  "fin": "2026-11-06",
-  "t": "JAM Session",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Association Hessel Espace Culturel",
-  "h": "Dès 20h jusqu'à 23h45",
-  "lieu": "Rue Davall 3, 1350 Orbe",
-  "url": "https://www.facebook.com/events/1598540068938099"
- },
- {
-  "d": "2026-11-06",
   "fin": "2026-11-07",
   "t": "Soirée raclette du Ski-club",
   "v": "Baulmes",
@@ -3598,17 +3587,6 @@
  {
   "d": "2026-11-07",
   "fin": "2026-11-07",
-  "t": "Concert Intemplo La voie de l'unité",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Association Intemplo Orbe et Région",
-  "h": "18h - 22h",
-  "lieu": "Casino d'Orbe, Rue des Terreaux 9, 1350 Orbe",
-  "url": "https://monbillet.ch/events/in-templo-26-la-tribu-du-vivant"
- },
- {
-  "d": "2026-11-07",
-  "fin": "2026-11-07",
   "t": "Dhrupad : chant et musique indienne",
   "v": "Romainmôtier-Envy",
   "c": "musique",
@@ -3634,9 +3612,9 @@
   "t": "Loto",
   "v": "Chavornay",
   "c": "loto",
-  "o": "Giron des lotos",
+  "o": "",
   "h": "",
-  "lieu": "Foyer de la Salle Polyvalente",
+  "lieu": "",
   "url": ""
  },
  {
@@ -3649,17 +3627,6 @@
   "h": "",
   "lieu": "Refuge forestier communal",
   "url": "https://croy.ch/agenda/"
- },
- {
-  "d": "2026-11-07",
-  "fin": "2026-11-07",
-  "t": "Plateau Stand-Up",
-  "v": "Vallorbe",
-  "c": "fete",
-  "o": "Commission culturelle Vallorbe",
-  "h": "",
-  "lieu": "Casino de Vallorbe",
-  "url": ""
  },
  {
   "d": "2026-11-07",
@@ -3691,7 +3658,7 @@
   "c": "loto",
   "o": "Jeunesse de Corcelles",
   "h": "",
-  "lieu": "Grande salle CO",
+  "lieu": "",
   "url": ""
  },
  {
@@ -3773,17 +3740,6 @@
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
-  "d": "2026-11-08",
-  "fin": "2026-11-08",
-  "t": "Voyages en cartes postales et en petites voitures",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "14h et 16h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/spectacle/voyages-en-cartes-postales-et-en-petites-voitures/"
- },
- {
   "d": "2026-11-09",
   "fin": "2026-11-09",
   "t": "FC Assens – FC Bavois -Chavornay",
@@ -3839,61 +3795,6 @@
   "h": "9h à 11h",
   "lieu": "Rue Davall 5, 1350 Orbe",
   "url": "https://www.arc-echange.ch"
- },
- {
-  "d": "2026-11-10",
-  "fin": "2026-11-10",
-  "t": "Permanence numérique",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "De 16h30 à 17h30",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
- },
- {
-  "d": "2026-11-10",
-  "fin": "2026-11-10",
-  "t": "Table au bistrot",
-  "v": "Orny",
-  "c": "fete",
-  "o": "Pro Senectute",
-  "h": "",
-  "lieu": "Auberge communale Les Rupiants",
-  "url": ""
- },
- {
-  "d": "2026-11-11",
-  "fin": "2026-11-11",
-  "t": "Contes joyeux en musique",
-  "v": "Vallorbe",
-  "c": "culture",
-  "o": "Bibliothèque de Vallorbe, Ballaigues et Vallon du Nozon",
-  "h": "",
-  "lieu": "Bibliothèque de Vallorbe, Ballaigues et Vallon du Nozon",
-  "url": ""
- },
- {
-  "d": "2026-11-11",
-  "fin": "2026-11-11",
-  "t": "Lis-moi une histoire",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "De 15h à 15h45",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
- },
- {
-  "d": "2026-11-11",
-  "fin": "2026-11-11",
-  "t": "Mercredi Forêt Famille",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Association Point Nature",
-  "h": "De 9h00 à 17h00",
-  "lieu": "Forêt de Chassagne, près d'Orbe",
-  "url": "https://point-nature.ch/ateliers.html"
  },
  {
   "d": "2026-11-11",
@@ -4010,6 +3911,17 @@
  },
  {
   "d": "2026-11-14",
+  "fin": "2026-11-14",
+  "t": "Souper concert « En route, de Vienne à Berlin » (95 ans des Ondins)",
+  "v": "Orbe",
+  "c": "musique",
+  "o": "Orchestre d'accordéonistes Les Ondins",
+  "h": "apéritif 18h15, repas 18h45, concert 20h30 (concert seul : portes 20h)",
+  "lieu": "Casino d'Orbe, Rue des Terreaux 9, 1350 Orbe",
+  "url": ""
+ },
+ {
+  "d": "2026-11-14",
   "fin": "2026-11-15",
   "t": "Vente automne 2026",
   "v": "Chavornay",
@@ -4115,7 +4027,7 @@
   "v": "Orbe",
   "c": "culture",
   "o": "Pro Urba",
-  "h": "",
+  "h": "De 19h à 21h. Ouverture des portes à 18h30",
   "lieu": "Caveau du musée",
   "url": "https://www.pro-urba.ch/activites/"
  },
@@ -4199,6 +4111,17 @@
  {
   "d": "2026-11-21",
   "fin": "2026-11-21",
+  "t": "FC Bavois – FC Grand-Saconnex",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Promotion League",
+  "h": "15h00",
+  "lieu": "Les Peupliers N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
+ },
+ {
+  "d": "2026-11-21",
+  "fin": "2026-11-21",
   "t": "Marché artisanal de Noël",
   "v": "Croy",
   "c": "marche",
@@ -4239,6 +4162,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations.html"
+ },
+ {
+  "d": "2026-11-21",
+  "fin": "2026-11-21",
+  "t": "Repas de soutien de la Jeunesse (soirée raclette)",
+  "v": "Juriens",
+  "c": "fete",
+  "o": "Société de Jeunesse de Juriens",
+  "h": "",
+  "lieu": "Grande Salle",
+  "url": "https://www.juriens.ch/"
  },
  {
   "d": "2026-11-21",
@@ -4550,6 +4484,17 @@
  },
  {
   "d": "2026-12-01",
+  "fin": "2026-12-23",
+  "t": "Chalet de l'Avent USL 2026",
+  "v": "Chavornay",
+  "c": "fete",
+  "o": "Les Sociétés locales de Chavornay",
+  "h": "",
+  "lieu": "Place du provisoire du Marché",
+  "url": ""
+ },
+ {
+  "d": "2026-12-01",
   "fin": "2026-12-01",
   "t": "Conseil général",
   "v": "Premier",
@@ -4595,6 +4540,17 @@
  {
   "d": "2026-12-02",
   "fin": "2026-12-02",
+  "t": "Conférence : incendies de forêt dans le Jura vaudois",
+  "v": "Romainmôtier-Envy",
+  "c": "culture",
+  "o": "Commune de Romainmôtier-Envy",
+  "h": "",
+  "lieu": "",
+  "url": "https://romainmotier.ch/actualite-manifestations/agenda/"
+ },
+ {
+  "d": "2026-12-02",
+  "fin": "2026-12-02",
   "t": "Conseil général",
   "v": "La Praz",
   "c": "officiel",
@@ -4631,8 +4587,8 @@
   "t": "Repas de Noël des Aînés",
   "v": "Baulmes",
   "c": "fete",
-  "o": "Aînés de Baulmes",
-  "h": "",
+  "o": "Groupe des Retraités et des Aînés",
+  "h": "dès 11h30 · inscription jusqu'au 27.11",
   "lieu": "Salle des Fêtes",
   "url": "https://www.baulmes.ch/fr/28/manifestations"
  },
@@ -4967,6 +4923,17 @@
   "url": "https://www.suchy.ch/events/"
  },
  {
+  "d": "2026-12-10",
+  "fin": "2026-12-10",
+  "t": "Poste mobile de gendarmerie",
+  "v": "Valeyres-sous-Rances",
+  "c": "officiel",
+  "o": "Commune de Valeyres-sous-Rances",
+  "h": "l'après-midi",
+  "lieu": "Place du Village",
+  "url": "https://www.valeyres-sous-rances.ch/"
+ },
+ {
   "d": "2026-12-11",
   "fin": "2026-12-11",
   "t": "Calendrier de l'Avent des Urbigènes",
@@ -5013,6 +4980,28 @@
  {
   "d": "2026-12-12",
   "fin": "2026-12-12",
+  "t": "Calendrier de l'Avent des Urbigènes",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du marché de Noël",
+  "h": "de 8h à 16h",
+  "lieu": "Place du Marché, 1350 Orbe",
+  "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Contes de Noël",
+  "v": "Vallorbe",
+  "c": "culture",
+  "o": "Bibliothèque de Vallorbe",
+  "h": "",
+  "lieu": "Bibliothèque de Vallorbe",
+  "url": ""
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
   "t": "Distribution des sapins de Noël",
   "v": "Croy",
   "c": "marche",
@@ -5031,6 +5020,28 @@
   "h": "",
   "lieu": "Devant le local voirie",
   "url": "https://www.pompaples.ch/agenda"
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Distribution des sapins par la Commune",
+  "v": "Juriens",
+  "c": "marche",
+  "o": "Commune de Juriens",
+  "h": "inscription obligatoire",
+  "lieu": "Ancien Battoir, Collège 1",
+  "url": "https://www.juriens.ch/"
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Le Père Noël au Temple 2026",
+  "v": "Chavornay",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Temple de Chavornay",
+  "url": ""
  },
  {
   "d": "2026-12-12",
@@ -5192,9 +5203,9 @@
   "t": "Calendrier de l'Avent des Urbigènes",
   "v": "Orbe",
   "c": "fete",
-  "o": "Association du Marché de Noël d'Orbe",
-  "h": "De 16h à 20h",
-  "lieu": "Place du Marché, 1350 Orbe",
+  "o": "Association du Marché de Noël",
+  "h": "de 10h à 16h",
+  "lieu": "Place du Marché , 1350 Orbe",
   "url": "https://www.orbe.ch"
  },
  {
@@ -5242,6 +5253,17 @@
   "url": "https://www.orbe.ch"
  },
  {
+  "d": "2026-12-20",
+  "fin": "2026-12-20",
+  "t": "Calendrier de l'Avent des Urbigènes",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Association du Marché de Noël d'Orbe",
+  "h": "de 10h à 15h",
+  "lieu": "Place du Marché , 1350 Orbe",
+  "url": "https://www.orbe.ch"
+ },
+ {
   "d": "2026-12-22",
   "fin": "2026-12-22",
   "t": "Atelier dessin « Créativi’thé »",
@@ -5284,6 +5306,17 @@
   "h": "",
   "lieu": "Place de l'Hôtel-de-Ville",
   "url": "https://vaulion.ch/agenda"
+ },
+ {
+  "d": "2026-12-24",
+  "fin": "2026-12-24",
+  "t": "Repas de Noël pour les personnes seules habitant la Commune",
+  "v": "Chavornay",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Salle Courtes-Raies",
+  "url": ""
  },
  {
   "d": "2026-12-25",
@@ -5361,6 +5394,17 @@
   "h": "dès 11h30",
   "lieu": "",
   "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
+ },
+ {
+  "d": "2027-01-09",
+  "fin": "2027-01-09",
+  "t": "Loto des USL",
+  "v": "Juriens",
+  "c": "fete",
+  "o": "USL Juriens",
+  "h": "dès 19h",
+  "lieu": "Grande Salle",
+  "url": "https://www.juriens.ch/"
  },
  {
   "d": "2027-01-09",
@@ -5869,6 +5913,17 @@
   "url": "https://www.fvjc.ch/agenda/#tourdejeunesse-1163"
  },
  {
+  "d": "2027-05-07",
+  "fin": "2027-05-07",
+  "t": "Tour de jeunesse",
+  "v": "Valeyres-sous-Rances",
+  "c": "sport",
+  "o": "Jeunesse de Valeyres-sous-Rances",
+  "h": "",
+  "lieu": "1358 Valeyres-sous-Rances",
+  "url": "https://www.fvjc.ch/agenda/#tourdejeunessevaleyres-sous-rances-1205"
+ },
+ {
   "d": "2027-05-08",
   "fin": "2027-05-08",
   "t": "Tour de jeunesse",
@@ -5878,6 +5933,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#tourdejeunesse-1164"
+ },
+ {
+  "d": "2027-05-08",
+  "fin": "2027-05-08",
+  "t": "Tour de jeunesse",
+  "v": "Valeyres-sous-Rances",
+  "c": "sport",
+  "o": "Jeunesse de Valeyres-sous-Rances",
+  "h": "",
+  "lieu": "1358 Valeyres-sous-Rances",
+  "url": "https://www.fvjc.ch/agenda/#tourdejeunessevaleyres-sous-rances-1209"
  },
  {
   "d": "2027-05-09",
