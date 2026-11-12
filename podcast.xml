@@ -18,6 +18,16 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:type>episodic</itunes:type>
     <item>
+      <title>Le week-end du 13 au 15</title>
+      <description>Le week-end du 13 au 15, raconté par Firmin et Margot. Tout le programme, les horaires et les liens : https://lebattoir.ch/ce-week-end/ . Voix artificielles ; une personne écoute l'émission en entier avant diffusion.</description>
+      <enclosure url="https://lebattoir.ch/radio-2026-11-12.mp3" length="6499760" type="audio/mpeg"/>
+      <guid isPermaLink="false">https://lebattoir.ch/radio-2026-11-12.mp3</guid>
+      <pubDate>Thu, 12 Nov 2026 18:00:00 +0100</pubDate>
+      <itunes:duration>9:01</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
       <title>Le week-end du 6 au 8 novembre</title>
       <description>Le week-end du 6 au 8 novembre, raconté par Firmin et Margot. Tout le programme, les horaires et les liens : https://lebattoir.ch/ce-week-end/ . Voix artificielles ; une personne écoute l'émission en entier avant diffusion.</description>
       <enclosure url="https://lebattoir.ch/radio-2026-11-05.mp3" length="5078176" type="audio/mpeg"/>
