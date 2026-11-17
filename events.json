@@ -3786,17 +3786,6 @@
   "url": "https://matchcenter-acvf.football.ch/"
  },
  {
-  "d": "2026-11-10",
-  "fin": "2026-11-17",
-  "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Association ARC-Echange",
-  "h": "9h à 11h",
-  "lieu": "Rue Davall 5, 1350 Orbe",
-  "url": "https://www.arc-echange.ch"
- },
- {
   "d": "2026-11-11",
   "fin": "2026-11-11",
   "t": "Pause-café",
@@ -3829,17 +3818,6 @@
   "lieu": "Terrain Grassy, Chavannes-le-Chêne",
   "url": "https://matchcenter-acvf.football.ch/",
   "exterieur": true
- },
- {
-  "d": "2026-11-12",
-  "fin": "2026-11-12",
-  "t": "RDV du jeudi - Entrez dans le conte",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "20h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/spectacle/rdv-du-jeudi-entrez-dans-le-conte/"
  },
  {
   "d": "2026-11-13",
@@ -3883,19 +3861,8 @@
   "c": "loto",
   "o": "FC Chavornay",
   "h": "",
-  "lieu": "Foyer de la Salle Polyvalente",
+  "lieu": "",
   "url": ""
- },
- {
-  "d": "2026-11-14",
-  "fin": "2026-11-14",
-  "t": "Adrienne",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "20h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/spectacle/adrienne/"
  },
  {
   "d": "2026-11-14",
@@ -3918,17 +3885,6 @@
   "o": "Orchestre d'accordéonistes Les Ondins",
   "h": "apéritif 18h15, repas 18h45, concert 20h30 (concert seul : portes 20h)",
   "lieu": "Casino d'Orbe, Rue des Terreaux 9, 1350 Orbe",
-  "url": ""
- },
- {
-  "d": "2026-11-14",
-  "fin": "2026-11-15",
-  "t": "Vente automne 2026",
-  "v": "Chavornay",
-  "c": "marche",
-  "o": "Aînés-Les Bons Vivants",
-  "h": "",
-  "lieu": "Bâtiment administratif",
   "url": ""
  },
  {
@@ -3975,17 +3931,6 @@
   "h": "19h30",
   "lieu": "",
   "url": "https://vaulion.ch/agenda"
- },
- {
-  "d": "2026-11-17",
-  "fin": "2026-11-17",
-  "t": "IA : pourquoi et comment elle change nos vies ?",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "De 15h à 16h30",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
  },
  {
   "d": "2026-11-19",
@@ -4224,9 +4169,9 @@
   "t": "Hechizo Flamenco Group",
   "v": "Orbe",
   "c": "culture",
-  "o": "Association Intemplo Orbe et Région",
-  "h": "16h - 18h30",
-  "lieu": "Casino d'Orbe, Rue des Terreaux 9, 1350 Orbe",
+  "o": "Association In Templo",
+  "h": "17h (portes 16h)",
+  "lieu": "Temple d'Orbe, Rue du Château 5/7, 1350 Orbe",
   "url": "https://monbillet.ch/events/in-templo-26-hechizo-flamenco-group"
  },
  {
@@ -4646,6 +4591,17 @@
   "h": "De 9h à 14h",
   "lieu": "Place du Marché, 1350 Orbe",
   "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
+  "t": "Cave ouverte - Le Rupiant",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "",
+  "url": ""
  },
  {
   "d": "2026-12-05",
