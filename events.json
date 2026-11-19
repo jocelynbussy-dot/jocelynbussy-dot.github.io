@@ -3935,28 +3935,6 @@
  {
   "d": "2026-11-19",
   "fin": "2026-11-19",
-  "t": "Cours seniors en mouvement",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "TRAVYS",
-  "h": "De 14h00 à 17h00",
-  "lieu": "Buvette du Casino, Rue des Terreaux 9",
-  "url": "https://www.travys.ch/actualites/cours-seniors-2026/"
- },
- {
-  "d": "2026-11-19",
-  "fin": "2026-11-19",
-  "t": "Le castor, ingénieur de nos rivières",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Fondation Connaissance 3",
-  "h": "Jeudi 19 novembre 2026, de 14h30 à 16h.",
-  "lieu": "Salle de paroisse, rue Davall 5, 1350 Orbe",
-  "url": "https://www.connaissance3.ch"
- },
- {
-  "d": "2026-11-19",
-  "fin": "2026-11-19",
   "t": "Soirée jeux de société",
   "v": "La Praz",
   "c": "fete",
@@ -4038,8 +4016,8 @@
   "v": "Orbe",
   "c": "culture",
   "o": "Pro Urba",
-  "h": "10h30",
-  "lieu": "Caveau du musée",
+  "h": "10h30-11h30",
+  "lieu": "Caveau du musée, Rue Centrale 23",
   "url": "https://www.pro-urba.ch/activites/"
  },
  {
@@ -4085,17 +4063,6 @@
   "h": "8h30-12h30",
   "lieu": "",
   "url": "https://www.ballaigues.ch/calendrier-des-manifestations/169-categorie-01/264-march%C3%A9-de-n%C3%B6el.html"
- },
- {
-  "d": "2026-11-21",
-  "fin": "2026-11-21",
-  "t": "Pro Urba, les Conférences du Musée",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Association des Amis de Pro Urba",
-  "h": "10h30-11h30",
-  "lieu": "Rue Centrale 23, 1350 Orbe",
-  "url": "https://www.pro-urba.ch/"
  },
  {
   "d": "2026-11-21",
@@ -4159,7 +4126,7 @@
   "v": "Baulmes",
   "c": "fete",
   "o": "Paroisse",
-  "h": "",
+  "h": "10h30, célébration œcuménique",
   "lieu": "Salle des Fêtes",
   "url": "https://www.baulmes.ch/fr/28/manifestations"
  },
@@ -4206,6 +4173,17 @@
   "h": "De 16h à 17h30",
   "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
   "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
+ },
+ {
+  "d": "2026-11-25",
+  "fin": "2026-11-25",
+  "t": "FC Bavois – FC Schaffhausen",
+  "v": "Bavois",
+  "c": "foot",
+  "o": "Promotion League",
+  "h": "19h30",
+  "lieu": "Les Peupliers N°1",
+  "url": "https://matchcenter-acvf.football.ch/"
  },
  {
   "d": "2026-11-25",
@@ -4639,6 +4617,17 @@
  {
   "d": "2026-12-05",
   "fin": "2026-12-05",
+  "t": "La fresque du numérique",
+  "v": "Orbe",
+  "c": "fete",
+  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
+  "h": "De 9h à 12h",
+  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
+  "url": "https://framaforms.org/fresque-du-numerique-1786629818"
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
   "t": "Loto",
   "v": "Chavornay",
   "c": "loto",
@@ -4646,6 +4635,17 @@
   "h": "",
   "lieu": "Foyer de la Salle Polyvalente",
   "url": ""
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
+  "t": "Saint-Nicolas et Noël des enfants",
+  "v": "Romainmôtier-Envy",
+  "c": "fete",
+  "o": "Nicole Perreaud et la Paroisse",
+  "h": "dès 18h15",
+  "lieu": "Place du Bourg",
+  "url": "https://romainmotier.ch/actualite-manifestations/agenda/"
  },
  {
   "d": "2026-12-05",
@@ -4965,6 +4965,17 @@
   "h": "",
   "lieu": "Place de la Lavandière",
   "url": "https://croy.ch/agenda/"
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Distribution des sapins de Noël offerts par la Commune",
+  "v": "Romainmôtier-Envy",
+  "c": "officiel",
+  "o": "Commune de Romainmôtier-Envy",
+  "h": "dès 10h30",
+  "lieu": "Place du Bourg",
+  "url": "https://romainmotier.ch/actualite-manifestations/agenda/"
  },
  {
   "d": "2026-12-12",
@@ -5320,7 +5331,7 @@
  },
  {
   "d": "2026-12-31",
-  "fin": "2026-12-31",
+  "fin": "2027-01-02",
   "t": "Nouvel-An",
   "v": "Vaulion",
   "c": "fete",
@@ -5966,6 +5977,17 @@
   "h": "9h à 11h",
   "lieu": "Rue Davall 5, 1350 Orbe",
   "url": "https://www.arc-echange.ch"
+ },
+ {
+  "d": "2027-06-05",
+  "fin": "2027-06-05",
+  "t": "URBA TRIBUTE NIGHT",
+  "v": "Orbe",
+  "c": "culture",
+  "o": "ABV Production - Claudio Vallone",
+  "h": "19h à 23h59",
+  "lieu": "Rue des Terreaux 9, 1350 Orbe",
+  "url": ""
  },
  {
   "d": "2027-06-09",
