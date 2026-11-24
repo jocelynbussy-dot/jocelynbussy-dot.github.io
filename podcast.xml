@@ -67,5 +67,15 @@
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:explicit>false</itunes:explicit>
     </item>
+    <item>
+      <title>Le butin de la pie du mardi 24 novembre</title>
+      <description>Le butin de la pie du mardi 24 novembre : deux brèves d'actu vraies et sourcées, racontées par Firmin et Margot avec un témoin inventé. Les sources : https://lebattoir.ch/#radio . Voix artificielles ; une personne écoute chaque butin en entier avant diffusion.</description>
+      <enclosure url="https://lebattoir.ch/radio-2026-11-24.mp3" length="3247786" type="audio/mpeg"/>
+      <guid isPermaLink="false">https://lebattoir.ch/radio-2026-11-24.mp3</guid>
+      <pubDate>Tue, 24 Nov 2026 18:00:00 +0100</pubDate>
+      <itunes:duration>2:15</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
   </channel>
 </rss>
