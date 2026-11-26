@@ -3575,17 +3575,6 @@
  },
  {
   "d": "2026-11-07",
-  "fin": "2026-11-22",
-  "t": "13e exposition L'Art en fête",
-  "v": "Chavornay",
-  "c": "fete",
-  "o": "",
-  "h": "",
-  "lieu": "Salle du Conseil Communal",
-  "url": ""
- },
- {
-  "d": "2026-11-07",
   "fin": "2026-11-07",
   "t": "Dhrupad : chant et musique indienne",
   "v": "Romainmôtier-Envy",
@@ -3950,20 +3939,9 @@
   "v": "Orbe",
   "c": "culture",
   "o": "Pro Urba",
-  "h": "De 19h à 21h. Ouverture des portes à 18h30",
+  "h": "",
   "lieu": "Caveau du musée",
   "url": "https://www.pro-urba.ch/activites/"
- },
- {
-  "d": "2026-11-20",
-  "fin": "2026-11-20",
-  "t": "Dominique y los Cuchumatanes",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Théâtre de la Tournelle",
-  "h": "20h",
-  "lieu": "Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://tournelle.ch/spectacle/dominique-y-los-cuchumatanes/"
  },
  {
   "d": "2026-11-20",
@@ -3973,18 +3951,7 @@
   "c": "fete",
   "o": "Société de gymnastique",
   "h": "",
-  "lieu": "Foyer de la Salle Polyvalente",
-  "url": ""
- },
- {
-  "d": "2026-11-20",
-  "fin": "2026-11-20",
-  "t": "Théâtre",
-  "v": "Chavornay",
-  "c": "culture",
-  "o": "Troupe théâtrale de Zygomates",
-  "h": "",
-  "lieu": "Grande salle",
+  "lieu": "",
   "url": ""
  },
  {
@@ -4004,7 +3971,7 @@
   "t": "Brisolée",
   "v": "Bofflens",
   "c": "fete",
-  "o": "Vicky et Alexandre Sordet",
+  "o": "",
   "h": "dès 16h",
   "lieu": "Grande salle de Bofflens",
   "url": "https://vallondunozon.ch/evenements/brisolee-des-16h00-a-la-grande-salle/"
@@ -4089,17 +4056,6 @@
  {
   "d": "2026-11-21",
   "fin": "2026-11-21",
-  "t": "Théâtre",
-  "v": "Chavornay",
-  "c": "culture",
-  "o": "Troupe théâtrale de Zygomates",
-  "h": "",
-  "lieu": "Grande salle",
-  "url": ""
- },
- {
-  "d": "2026-11-21",
-  "fin": "2026-11-21",
   "t": "Vernissage de la Revue historique vaudoise consacrée à Orbe",
   "v": "Orbe",
   "c": "culture",
@@ -4166,17 +4122,6 @@
  {
   "d": "2026-11-25",
   "fin": "2026-11-25",
-  "t": "Atelier dessin « Créativi’thé »",
-  "v": "Orbe",
-  "c": "culture",
-  "o": "Bibliothèque publique et scolaire de la région d’Orbe",
-  "h": "De 16h à 17h30",
-  "lieu": "Bibliothèque d'Orbe, Rue de la Tournelle 2, 1350 Orbe",
-  "url": "https://biblio.orbe.ch/actualites2/1198-programme-culturel-du-second-semestre-2026"
- },
- {
-  "d": "2026-11-25",
-  "fin": "2026-11-25",
   "t": "FC Bavois – FC Schaffhausen",
   "v": "Bavois",
   "c": "foot",
@@ -4184,17 +4129,6 @@
   "h": "19h30",
   "lieu": "Les Peupliers N°1",
   "url": "https://matchcenter-acvf.football.ch/"
- },
- {
-  "d": "2026-11-25",
-  "fin": "2026-11-25",
-  "t": "Mercredi Forêt Enfants (4 à 8+ans)",
-  "v": "Orbe",
-  "c": "fete",
-  "o": "Association Point Nature",
-  "h": "De 9h00 à 17h00",
-  "lieu": "Forêt de Chassagne, près d'Orbe",
-  "url": "https://point-nature.ch/ateliers.html"
  },
  {
   "d": "2026-11-25",
@@ -4407,6 +4341,17 @@
  },
  {
   "d": "2026-12-01",
+  "fin": "2026-12-31",
+  "t": "Activités décembre 2026 café contact et créatif de Chavornay",
+  "v": "Essert-Pittet",
+  "c": "fete",
+  "o": "Café contact",
+  "h": "",
+  "lieu": "Salle Essert-Pittet",
+  "url": ""
+ },
+ {
+  "d": "2026-12-01",
   "fin": "2026-12-23",
   "t": "Chalet de l'Avent USL 2026",
   "v": "Chavornay",
@@ -4450,6 +4395,28 @@
   "url": "https://champvent.ch/manifestations"
  },
  {
+  "d": "2026-12-01",
+  "fin": "2026-12-24",
+  "t": "Fenêtres de l'Avent",
+  "v": "Valeyres-sous-Rances",
+  "c": "fete",
+  "o": "ValeyreS'anime",
+  "h": "",
+  "lieu": "Village (calendrier à la fontaine)",
+  "url": "https://www.valeyres-sous-rances.ch/"
+ },
+ {
+  "d": "2026-12-01",
+  "fin": "2026-12-01",
+  "t": "Verrée de l'Avent offerte par la Municipalité",
+  "v": "Orny",
+  "c": "fete",
+  "o": "Commune d'Orny",
+  "h": "",
+  "lieu": "Administration communale",
+  "url": ""
+ },
+ {
   "d": "2026-12-02",
   "fin": "2026-12-02",
   "t": "Calendrier de l'Avent des Urbigènes",
@@ -4483,6 +4450,17 @@
   "url": "https://www.lapraz.ch/agenda/"
  },
  {
+  "d": "2026-12-02",
+  "fin": "2026-12-02",
+  "t": "Noël villageois à Orny",
+  "v": "Orny",
+  "c": "fete",
+  "o": "Paroisse de La Sarraz",
+  "h": "",
+  "lieu": "",
+  "url": ""
+ },
+ {
   "d": "2026-12-03",
   "fin": "2026-12-03",
   "t": "Calendrier de l'Avent des Urbigènes",
@@ -4492,6 +4470,17 @@
   "h": "de 8h à 12h",
   "lieu": "Place du Marché, 1350 Orbe",
   "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-03",
+  "fin": "2026-12-03",
+  "t": "Fenêtre de l'Avent, vin chaud de la Municipalité",
+  "v": "Bretonnières",
+  "c": "fete",
+  "o": "Municipalité de Bretonnières",
+  "h": "18h30-20h",
+  "lieu": "Couvert de la fontaine, au milieu du village",
+  "url": "https://bretonnieres.ch/"
  },
  {
   "d": "2026-12-03",
@@ -4525,6 +4514,17 @@
   "h": "De 10h à 20h",
   "lieu": "Place du Marché, 1350 Orbe",
   "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-04",
+  "fin": "2026-12-19",
+  "t": "Fenêtres de l'Avent (dix rendez-vous de quartier)",
+  "v": "Montcherand",
+  "c": "fete",
+  "o": "Municipalité de Montcherand",
+  "h": "",
+  "lieu": "Quartiers du village (liste communale)",
+  "url": "https://montcherand.ch/data/files/montcherand/informations/fenetresdelavent2026liste.pdf"
  },
  {
   "d": "2026-12-04",
@@ -4595,6 +4595,17 @@
  {
   "d": "2026-12-05",
   "fin": "2026-12-05",
+  "t": "Distribution des sapins de Noël 2026",
+  "v": "Chavornay",
+  "c": "fete",
+  "o": "Commune",
+  "h": "",
+  "lieu": "Pépinière du bois Désert, en forêt",
+  "url": ""
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
   "t": "Fanfare de la Police cantonale vaudoise",
   "v": "Orbe",
   "c": "culture",
@@ -4602,6 +4613,28 @@
   "h": "18h à 22h",
   "lieu": "Casino d'Orbe, Rue des Terreaux 9, 1350 Orbe",
   "url": "https://monbillet.ch/events/in-templo-26-fanfare-de-la-police-cantonale"
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
+  "t": "Fenêtre de l'Avent de la Jeunesse, apéro dînatoire",
+  "v": "Montcherand",
+  "c": "fete",
+  "o": "Jeunesse de Montcherand",
+  "h": "dès 18h30",
+  "lieu": "Crêt de la Forge 1",
+  "url": "https://montcherand.ch/data/files/montcherand/informations/fenetresdelavent2026liste.pdf"
+ },
+ {
+  "d": "2026-12-05",
+  "fin": "2026-12-05",
+  "t": "Fournée \"St-Nicolas\" et verrée de l'Avent",
+  "v": "Orny",
+  "c": "fete",
+  "o": "Société du Four à pain d'Orny",
+  "h": "",
+  "lieu": "Four à Pain d'Orny",
+  "url": ""
  },
  {
   "d": "2026-12-05",
@@ -4650,13 +4683,13 @@
  {
   "d": "2026-12-05",
   "fin": "2026-12-05",
-  "t": "Société du four à pain - fournée et apéro fenêtre de l’Avent",
-  "v": "Orny",
+  "t": "Téléthon, soupe aux pois",
+  "v": "Valeyres-sous-Rances",
   "c": "fete",
-  "o": "Société du four à pain",
-  "h": "",
-  "lieu": "",
-  "url": ""
+  "o": "Organisateurs du Téléthon de Valeyres",
+  "h": "8h-14h (soupe vers 11h30)",
+  "lieu": "Grande salle",
+  "url": "https://www.valeyres-sous-rances.ch/"
  },
  {
   "d": "2026-12-06",
@@ -4683,13 +4716,24 @@
  {
   "d": "2026-12-06",
   "fin": "2026-12-06",
-  "t": "L'Avent méconnu de la Pologne au 17e siècle (Gli Angeli Genève)",
+  "t": "Gli Angeli - L'Avent méconnu de la Pologne au 17es.",
   "v": "Romainmôtier-Envy",
   "c": "musique",
   "o": "Les Concerts de Romainmôtier",
-  "h": "16h · billets sur monbillet.ch ou 024 453 14 65",
+  "h": "16h00",
   "lieu": "Abbatiale",
-  "url": "https://www.concerts-romainmotier.ch/"
+  "url": "https://monbillet.ch/events/concerts-romainmotier-26-gli-angeli-avent-meconnu-de-la-pologne"
+ },
+ {
+  "d": "2026-12-06",
+  "fin": "2026-12-06",
+  "t": "Saint-Nicolas",
+  "v": "Premier",
+  "c": "fete",
+  "o": "ADIP",
+  "h": "17h",
+  "lieu": "Salle du Tirage",
+  "url": "https://premier.ch/"
  },
  {
   "d": "2026-12-06",
@@ -4701,6 +4745,17 @@
   "h": "De 14 h. 00 à 17 h. 00",
   "lieu": "Restaurant des Ducats Orbe",
   "url": "https://avivo-vaud.ch/sections/#orbe"
+ },
+ {
+  "d": "2026-12-07",
+  "fin": "2026-12-07",
+  "t": "Fenêtre de l'Avent, apéritif offert par la commune",
+  "v": "Premier",
+  "c": "fete",
+  "o": "Commune de Premier",
+  "h": "dès 18h30",
+  "lieu": "Place du Collège",
+  "url": "https://premier.ch/"
  },
  {
   "d": "2026-12-07",
@@ -4902,6 +4957,17 @@
  },
  {
   "d": "2026-12-11",
+  "fin": "2026-12-11",
+  "t": "Culte de Noël des enfants",
+  "v": "Bretonnières",
+  "c": "fete",
+  "o": "",
+  "h": "19h",
+  "lieu": "Église",
+  "url": "https://bretonnieres.ch/"
+ },
+ {
+  "d": "2026-12-11",
   "fin": "2026-12-12",
   "t": "La Fin",
   "v": "Orbe",
@@ -4953,6 +5019,17 @@
   "o": "Bibliothèque de Vallorbe",
   "h": "",
   "lieu": "Bibliothèque de Vallorbe",
+  "url": ""
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
+  "t": "Distribution des sapins de Noël",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "",
   "url": ""
  },
  {
@@ -5035,6 +5112,17 @@
  {
   "d": "2026-12-12",
   "fin": "2026-12-12",
+  "t": "Schafer Jonathan",
+  "v": "Vallorbe",
+  "c": "fete",
+  "o": "Club de pétanque de Vallorbe",
+  "h": "",
+  "lieu": "Grand-Rue",
+  "url": ""
+ },
+ {
+  "d": "2026-12-12",
+  "fin": "2026-12-12",
   "t": "Vente de sapins",
   "v": "Arnex-sur-Orbe",
   "c": "marche",
@@ -5112,6 +5200,17 @@
  {
   "d": "2026-12-16",
   "fin": "2026-12-16",
+  "t": "Atelier biscômes et gourmandises EJED 2026",
+  "v": "Chavornay",
+  "c": "culture",
+  "o": "EJED",
+  "h": "",
+  "lieu": "Foyer du Verneret",
+  "url": ""
+ },
+ {
+  "d": "2026-12-16",
+  "fin": "2026-12-16",
   "t": "Calendrir de l'Avent des Urbigènes",
   "v": "Orbe",
   "c": "fete",
@@ -5119,6 +5218,17 @@
   "h": "de 16h à 19h",
   "lieu": "Place du Marché, 1350 Orbe",
   "url": "https://www.orbe.ch"
+ },
+ {
+  "d": "2026-12-16",
+  "fin": "2026-12-16",
+  "t": "Chalet de l'Avent EJED 2026",
+  "v": "Chavornay",
+  "c": "fete",
+  "o": "EJED",
+  "h": "",
+  "lieu": "",
+  "url": ""
  },
  {
   "d": "2026-12-16",
@@ -5231,6 +5341,17 @@
   "url": "https://www.orbe.ch"
  },
  {
+  "d": "2026-12-21",
+  "fin": "2026-12-21",
+  "t": "Fenêtre de l'Avent de l'école, chantée et fanfare",
+  "v": "Valeyres-sous-Rances",
+  "c": "musique",
+  "o": "École, commune et Echo des Campagnes",
+  "h": "18h30-20h (chantée 18h45, fanfare 19h)",
+  "lieu": "Cour du collège",
+  "url": "https://www.valeyres-sous-rances.ch/"
+ },
+ {
   "d": "2026-12-22",
   "fin": "2026-12-22",
   "t": "Atelier dessin « Créativi’thé »",
@@ -5273,6 +5394,17 @@
   "h": "",
   "lieu": "Place de l'Hôtel-de-Ville",
   "url": "https://vaulion.ch/agenda"
+ },
+ {
+  "d": "2026-12-24",
+  "fin": "2027-01-08",
+  "t": "Fermeture de l'administration communale",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "",
+  "url": ""
  },
  {
   "d": "2026-12-24",
@@ -5354,6 +5486,17 @@
  {
   "d": "2027-01-02",
   "fin": "2027-01-02",
+  "t": "Loto du Chœur mixte L'Avenir de Bavois",
+  "v": "Arnex-sur-Orbe",
+  "c": "loto",
+  "o": "Chœur mixte L'Avenir de Bavois",
+  "h": "17h (portes 15h) · date à confirmer : la commune écrit « dimanche 2 janvier »",
+  "lieu": "Grande salle",
+  "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
+ },
+ {
+  "d": "2027-01-02",
+  "fin": "2027-01-02",
   "t": "Soupe aux pois du FC Arnex",
   "v": "Arnex-sur-Orbe",
   "c": "fete",
@@ -5394,6 +5537,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#souperitalie-1129"
+ },
+ {
+  "d": "2027-01-10",
+  "fin": "2027-01-10",
+  "t": "Brunch à Orny",
+  "v": "Orny",
+  "c": "sport",
+  "o": "",
+  "h": "",
+  "lieu": "Caveau du concours de tambours",
+  "url": ""
  },
  {
   "d": "2027-01-12",
@@ -5440,6 +5594,17 @@
   "url": "https://www.fvjc.ch/agenda/#concoursdetambours-1129"
  },
  {
+  "d": "2027-01-15",
+  "fin": "2027-01-15",
+  "t": "Spectacle humour : \"Performance\" de Yoann Provenzano",
+  "v": "Vallorbe",
+  "c": "culture",
+  "o": "Commission culturelle de Vallorbe",
+  "h": "",
+  "lieu": "Casino de Vallorbe",
+  "url": ""
+ },
+ {
   "d": "2027-01-16",
   "fin": "2027-01-16",
   "t": "Concours de Tambours",
@@ -5482,6 +5647,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#baldejeunesse-1141"
+ },
+ {
+  "d": "2027-01-23",
+  "fin": "2027-01-24",
+  "t": "Exposition romande des lapins mâles",
+  "v": "Chavornay",
+  "c": "culture",
+  "o": "Petits Animaux Chavornay & Environs",
+  "h": "",
+  "lieu": "Foyer du Verneret",
+  "url": ""
  },
  {
   "d": "2027-01-24",
@@ -5704,6 +5880,28 @@
   "url": "https://www.pompaples.ch/agenda"
  },
  {
+  "d": "2027-03-20",
+  "fin": "2027-03-20",
+  "t": "Concert annuel 2027 de la Société de musique Bavois-Chavornay",
+  "v": "Chavornay",
+  "c": "culture",
+  "o": "Société de Musique de Bavois-Chavornay",
+  "h": "",
+  "lieu": "Grande salle",
+  "url": ""
+ },
+ {
+  "d": "2027-03-22",
+  "fin": "2027-03-22",
+  "t": "Conseil général",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Salle communale",
+  "url": ""
+ },
+ {
   "d": "2027-03-23",
   "fin": "2027-04-13",
   "t": "Lieu d'accueil parents-enfants (0 à 5 ans)",
@@ -5822,6 +6020,17 @@
   "o": "Section des samaritains de Chavornay et environ",
   "h": "",
   "lieu": "Foyer de la salle polyvalente",
+  "url": ""
+ },
+ {
+  "d": "2027-04-24",
+  "fin": "2027-04-24",
+  "t": "Concours de pétanque en doublettes",
+  "v": "Vallorbe",
+  "c": "sport",
+  "o": "Club de pétanque de Vallorbe",
+  "h": "",
+  "lieu": "Boulodrome de Vallorbe",
   "url": ""
  },
  {
@@ -6045,6 +6254,17 @@
   "url": "https://www.pompaples.ch/agenda"
  },
  {
+  "d": "2027-06-19",
+  "fin": "2027-06-19",
+  "t": "Concours de pétanque en doublettes",
+  "v": "Vallorbe",
+  "c": "sport",
+  "o": "Pétanque Club",
+  "h": "",
+  "lieu": "Boulodrome de Vallorbe",
+  "url": ""
+ },
+ {
   "d": "2027-06-21",
   "fin": "2027-06-21",
   "t": "Séance du Conseil communal",
@@ -6065,6 +6285,28 @@
   "h": "",
   "lieu": "",
   "url": "https://www.arnex-sur-orbe.ch/agenda-des-manifestations-2026-fr774.html"
+ },
+ {
+  "d": "2027-06-28",
+  "fin": "2027-06-28",
+  "t": "Conseil général",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Salle communale",
+  "url": ""
+ },
+ {
+  "d": "2027-07-17",
+  "fin": "2027-07-17",
+  "t": "Concours de pétanque en doublettes",
+  "v": "Vallorbe",
+  "c": "sport",
+  "o": "Club de pétanque de Vallorbe",
+  "h": "",
+  "lieu": "Boulodrome de Vallorbe",
+  "url": ""
  },
  {
   "d": "2027-07-23",
@@ -6098,6 +6340,17 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#balenpleinair-1175"
+ },
+ {
+  "d": "2027-08-28",
+  "fin": "2027-08-28",
+  "t": "Mémorial Francfort - concours de pétanque en doublettes",
+  "v": "Vallorbe",
+  "c": "sport",
+  "o": "Club de pétanque de Vallorbe",
+  "h": "",
+  "lieu": "Boulodrome de Vallorbe",
+  "url": ""
  },
  {
   "d": "2027-09-08",
@@ -6142,6 +6395,28 @@
   "h": "",
   "lieu": "",
   "url": "https://www.fvjc.ch/agenda/#40ansdelajeunesse-1166"
+ },
+ {
+  "d": "2027-10-02",
+  "fin": "2027-10-02",
+  "t": "Concours de pétanque en doublettes",
+  "v": "Vallorbe",
+  "c": "sport",
+  "o": "Club de pétanque de Vallorbe",
+  "h": "",
+  "lieu": "Boulodrome de Vallorbe",
+  "url": ""
+ },
+ {
+  "d": "2027-10-04",
+  "fin": "2027-10-04",
+  "t": "Conseil général",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Salle communale",
+  "url": ""
  },
  {
   "d": "2027-10-04",
@@ -6208,6 +6483,17 @@
   "h": "",
   "lieu": "Salle villageoise",
   "url": "https://www.pompaples.ch/agenda"
+ },
+ {
+  "d": "2027-12-13",
+  "fin": "2027-12-13",
+  "t": "Conseil général",
+  "v": "Orny",
+  "c": "fete",
+  "o": "",
+  "h": "",
+  "lieu": "Salle communale",
+  "url": ""
  },
  {
   "d": "2028-01-22",
